@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SiteShell, MetaLine, JsonLd } from "./site";
 import { brandExamples } from "./brands/brands-data";
 import { SectionDivider } from "./site-effects";
+import { publicPath, siteUrl } from "./site-config";
 
 export const metadata = {
   title: "Rudollforum — TPE и силиконовые куклы: выбор, покупка и уход",
@@ -30,7 +31,7 @@ const faq = [
 
 export default function Home() {
   return <SiteShell>
-    <JsonLd data={{"@context":"https://schema.org","@type":"WebSite",name:"Rudollforum | TPE и силиконовые куклы",inLanguage:"ru-RU",url:"https://rudollforum.sites.openai.com/"}} />
+    <JsonLd data={{"@context":"https://schema.org","@type":"WebSite",name:"Rudollforum | TPE и силиконовые куклы",inLanguage:"ru-RU",url:siteUrl("/")}} />
     <section className="hero">
       <div className="hero-copy"><div className="eyebrow">Независимый справочник · 18+</div>
         <h1>TPE и силиконовые куклы: выбор, покупка и правильный уход</h1>
@@ -39,7 +40,7 @@ export default function Home() {
         <div className="hero-note"><span>Практика владельцев</span><span>Независимо от брендов</span><span>Без приёма оплаты</span></div>
         <p className="trust-copy">Справочник систематизирует практический опыт сообщества. Отдельные рекомендации могут не подходить конкретной модели, поэтому перед применением необходимо учитывать материал и инструкцию производителя.</p>
       </div>
-      <figure className="hero-art"><img src="/hero-hanfu.webp" alt="Взрослая женщина в закрытом традиционном ханьфу среди белых лотосов" width="900" height="1800" fetchPriority="high" /></figure>
+      <figure className="hero-art"><img src={publicPath("/hero-hanfu.webp")} alt="Взрослая женщина в закрытом традиционном ханьфу среди белых лотосов" width="900" height="1800" fetchPriority="high" /></figure>
     </section>
 
     <section className="intro-grid">
@@ -50,7 +51,7 @@ export default function Home() {
 
     <section className="section" id="topics"><div className="section-head"><div><span className="section-no">Навигация</span><h2>Ключевые темы справочника</h2></div><p>Краткие вводные ведут к отдельным подробным материалам.</p></div>
       <div className="topic-grid">{sections.slice(0,4).map(([title, text, href, no, icon]) => <Link href={href} className="topic-card reveal" key={no}><div className="card-top"><span>{no}</span><i aria-hidden="true">{icon}</i></div><h3>{title}</h3><p>{text}</p><b>Читать материал →</b></Link>)}</div>
-      <figure className="editorial-visual guide-visual" id="guide-banner"><img src="/guide-hanfu.webp" alt="Взрослая женщина в светлом закрытом ханьфу читает справочник" width="1400" height="850" loading="lazy"/><figcaption><span>Осознанный выбор</span><strong>Сначала факты, затем решение</strong><Link href="/how-to-choose">Как выбрать модель →</Link><Link className="home-guide-link" href="/guide">Полное руководство владельца →</Link></figcaption></figure>
+      <figure className="editorial-visual guide-visual" id="guide-banner"><img src={publicPath("/guide-hanfu.webp")} alt="Взрослая женщина в светлом закрытом ханьфу читает справочник" width="1400" height="850" loading="lazy"/><figcaption><span>Осознанный выбор</span><strong>Сначала факты, затем решение</strong><Link href="/how-to-choose">Как выбрать модель →</Link><Link className="home-guide-link" href="/guide">Полное руководство владельца →</Link></figcaption></figure>
       <aside className="external-card" aria-labelledby="moon-doll-title">
         <div className="external-card-icon" aria-hidden="true">↗</div>
         <div className="external-card-copy">
@@ -64,7 +65,7 @@ export default function Home() {
         </div>
       </aside>
       <div className="topic-grid topic-grid-continuation">{sections.slice(4).map(([title, text, href, no, icon]) => <Link href={href} className="topic-card reveal" key={no}><div className="card-top"><span>{no}</span><i aria-hidden="true">{icon}</i></div><h3>{title}</h3><p>{text}</p><b>Читать материал →</b></Link>)}</div>
-      <figure className="editorial-visual care-visual"><img src="/care-hanfu.webp" alt="Взрослая женщина в закрытом лиловом ханьфу аккуратно складывает ткань у сундука" width="1400" height="788" loading="lazy"/><figcaption><span>Уход и хранение</span><strong>Долговечность начинается с привычек</strong><Link href="/storage">Правила хранения →</Link></figcaption></figure>
+      <figure className="editorial-visual care-visual"><img src={publicPath("/care-hanfu.webp")} alt="Взрослая женщина в закрытом лиловом ханьфу аккуратно складывает ткань у сундука" width="1400" height="788" loading="lazy"/><figcaption><span>Уход и хранение</span><strong>Долговечность начинается с привычек</strong><Link href="/storage">Правила хранения →</Link></figcaption></figure>
     </section>
     <SectionDivider />
 

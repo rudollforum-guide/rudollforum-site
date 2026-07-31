@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { brands, groupInfo, tagDescriptions, tagLabels, type Brand, type BrandGroup, type BrandTag } from "./brands-data";
 import { BrandIcon } from "./brand-icon";
+import { publicPath } from "../site-config";
 
 type Filter = "all" | "realistic" | BrandGroup | BrandTag;
 type SortOrder = "az" | "za";
@@ -33,7 +34,7 @@ function emblemSrc(brand: Brand) {
     .toLocaleLowerCase("en")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
-  return `/brands/generated/${brand.group}/${slug}.webp`;
+  return publicPath(`/brands/generated/${brand.group}/${slug}.webp`);
 }
 
 function BrandCard({ brand }: { brand: Brand }) {

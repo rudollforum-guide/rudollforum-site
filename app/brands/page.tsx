@@ -3,15 +3,16 @@ import Link from "next/link";
 import { JsonLd, MetaLine, SiteShell } from "../site";
 import { BrandCatalog } from "./brand-catalog";
 import { brands } from "./brands-data";
+import { siteUrl } from "../site-config";
 
 export const metadata: Metadata = {
   title: "Бренды силиконовых и ТПЕ-кукол — каталог Rudollforum",
   description: "Справочный каталог брендов силиконовых, ТПЕ, аниме, фурри, торсовых и роботизированных кукол с официальными ссылками и фильтрами.",
-  alternates: { canonical: "/brands" },
+  alternates: { canonical: siteUrl("/brands") },
   openGraph: {
     title: "Бренды силиконовых и ТПЕ-кукол — каталог Rudollforum",
     description: "Справочный каталог брендов с официальными ссылками, категориями, поиском и фильтрами.",
-    url: "/brands",
+    url: siteUrl("/brands"),
     type: "website",
   },
 };
@@ -21,8 +22,8 @@ export default function BrandsPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Главная", item: "https://rudollforum.sites.openai.com/" },
-      { "@type": "ListItem", position: 2, name: "Бренды", item: "https://rudollforum.sites.openai.com/brands" },
+      { "@type": "ListItem", position: 1, name: "Главная", item: siteUrl("/") },
+      { "@type": "ListItem", position: 2, name: "Бренды", item: siteUrl("/brands") },
     ],
   };
   const collection = {
@@ -30,7 +31,7 @@ export default function BrandsPage() {
     "@type": "CollectionPage",
     name: "Бренды силиконовых и ТПЕ-кукол",
     description: metadata.description,
-    url: "https://rudollforum.sites.openai.com/brands",
+    url: siteUrl("/brands"),
     inLanguage: "ru-RU",
   };
   const itemList = {

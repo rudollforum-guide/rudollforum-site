@@ -1,4 +1,4 @@
-import { guideArticles } from "./guide-articles.ts";
+import { guideArticles } from "./guide-articles";
 
 type Section={heading:string;text:string[];items?:string[];table?:string[][]};
 type Article={title:string;description:string;h1:string;intro:string;kicker?:string;notice?:string;schema?:string;sections:Section[];related:[string,string][]};

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { articles } from "../articles";
 import { JsonLd, MetaLine, SiteShell } from "../site";
+import { siteUrl } from "../site-config";
 
 function ArticleItem({ item, heading }: { item: string; heading: string }) {
   const external = item.match(/^(https?:\/\/\S+) — (.+)$/);
@@ -43,14 +44,15 @@ function ArticleItem({ item, heading }: { item: string; heading: string }) {
   return <li>{item}</li>;
 }
 
-export function generateStaticParams(){return Object.keys(articles).map(slug=>({slug}))}
+export const dynamicParams = false;
+export function generateStaticParams(){return Object.keys(articles).filter(slug=>slug!=="brands").map(slug=>({slug}))}
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{
   const {slug}=await params; const a=articles[slug]; if(!a)return {};
-  return {title:a.title,description:a.description,alternates:{canonical:`/${slug}`},openGraph:{title:a.title,description:a.description,url:`/${slug}`,type:"article"}};
+  return {title:a.title,description:a.description,alternates:{canonical:siteUrl(`/${slug}`)},openGraph:{title:a.title,description:a.description,url:siteUrl(`/${slug}`),type:"article"}};
 }
 export default async function Article({params}:{params:Promise<{slug:string}>}){
   const {slug}=await params; const a=articles[slug]; if(!a)notFound();
-  const breadcrumb={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://rudollforum.sites.openai.com/"},{"@type":"ListItem","position":2,"name":a.h1,"item":`https://rudollforum.sites.openai.com/${slug}`}]};
+  const breadcrumb={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":siteUrl("/")},{"@type":"ListItem","position":2,"name":a.h1,"item":siteUrl(`/${slug}`)}]};
   const article={"@context":"https://schema.org","@type":a.schema||"Article",headline:a.h1,description:a.description,inLanguage:"ru-RU",datePublished:"2026-07-24",dateModified:"2026-07-24",author:{"@type":"Organization","name":"Редакция Rudollforum"}};
   return <SiteShell><JsonLd data={breadcrumb}/><JsonLd data={article}/><article className="article"><nav className="breadcrumbs"><Link href="/">Главная</Link><span>→</span><span>{a.h1}</span></nav><div className="article-hero"><span className="eyebrow">{a.kicker||"Справочник Rudollforum"}</span><h1>{a.h1}</h1><p>{a.intro}</p></div>{a.notice&&<aside className="notice">{a.notice}</aside>}<div className="article-body">{a.sections.map((s,i)=><section key={s.heading}><span className="chapter">{String(i+1).padStart(2,"0")}</span><div><h2>{s.heading}</h2>{s.text.map(p=><p key={p}>{p}</p>)}{s.items&&<ul className={s.heading === "Moon-Doll" || s.heading === "Опыт продолжается в обсуждениях" ? "article-link-actions" : undefined}>{s.items.map(x=><ArticleItem item={x} heading={s.heading} key={x}/>)}</ul>}{s.table&&<div className="table-wrap"><table><thead><tr>{s.table[0].map(c=><th key={c}>{c}</th>)}</tr></thead><tbody>{s.table.slice(1).map((r,j)=><tr key={j}>{r.map(c=><td key={c}>{c}</td>)}</tr>)}</tbody></table></div>}</div></section>)}</div><section className="related"><span className="section-no">Продолжить чтение</span><h2>Связанные материалы</h2><div>{a.related.map(([n,h])=><Link href={h} key={h}>{n}<span>→</span></Link>)}</div></section><MetaLine/></article></SiteShell>
 }

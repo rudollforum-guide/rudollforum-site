@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd, MetaLine, SiteShell } from "../site";
+import { publicPath, siteUrl } from "../site-config";
 
 export const metadata: Metadata = {
   title: "Практическое руководство по силиконовым и TPE-куклам — Rudollforum",
   description: "Полное руководство Rudollforum по выбору, покупке, эксплуатации, уходу, хранению и ремонту силиконовых и TPE-кукол. Доступна PDF-версия.",
-  alternates: { canonical: "/guide" },
+  alternates: { canonical: siteUrl("/guide") },
 };
 
 const chapters = [
@@ -26,14 +27,14 @@ const chapters = [
 ];
 
 export default function GuidePage() {
-  const breadcrumb={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://rudollforum.sites.openai.com/"},{"@type":"ListItem","position":2,"name":"Практическое руководство","item":"https://rudollforum.sites.openai.com/guide"}]};
+  const breadcrumb={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":siteUrl("/")},{"@type":"ListItem","position":2,"name":"Практическое руководство","item":siteUrl("/guide")}]};
   const article={"@context":"https://schema.org","@type":"Article",headline:"Практическое руководство владельца",description:metadata.description,inLanguage:"ru-RU",datePublished:"2026-07-24",dateModified:"2026-07-24",author:{"@type":"Organization","name":"Редакция Rudollforum"}};
   return <SiteShell><JsonLd data={breadcrumb}/><JsonLd data={article}/><article className="article guide-page">
     <nav className="breadcrumbs"><Link href="/">Главная</Link><span>→</span><span>Практическое руководство</span></nav>
     <header className="article-hero"><span className="eyebrow">Навигация по знаниям</span><h1>Практическое руководство владельца</h1><p>Руководство Rudollforum посвящено выбору, покупке, эксплуатации, уходу, хранению и ремонту полноразмерных силиконовых и TPE-кукол. Оно основано на реальном опыте владельцев и систематизации практических ситуаций.</p></header>
     <section className="guide-pdf-card" aria-labelledby="guide-pdf-title">
       <figure className="guide-pdf-cover">
-        <img src="/images/guide/rudollforum-guide-cover.webp" alt="Обложка руководства Rudollforum по уходу за силиконовыми и TPE-куклами" width="1000" height="1414" loading="lazy"/>
+        <img src={publicPath("/images/guide/rudollforum-guide-cover.webp")} alt="Обложка руководства Rudollforum по уходу за силиконовыми и TPE-куклами" width="1000" height="1414" loading="lazy"/>
       </figure>
       <div className="guide-pdf-copy">
         <span className="guide-pdf-label">Полная версия · PDF · 18+</span>
@@ -48,8 +49,8 @@ export default function GuidePage() {
         </ul>
         <p className="guide-pdf-warning">18+. Материал предназначен только для совершеннолетней аудитории.</p>
         <div className="guide-pdf-actions">
-          <a className="link-button-primary" href="/documents/rudollforum-guide-tpe-silicone-2026.pdf" target="_blank" rel="noopener noreferrer">Открыть полное руководство <span aria-hidden="true">↗</span></a>
-          <a className="link-button-secondary" href="/documents/rudollforum-guide-tpe-silicone-2026.pdf" download>Скачать PDF <span aria-hidden="true">↓</span></a>
+          <a className="link-button-primary" href={publicPath("/documents/rudollforum-guide-tpe-silicone-2026.pdf")} target="_blank" rel="noopener noreferrer">Открыть полное руководство <span aria-hidden="true">↗</span></a>
+          <a className="link-button-secondary" href={publicPath("/documents/rudollforum-guide-tpe-silicone-2026.pdf")} download>Скачать PDF <span aria-hidden="true">↓</span></a>
         </div>
         <p className="guide-pdf-rights">© Rudollforum, 2026. Разрешено личное использование и цитирование с указанием источника. Полное копирование, удаление авторства, публикация под другим именем и коммерческое распространение без письменного разрешения запрещены.</p>
       </div>

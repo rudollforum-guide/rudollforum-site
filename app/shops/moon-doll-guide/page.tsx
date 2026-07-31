@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd, MetaLine, SiteShell } from "../../site";
+import { siteUrl } from "../../site-config";
 
 export const metadata: Metadata = {
   title: "Как купить куклу на Moon-Doll — оформление, оплата и доставка",
   description: "Пошаговая инструкция по заказу на Moon-Doll: регистрация, выбор модели, комплектация, промокод RUDOLLFORUM, оплата, производство, доставка и гарантии.",
-  alternates: { canonical: "/shops/moon-doll-guide" },
+  alternates: { canonical: siteUrl("/shops/moon-doll-guide") },
   openGraph: {
     title: "Как купить куклу на Moon-Doll — оформление, оплата и доставка",
     description: "Нейтральная пошаговая инструкция Rudollforum по оформлению и проверке заказа.",
-    url: "/shops/moon-doll-guide",
+    url: siteUrl("/shops/moon-doll-guide"),
     type: "article",
   },
 };
@@ -101,10 +102,10 @@ const faq = [
 ];
 
 export default function MoonDollGuidePage() {
-  const canonical = "https://rudollforum.sites.openai.com/shops/moon-doll-guide";
+  const canonical = siteUrl("/shops/moon-doll-guide");
   const breadcrumb = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Главная","item":"https://rudollforum.sites.openai.com/"},
-    {"@type":"ListItem","position":2,"name":"Покупка","item":"https://rudollforum.sites.openai.com/safe-purchase"},
+    {"@type":"ListItem","position":1,"name":"Главная","item":siteUrl("/")},
+    {"@type":"ListItem","position":2,"name":"Покупка","item":siteUrl("/safe-purchase")},
     {"@type":"ListItem","position":3,"name":"Как оформить заказ на Moon-Doll","item":canonical},
   ]};
   const article = {"@context":"https://schema.org","@type":"Article",headline:"Как оформить заказ на Moon-Doll",description:metadata.description,inLanguage:"ru-RU",datePublished:"2026-07-24",dateModified:"2026-07-24",author:{"@type":"Organization","name":"Редакция Rudollforum"},mainEntityOfPage:canonical};
