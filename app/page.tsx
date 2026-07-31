@@ -5,9 +5,10 @@ import { SectionDivider } from "./site-effects";
 import { publicPath, siteUrl } from "./site-config";
 
 export const metadata = {
-  title: "Rudollforum — TPE и силиконовые куклы: выбор, покупка и уход",
-  description: "Независимый справочник Rudollforum о силиконовых и ТПЕ-куклах: как выбрать и купить модель, сравнить материалы, правильно очищать, сушить, хранить и ремонтировать.",
+  title: "Силиконовые и TPE-куклы — купить, выбрать, ухаживать | Rudollforum",
+  description: "Справочник Rudollforum о силиконовых, TPE и реалистичных куклах: как выбрать и купить модель, сравнить материалы, проверить продавца, изучить бренды, уход и отзывы владельцев.",
   alternates: { canonical: "/" },
+  openGraph: { title: "Силиконовые и TPE-куклы — купить, выбрать, ухаживать | Rudollforum", description: "Справочник Rudollforum о силиконовых, TPE и реалистичных куклах: как выбрать и купить модель, сравнить материалы, проверить продавца, изучить бренды, уход и отзывы владельцев.", url: siteUrl("/"), type: "website" as const },
 };
 
 const sections = [
@@ -35,7 +36,7 @@ export default function Home() {
     <section className="hero">
       <div className="hero-copy"><div className="eyebrow">Независимый справочник · 18+</div>
         <h1>TPE и силиконовые куклы: выбор, покупка и правильный уход</h1>
-        <p className="lead">Подробные материалы о свойствах силикона и ТПЕ, выборе полноразмерной модели, проверке продавца, доставке, очистке, полной сушке, безопасном хранении и устранении распространённых повреждений.</p>
+        <p className="lead">Rudollforum не продаёт кукол и не принимает оплату. Справочник помогает выбрать магазин, модель и материал, проверить продавца, подготовиться к доставке и организовать правильный уход.</p>
         <div className="actions"><Link className="button primary" href="/how-to-choose">Начать со справочника</Link><Link className="button" href="/silicone-or-tpe">Сравнить силикон и ТПЕ</Link></div>
         <div className="hero-note"><span>Практика владельцев</span><span>Независимо от брендов</span><span>Без приёма оплаты</span></div>
         <p className="trust-copy">Справочник систематизирует практический опыт сообщества. Отдельные рекомендации могут не подходить конкретной модели, поэтому перед применением необходимо учитывать материал и инструкцию производителя.</p>
@@ -83,6 +84,19 @@ export default function Home() {
     </section>
     <SectionDivider />
 
+    <section className="section split" aria-labelledby="purchase-guides-title">
+      <div className="feature"><span className="section-no">Навигация по покупке</span><h2 id="purchase-guides-title">Как купить силиконовую или TPE-куклу</h2><p>Сначала определите подходящий материал и допустимый вес, затем сравните бренды и каналы покупки. Rudollforum помогает проверить магазин и модель, но не оформляет заказы.</p></div>
+      <div className="article-list">
+        <Link href="/buy-tpe-doll"><span>Материал</span><strong>Купить TPE-куклу: как выбрать</strong><small>→</small></Link>
+        <Link href="/buy-silicone-doll"><span>Материал</span><strong>Купить силиконовую куклу: как выбрать</strong><small>→</small></Link>
+        <Link href="/realistic-dolls"><span>Критерии</span><strong>Реалистичные модели</strong><small>→</small></Link>
+        <Link href="/brands"><span>Каталог</span><strong>Бренды и отдельные линейки</strong><small>→</small></Link>
+        <Link href="/where-to-buy"><span>Магазины</span><strong>Где купить и что проверить</strong><small>→</small></Link>
+        <Link href="/owner-reviews"><span>Опыт</span><strong>Отзывы владельцев</strong><small>→</small></Link>
+      </div>
+    </section>
+    <SectionDivider />
+
     <section className="community-home section" aria-labelledby="community-title">
       <div className="community-heading">
         <span className="section-no">Справочник и сообщество владельцев</span>
@@ -98,6 +112,13 @@ export default function Home() {
         {["Доброжелательное общение владельцев","Помощь новичкам","Опыт эксплуатации","Галерея кукол участников","Уважительное отношение к куклам и их владельцам","Тематические фотосессии","Конкурсы и творческие проекты","Обсуждение брендов и моделей","Новости производителей и магазинов","Уход, хранение и ремонт","Одежда, парики и создание образов","Практические руководства"].map((item,index)=><span key={item}><i>{String(index+1).padStart(2,"0")}</i>{item}</span>)}
       </div>
       <div className="community-actions"><a className="link-button-secondary" href="https://t.me/rudollforum" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">✉</span>Открыть Telegram Rudollforum <span className="external-link-badge" aria-hidden="true">↗</span></a><Link className="link-button-secondary link-button-internal" href="/community">О сообществе <span aria-hidden="true">→</span></Link><small>На канале доступны открытые материалы и информация о закрытой группе владельцев.</small></div>
+    </section>
+
+    <section className="section" aria-labelledby="owner-reviews-title">
+      <div className="section-head"><div><span className="section-no">Редакционный раздел</span><h2 id="owner-reviews-title">Отзывы владельцев</h2></div><p>Будущая подборка будет опираться только на подтверждённый опыт без выдуманных оценок и количества отзывов.</p></div>
+      <div className="topic-grid">
+        {[['Материалы','Состав, мягкость, текстура и изменения поверхности со временем.'],['Вес и переноска','Фактическая масса, скелет, суставы и бытовое удобство.'],['Уход и долговечность','Очистка, пятна, хранение, ремонт и состояние спустя месяцы.']].map(([title,text],index)=><Link href="/owner-reviews" className="topic-card" key={title}><div className="card-top"><span>{String(index+1).padStart(2,"0")}</span><i aria-hidden="true">◇</i></div><h3>{title}</h3><p>{text}</p><b>Открыть раздел →</b></Link>)}
+      </div>
     </section>
 
     <section className="section split">

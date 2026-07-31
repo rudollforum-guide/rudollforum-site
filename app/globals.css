@@ -52,6 +52,13 @@ main{padding-top:12px}
   .guide-visual{height:clamp(470px,68vw,560px)}
   .guide-visual figcaption{width:40%}
 }
+
+.article-subsection{margin-top:30px;padding-top:24px;border-top:1px solid var(--line)}
+.article-subsection h3{font:25px/1.25 Georgia,serif;margin:0 0 12px}
+.owner-reviews-page .topic-grid{grid-template-columns:repeat(3,1fr)}
+.owner-reviews-page .catalog-disclaimer{margin:0 0 28px}
+.owner-reviews-page .catalog-navigation-note{margin-top:24px}
+@media(max-width:600px){.owner-reviews-page .topic-grid{grid-template-columns:1fr}}
 @media(max-width:700px){
   :root{--header-offset:133px}
   .site-header{position:sticky}

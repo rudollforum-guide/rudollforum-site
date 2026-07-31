@@ -7,7 +7,7 @@ export const nav = [
   ["Справочник", "/guide"],
   ["Выбор", "/getting-started"],
   ["Материалы", "/silicone-or-tpe"],
-  ["Покупка", "/safe-purchase"],
+  ["Покупка", "/where-to-buy"],
   ["Уход", "/care"],
   ["Хранение", "/storage"],
   ["Ремонт", "/repair"],
@@ -36,6 +36,19 @@ const guideOnlyRoutes = new Set<string>(
 function isNavActive(pathname: string, href: string) {
   if (href === "/guide") {
     return pathname === href || guideOnlyRoutes.has(pathname);
+  }
+
+  if (href === "/where-to-buy") {
+    return new Set([
+      "/where-to-buy",
+      "/buy-tpe-doll",
+      "/buy-silicone-doll",
+      "/realistic-dolls",
+      "/how-to-buy",
+      "/safe-purchase",
+      "/delivery-check",
+      "/owner-reviews",
+    ]).has(pathname);
   }
 
   return pathname === href;

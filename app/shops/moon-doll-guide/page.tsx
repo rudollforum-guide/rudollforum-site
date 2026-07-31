@@ -105,7 +105,7 @@ export default function MoonDollGuidePage() {
   const canonical = siteUrl("/shops/moon-doll-guide");
   const breadcrumb = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
     {"@type":"ListItem","position":1,"name":"Главная","item":siteUrl("/")},
-    {"@type":"ListItem","position":2,"name":"Покупка","item":siteUrl("/safe-purchase")},
+    {"@type":"ListItem","position":2,"name":"Покупка","item":siteUrl("/where-to-buy")},
     {"@type":"ListItem","position":3,"name":"Как оформить заказ на Moon-Doll","item":canonical},
   ]};
   const article = {"@context":"https://schema.org","@type":"Article",headline:"Как оформить заказ на Moon-Doll",description:metadata.description,inLanguage:"ru-RU",datePublished:"2026-07-24",dateModified:"2026-07-24",author:{"@type":"Organization","name":"Редакция Rudollforum"},mainEntityOfPage:canonical};
@@ -114,7 +114,7 @@ export default function MoonDollGuidePage() {
   return <SiteShell>
     <JsonLd data={breadcrumb}/><JsonLd data={article}/><JsonLd data={howTo}/>
     <article className="article moon-guide">
-      <nav className="breadcrumbs"><Link href="/">Главная</Link><span>→</span><Link href="/safe-purchase">Покупка</Link><span>→</span><span>Moon-Doll</span></nav>
+      <nav className="breadcrumbs"><Link href="/">Главная</Link><span>→</span><Link href="/where-to-buy">Покупка</Link><span>→</span><span>Moon-Doll</span></nav>
       <header className="article-hero">
         <span className="eyebrow">Внешний магазин · независимая инструкция</span>
         <h1>Как оформить заказ на Moon-Doll</h1>

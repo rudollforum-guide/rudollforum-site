@@ -77,7 +77,7 @@ export default function BrandsPage() {
           <h2>Перед выбором модели</h2>
           <div>
             <Link href="/how-to-choose">Как выбрать модель <span>→</span></Link>
-            <Link href="/how-to-buy">Что проверить перед покупкой <span>→</span></Link>
+            <Link href="/where-to-buy">Где купить и что проверить <span>→</span></Link>
             <Link href="/silicone-or-tpe">Силикон или ТПЕ <span>→</span></Link>
           </div>
         </section>
