@@ -15,3 +15,16 @@ export function siteUrl(path = "/") {
   const normalized = path.startsWith("/") ? path : `/${path}`;
   return `${SITE_URL}${normalized}`;
 }
+
+export const SOCIAL_IMAGE_ALT = "Rudollforum — справочник по силиконовым и TPE-куклам";
+export const OPEN_GRAPH_IMAGE = {
+  url: siteUrl("/images/rudollforum-og.webp"),
+  width: 1200,
+  height: 630,
+  type: "image/webp",
+  alt: SOCIAL_IMAGE_ALT,
+};
+export const TWITTER_IMAGE = {
+  url: OPEN_GRAPH_IMAGE.url,
+  alt: SOCIAL_IMAGE_ALT,
+};

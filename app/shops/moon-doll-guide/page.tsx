@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd, MetaLine, SiteShell } from "../../site";
-import { siteUrl } from "../../site-config";
+import { OPEN_GRAPH_IMAGE, siteUrl } from "../../site-config";
 
 export const metadata: Metadata = {
   title: "Как купить куклу на Moon-Doll — оформление, оплата и доставка",
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     description: "Нейтральная пошаговая инструкция Rudollforum по оформлению и проверке заказа.",
     url: siteUrl("/shops/moon-doll-guide"),
     type: "article",
+    images: [OPEN_GRAPH_IMAGE],
   },
 };
 
@@ -108,7 +109,7 @@ export default function MoonDollGuidePage() {
     {"@type":"ListItem","position":2,"name":"Покупка","item":siteUrl("/where-to-buy")},
     {"@type":"ListItem","position":3,"name":"Как оформить заказ на Moon-Doll","item":canonical},
   ]};
-  const article = {"@context":"https://schema.org","@type":"Article",headline:"Как оформить заказ на Moon-Doll",description:metadata.description,inLanguage:"ru-RU",datePublished:"2026-07-24",dateModified:"2026-07-24",author:{"@type":"Organization","name":"Редакция Rudollforum"},mainEntityOfPage:canonical};
+  const article = {"@context":"https://schema.org","@type":"Article",headline:"Как оформить заказ на Moon-Doll",description:metadata.description,inLanguage:"ru-RU",datePublished:"2026-07-24",dateModified:"2026-07-24",author:{"@type":"Organization","name":"Редакция Rudollforum"},publisher:{"@type":"Organization","name":"Rudollforum"},mainEntityOfPage:canonical};
   const howTo = {"@context":"https://schema.org","@type":"HowTo",name:"Как оформить заказ на Moon-Doll",description:metadata.description,step:steps.map((step,index)=>({"@type":"HowToStep",position:index+1,name:step.title,text:step.text.join(" ")}))};
 
   return <SiteShell>
@@ -129,12 +130,12 @@ export default function MoonDollGuidePage() {
             {step.items&&<ul className="check-list">{step.items.map(item=><li key={item}>{item}</li>)}</ul>}
             {step.note&&<aside className="step-warning">{step.note}</aside>}
             {step.extra&&<p className="step-extra">{step.extra}</p>}
-            {index===2&&<div className="contact-card"><span>Справочные контакты</span><a className="link-inline-arrow" href="https://t.me/jackymoondoll" target="_blank" rel="noopener noreferrer">Telegram: @jackymoondoll <span aria-hidden="true">↗</span></a><a className="link-inline-arrow" href="mailto:sales@moon-doll.com">E-mail: sales@moon-doll.com <span aria-hidden="true">→</span></a><a className="link-inline-arrow" href="https://wa.me/601126685168" target="_blank" rel="noopener noreferrer">WhatsApp: +60 11-2668 5168 <span aria-hidden="true">↗</span></a></div>}
+            {index===2&&<div className="contact-card"><span>Справочные контакты</span><a className="link-inline-arrow" href="https://t.me/jackymoondoll" target="_blank" rel="noopener noreferrer sponsored">Telegram: @jackymoondoll <span aria-hidden="true">↗</span></a><a className="link-inline-arrow" href="mailto:sales@moon-doll.com">E-mail: sales@moon-doll.com <span aria-hidden="true">→</span></a><a className="link-inline-arrow" href="https://wa.me/601126685168" target="_blank" rel="noopener noreferrer sponsored">WhatsApp: +60 11-2668 5168 <span aria-hidden="true">↗</span></a></div>}
             {index===4&&<div className="moon-promo"><span>Промокод Rudollforum</span><code>RUDOLLFORUM</code><a className="link-button-secondary" href="https://www.moon-doll.com/" target="_blank" rel="noopener noreferrer sponsored">Открыть Moon-Doll <b className="external-link-badge" aria-hidden="true">↗</b></a></div>}
             {index===5&&<div className="checkout-grid"><div><strong>Information</strong><p>Проверьте имя, адрес, телефон, электронную почту и промокод.</p></div><div><strong>Shipping</strong><p>Повторно проверьте адрес и действующие условия доставки.</p></div><div><strong>Payment</strong><p>На этапе оплаты выберите доступный для вашей страны и банка способ. Конкретные реквизиты и инструкции магазин может прислать отдельным письмом или инвойсом.</p></div><aside>Если банк приостановил перевод, свяжитесь со службой безопасности банка и менеджером магазина. Не повторяйте платёж несколько раз без подтверждения его статуса.</aside></div>}
-            {index===7&&<><a className="link-button-secondary" href="https://www.moon-doll.com/pages/cancellation-and-refund-policy" target="_blank" rel="noopener noreferrer">Проверить политику отмены и возврата <span className="external-link-badge" aria-hidden="true">↗</span></a><details className="inline-help"><summary>Справка по версии руководства</summary><p>В версии руководства Rudollforum на момент публикации указывались отдельные условия возврата до запуска производства. Перед оплатой обязательно проверьте действующую политику Moon-Doll.</p></details></>}
+            {index===7&&<><a className="link-button-secondary" href="https://www.moon-doll.com/pages/cancellation-and-refund-policy" target="_blank" rel="noopener noreferrer sponsored">Проверить политику отмены и возврата <span className="external-link-badge" aria-hidden="true">↗</span></a><details className="inline-help"><summary>Справка по версии руководства</summary><p>В версии руководства Rudollforum на момент публикации указывались отдельные условия возврата до запуска производства. Перед оплатой обязательно проверьте действующую политику Moon-Doll.</p></details></>}
             {index===12&&<Link className="link-button-secondary link-button-internal" href="/delivery-check">Открыть чек-лист проверки после доставки <span aria-hidden="true">→</span></Link>}
-            {index===14&&<a className="link-button-secondary" href="https://www.moon-doll.com/collections/defective-dolls-collection" target="_blank" rel="noopener noreferrer">Открыть раздел дефектных изделий <span className="external-link-badge" aria-hidden="true">↗</span></a>}
+            {index===14&&<a className="link-button-secondary" href="https://www.moon-doll.com/collections/defective-dolls-collection" target="_blank" rel="noopener noreferrer sponsored">Открыть раздел дефектных изделий <span className="external-link-badge" aria-hidden="true">↗</span></a>}
           </div>
         </section>)}
       </div>

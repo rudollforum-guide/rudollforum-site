@@ -136,13 +136,13 @@ export const brands: Brand[] = [
   { name: "Yuedoll", group: "additional", url: "https://yuedoll.com" },
 
   { name: "AheadForm", group: "robotics", url: "https://www.aheadform.com/" },
-  { name: "EX Robots", group: "robotics", url: "https://www.exrobots.net/" },
+  { name: "EX Robots", group: "robotics", note: "Официальный сайт временно недоступен." },
   { name: "Noetix Robotics", group: "robotics", url: "https://noetixrobotics.com/en" },
-  { name: "Realbotix", group: "robotics", url: "https://www.realbotix.com/robots" },
+  { name: "Realbotix", group: "robotics", url: "https://www.realbotix.com/" },
   { name: "UBTECH Robotics", group: "robotics", url: "https://www.ubtrobot.com/en" },
 
   { name: "Aotume Doll", group: "anime", url: "https://www.aotumedoll.us/", tags: ["anime"] },
-  { name: "BC Doll", group: "anime", url: "https://bcdolls.co", tags: ["anime"] },
+  { name: "BC Doll", group: "anime", url: "https://bcdolls.com/", tags: ["anime"] },
   { name: "Butterfly Doll", group: "anime", url: "https://butterflydoll.com.cn/", tags: ["anime"] },
   { name: "Croissant Doll", group: "anime", url: "https://croissantdoll.com", tags: ["anime"] },
   { name: "Elsa Babe", group: "anime", url: "https://elsababedoll.com/", features: "Среди моделей встречаются аниме- и фэнтези-варианты, а также отдельная фурри-линейка.", tags: ["anime", "furry", "fantasy"] },

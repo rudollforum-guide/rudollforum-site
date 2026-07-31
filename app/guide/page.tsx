@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd, MetaLine, SiteShell } from "../site";
-import { publicPath, siteUrl } from "../site-config";
+import { OPEN_GRAPH_IMAGE, publicPath, siteUrl } from "../site-config";
 
 export const metadata: Metadata = {
   title: "Практическое руководство по силиконовым и TPE-куклам — Rudollforum",
   description: "Полное руководство Rudollforum по выбору, покупке, эксплуатации, уходу, хранению и ремонту силиконовых и TPE-кукол. Доступна PDF-версия.",
   alternates: { canonical: siteUrl("/guide") },
+  openGraph: { url: siteUrl("/guide"), type: "article", images: [OPEN_GRAPH_IMAGE] },
 };
 
 const chapters = [
@@ -28,7 +29,7 @@ const chapters = [
 
 export default function GuidePage() {
   const breadcrumb={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":siteUrl("/")},{"@type":"ListItem","position":2,"name":"Практическое руководство","item":siteUrl("/guide")}]};
-  const article={"@context":"https://schema.org","@type":"Article",headline:"Практическое руководство владельца",description:metadata.description,inLanguage:"ru-RU",datePublished:"2026-07-24",dateModified:"2026-07-24",author:{"@type":"Organization","name":"Редакция Rudollforum"}};
+  const article={"@context":"https://schema.org","@type":"Article",headline:"Практическое руководство владельца",description:metadata.description,inLanguage:"ru-RU",datePublished:"2026-07-24",dateModified:"2026-07-24",author:{"@type":"Organization","name":"Редакция Rudollforum"},publisher:{"@type":"Organization","name":"Rudollforum"},mainEntityOfPage:siteUrl("/guide/")};
   return <SiteShell><JsonLd data={breadcrumb}/><JsonLd data={article}/><article className="article guide-page">
     <nav className="breadcrumbs"><Link href="/">Главная</Link><span>→</span><span>Практическое руководство</span></nav>
     <header className="article-hero"><span className="eyebrow">Навигация по знаниям</span><h1>Практическое руководство владельца</h1><p>Руководство Rudollforum посвящено выбору, покупке, эксплуатации, уходу, хранению и ремонту полноразмерных силиконовых и TPE-кукол. Оно основано на реальном опыте владельцев и систематизации практических ситуаций.</p></header>

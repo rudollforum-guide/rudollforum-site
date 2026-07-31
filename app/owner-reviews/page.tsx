@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FeaturedExternalLink, JsonLd, MetaLine, SiteShell } from "../site";
-import { siteUrl } from "../site-config";
+import { OPEN_GRAPH_IMAGE, siteUrl } from "../site-config";
 
 const title = "Отзывы владельцев силиконовых и TPE-кукол | Rudollforum";
 const description = "Отзывы владельцев силиконовых и TPE-кукол: материалы, вес, уход, хранение и длительная эксплуатация. Основные обсуждения и реальные отзывы публикуются в закрытой группе Rudollforum.";
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: siteUrl("/owner-reviews") },
-  openGraph: { title, description, url: siteUrl("/owner-reviews"), type: "website" },
+  openGraph: { title, description, url: siteUrl("/owner-reviews"), type: "website", images: [OPEN_GRAPH_IMAGE] },
 };
 
 const topics = [

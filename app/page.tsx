@@ -2,13 +2,13 @@ import Link from "next/link";
 import { SiteShell, MetaLine, JsonLd } from "./site";
 import { brandExamples } from "./brands/brands-data";
 import { SectionDivider } from "./site-effects";
-import { publicPath, siteUrl } from "./site-config";
+import { OPEN_GRAPH_IMAGE, publicPath, siteUrl } from "./site-config";
 
 export const metadata = {
   title: "Силиконовые и TPE-куклы — купить, выбрать, ухаживать | Rudollforum",
   description: "Справочник Rudollforum о силиконовых, TPE и реалистичных куклах: как выбрать и купить модель, сравнить материалы, проверить продавца, изучить бренды, уход и отзывы владельцев.",
   alternates: { canonical: "/" },
-  openGraph: { title: "Силиконовые и TPE-куклы — купить, выбрать, ухаживать | Rudollforum", description: "Справочник Rudollforum о силиконовых, TPE и реалистичных куклах: как выбрать и купить модель, сравнить материалы, проверить продавца, изучить бренды, уход и отзывы владельцев.", url: siteUrl("/"), type: "website" as const },
+  openGraph: { title: "Силиконовые и TPE-куклы — купить, выбрать, ухаживать | Rudollforum", description: "Справочник Rudollforum о силиконовых, TPE и реалистичных куклах: как выбрать и купить модель, сравнить материалы, проверить продавца, изучить бренды, уход и отзывы владельцев.", url: siteUrl("/"), type: "website" as const, images: [OPEN_GRAPH_IMAGE] },
 };
 
 const sections = [

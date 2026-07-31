@@ -3,7 +3,7 @@ import Link from "next/link";
 import { JsonLd, MetaLine, SiteShell } from "../site";
 import { BrandCatalog } from "./brand-catalog";
 import { brands } from "./brands-data";
-import { siteUrl } from "../site-config";
+import { OPEN_GRAPH_IMAGE, siteUrl } from "../site-config";
 
 export const metadata: Metadata = {
   title: "Бренды силиконовых и ТПЕ-кукол — каталог Rudollforum",
@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     description: "Справочный каталог брендов с официальными ссылками, категориями, поиском и фильтрами.",
     url: siteUrl("/brands"),
     type: "website",
+    images: [OPEN_GRAPH_IMAGE],
   },
 };
 
@@ -79,6 +80,7 @@ export default function BrandsPage() {
             <Link href="/how-to-choose">Как выбрать модель <span>→</span></Link>
             <Link href="/where-to-buy">Где купить и что проверить <span>→</span></Link>
             <Link href="/silicone-or-tpe">Силикон или ТПЕ <span>→</span></Link>
+            <Link href="/realistic-dolls">Реалистичные модели <span>→</span></Link>
           </div>
         </section>
 
