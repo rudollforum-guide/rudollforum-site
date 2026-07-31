@@ -16,12 +16,31 @@ type FeaturedExternalLinkProps = {
   rel?: string;
 };
 
+type FeaturedLinkContentProps = {
+  icon: string;
+  title: string;
+  description: string;
+  arrow: string;
+};
+
+function FeaturedLinkContent({icon,title,description,arrow}:FeaturedLinkContentProps) {
+  return <>
+    <span className="footer-featured-icon" aria-hidden="true">{icon}</span>
+    <span className="footer-featured-copy"><b>{title}</b><small>{description}</small></span>
+    <span className="footer-featured-arrow" aria-hidden="true">{arrow}</span>
+  </>;
+}
+
 export function FeaturedExternalLink({href,variant,icon,title,subtitle,rel="noopener noreferrer"}:FeaturedExternalLinkProps) {
   return <a className={`footer-featured-link footer-featured-link--${variant}`} href={href} target="_blank" rel={rel}>
-    <span className="footer-featured-icon" aria-hidden="true">{icon}</span>
-    <span className="footer-featured-copy"><b>{title}</b><small>{subtitle}</small></span>
-    <span className="footer-featured-arrow" aria-hidden="true">↗</span>
+    <FeaturedLinkContent icon={icon} title={title} description={subtitle} arrow="↗"/>
   </a>;
+}
+
+export function FeaturedInternalLink({href,icon,title,description,arrow="→"}:{href:string;icon:string;title:string;description:string;arrow?:string}) {
+  return <Link className="footer-featured-link footer-featured-link--internal" href={href}>
+    <FeaturedLinkContent icon={icon} title={title} description={description} arrow={arrow}/>
+  </Link>;
 }
 
 export function SiteShell({children}:{children:React.ReactNode}) {
