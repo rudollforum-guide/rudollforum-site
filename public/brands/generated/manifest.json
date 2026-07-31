@@ -1,0 +1,666 @@
+{
+  "Aibei Doll": {
+    "group": "known",
+    "slug": "aibei-doll",
+    "source": "/brands/generated/source/known/aibei-doll.webp",
+    "site": "/brands/generated/known/aibei-doll.webp",
+    "sheet": 1,
+    "position": 1
+  },
+  "AngelKiss": {
+    "group": "known",
+    "slug": "angelkiss",
+    "source": "/brands/generated/source/known/angelkiss.webp",
+    "site": "/brands/generated/known/angelkiss.webp",
+    "sheet": 1,
+    "position": 2
+  },
+  "ClimaxDoll": {
+    "group": "known",
+    "slug": "climaxdoll",
+    "source": "/brands/generated/source/known/climaxdoll.webp",
+    "site": "/brands/generated/known/climaxdoll.webp",
+    "sheet": 1,
+    "position": 3
+  },
+  "Doll Senior": {
+    "group": "known",
+    "slug": "doll-senior",
+    "source": "/brands/generated/source/known/doll-senior.webp",
+    "site": "/brands/generated/known/doll-senior.webp",
+    "sheet": 1,
+    "position": 4
+  },
+  "Dolls Castle": {
+    "group": "known",
+    "slug": "dolls-castle",
+    "source": "/brands/generated/source/known/dolls-castle.webp",
+    "site": "/brands/generated/known/dolls-castle.webp",
+    "sheet": 1,
+    "position": 5
+  },
+  "Evasdoll": {
+    "group": "known",
+    "slug": "evasdoll",
+    "source": "/brands/generated/source/known/evasdoll.webp",
+    "site": "/brands/generated/known/evasdoll.webp",
+    "sheet": 1,
+    "position": 6
+  },
+  "EXdoll": {
+    "group": "known",
+    "slug": "exdoll",
+    "source": "/brands/generated/source/known/exdoll.webp",
+    "site": "/brands/generated/known/exdoll.webp",
+    "sheet": 1,
+    "position": 7
+  },
+  "Fanreal Doll": {
+    "group": "known",
+    "slug": "fanreal-doll",
+    "source": "/brands/generated/source/known/fanreal-doll.webp",
+    "site": "/brands/generated/known/fanreal-doll.webp",
+    "sheet": 1,
+    "position": 8
+  },
+  "Funwest Doll": {
+    "group": "known",
+    "slug": "funwest-doll",
+    "source": "/brands/generated/source/known/funwest-doll.webp",
+    "site": "/brands/generated/known/funwest-doll.webp",
+    "sheet": 1,
+    "position": 9
+  },
+  "Galatea Doll": {
+    "group": "known",
+    "slug": "galatea-doll",
+    "source": "/brands/generated/source/known/galatea-doll.webp",
+    "site": "/brands/generated/known/galatea-doll.webp",
+    "sheet": 1,
+    "position": 10
+  },
+  "Game Lady": {
+    "group": "known",
+    "slug": "game-lady",
+    "source": "/brands/generated/source/known/game-lady.webp",
+    "site": "/brands/generated/known/game-lady.webp",
+    "sheet": 1,
+    "position": 11
+  },
+  "Gynoid": {
+    "group": "known",
+    "slug": "gynoid",
+    "source": "/brands/generated/source/known/gynoid.webp",
+    "site": "/brands/generated/known/gynoid.webp",
+    "sheet": 1,
+    "position": 12
+  },
+  "Irontech Doll": {
+    "group": "known",
+    "slug": "irontech-doll",
+    "source": "/brands/generated/source/known/irontech-doll.webp",
+    "site": "/brands/generated/known/irontech-doll.webp",
+    "sheet": 2,
+    "position": 1
+  },
+  "Jiusheng Doll": {
+    "group": "known",
+    "slug": "jiusheng-doll",
+    "source": "/brands/generated/source/known/jiusheng-doll.webp",
+    "site": "/brands/generated/known/jiusheng-doll.webp",
+    "sheet": 2,
+    "position": 2
+  },
+  "Lacedoll / TMDoll": {
+    "group": "known",
+    "slug": "lacedoll-tmdoll",
+    "source": "/brands/generated/source/known/lacedoll-tmdoll.webp",
+    "site": "/brands/generated/known/lacedoll-tmdoll.webp",
+    "sheet": 2,
+    "position": 3
+  },
+  "Lilydoll": {
+    "group": "known",
+    "slug": "lilydoll",
+    "source": "/brands/generated/source/known/lilydoll.webp",
+    "site": "/brands/generated/known/lilydoll.webp",
+    "sheet": 2,
+    "position": 4
+  },
+  "Lusandy Doll": {
+    "group": "known",
+    "slug": "lusandy-doll",
+    "source": "/brands/generated/source/known/lusandy-doll.webp",
+    "site": "/brands/generated/known/lusandy-doll.webp",
+    "sheet": 2,
+    "position": 5
+  },
+  "MMX Doll": {
+    "group": "known",
+    "slug": "mmx-doll",
+    "source": "/brands/generated/source/known/mmx-doll.webp",
+    "site": "/brands/generated/known/mmx-doll.webp",
+    "sheet": 2,
+    "position": 6
+  },
+  "OrangeIn Doll": {
+    "group": "known",
+    "slug": "orangein-doll",
+    "source": "/brands/generated/source/known/orangein-doll.webp",
+    "site": "/brands/generated/known/orangein-doll.webp",
+    "sheet": 2,
+    "position": 7
+  },
+  "Piper Doll": {
+    "group": "known",
+    "slug": "piper-doll",
+    "source": "/brands/generated/source/known/piper-doll.webp",
+    "site": "/brands/generated/known/piper-doll.webp",
+    "sheet": 2,
+    "position": 8
+  },
+  "RealDoll": {
+    "group": "known",
+    "slug": "realdoll",
+    "source": "/brands/generated/source/known/realdoll.webp",
+    "site": "/brands/generated/known/realdoll.webp",
+    "sheet": 2,
+    "position": 9
+  },
+  "Real Lady Doll": {
+    "group": "known",
+    "slug": "real-lady-doll",
+    "source": "/brands/generated/source/known/real-lady-doll.webp",
+    "site": "/brands/generated/known/real-lady-doll.webp",
+    "sheet": 2,
+    "position": 10
+  },
+  "Ridmii Doll": {
+    "group": "known",
+    "slug": "ridmii-doll",
+    "source": "/brands/generated/source/known/ridmii-doll.webp",
+    "site": "/brands/generated/known/ridmii-doll.webp",
+    "sheet": 2,
+    "position": 11
+  },
+  "Sanhui Doll": {
+    "group": "known",
+    "slug": "sanhui-doll",
+    "source": "/brands/generated/source/known/sanhui-doll.webp",
+    "site": "/brands/generated/known/sanhui-doll.webp",
+    "sheet": 2,
+    "position": 12
+  },
+  "SE Doll": {
+    "group": "known",
+    "slug": "se-doll",
+    "source": "/brands/generated/source/known/se-doll.webp",
+    "site": "/brands/generated/known/se-doll.webp",
+    "sheet": 3,
+    "position": 1
+  },
+  "SHEDOLL": {
+    "group": "known",
+    "slug": "shedoll",
+    "source": "/brands/generated/source/known/shedoll.webp",
+    "site": "/brands/generated/known/shedoll.webp",
+    "sheet": 3,
+    "position": 2
+  },
+  "Sigafun": {
+    "group": "known",
+    "slug": "sigafun",
+    "source": "/brands/generated/source/known/sigafun.webp",
+    "site": "/brands/generated/known/sigafun.webp",
+    "sheet": 3,
+    "position": 3
+  },
+  "Sino Doll": {
+    "group": "known",
+    "slug": "sino-doll",
+    "source": "/brands/generated/source/known/sino-doll.webp",
+    "site": "/brands/generated/known/sino-doll.webp",
+    "sheet": 3,
+    "position": 4
+  },
+  "SM Doll": {
+    "group": "known",
+    "slug": "sm-doll",
+    "source": "/brands/generated/source/known/sm-doll.webp",
+    "site": "/brands/generated/known/sm-doll.webp",
+    "sheet": 3,
+    "position": 5
+  },
+  "Starpery Doll": {
+    "group": "known",
+    "slug": "starpery-doll",
+    "source": "/brands/generated/source/known/starpery-doll.webp",
+    "site": "/brands/generated/known/starpery-doll.webp",
+    "sheet": 3,
+    "position": 6
+  },
+  "SY Doll": {
+    "group": "known",
+    "slug": "sy-doll",
+    "source": "/brands/generated/source/known/sy-doll.webp",
+    "site": "/brands/generated/known/sy-doll.webp",
+    "sheet": 3,
+    "position": 7
+  },
+  "TAYU Doll": {
+    "group": "known",
+    "slug": "tayu-doll",
+    "source": "/brands/generated/source/known/tayu-doll.webp",
+    "site": "/brands/generated/known/tayu-doll.webp",
+    "sheet": 3,
+    "position": 8
+  },
+  "TOP-CYDOLL / TopCY": {
+    "group": "known",
+    "slug": "top-cydoll-topcy",
+    "source": "/brands/generated/source/known/top-cydoll-topcy.webp",
+    "site": "/brands/generated/known/top-cydoll-topcy.webp",
+    "sheet": 3,
+    "position": 9
+  },
+  "Top Fire Doll": {
+    "group": "known",
+    "slug": "top-fire-doll",
+    "source": "/brands/generated/source/known/top-fire-doll.webp",
+    "site": "/brands/generated/known/top-fire-doll.webp",
+    "sheet": 3,
+    "position": 10
+  },
+  "WM Doll": {
+    "group": "known",
+    "slug": "wm-doll",
+    "source": "/brands/generated/source/known/wm-doll.webp",
+    "site": "/brands/generated/known/wm-doll.webp",
+    "sheet": 3,
+    "position": 11
+  },
+  "XT Dolls": {
+    "group": "known",
+    "slug": "xt-dolls",
+    "source": "/brands/generated/source/known/xt-dolls.webp",
+    "site": "/brands/generated/known/xt-dolls.webp",
+    "sheet": 3,
+    "position": 12
+  },
+  "Zelex": {
+    "group": "known",
+    "slug": "zelex",
+    "source": "/brands/generated/source/known/zelex.webp",
+    "site": "/brands/generated/known/zelex.webp",
+    "sheet": 4,
+    "position": 1
+  },
+  "6Ye Doll": {
+    "group": "additional",
+    "slug": "6ye-doll",
+    "source": "/brands/generated/source/additional/6ye-doll.webp",
+    "site": "/brands/generated/additional/6ye-doll.webp",
+    "sheet": 4,
+    "position": 2
+  },
+  "AF Doll": {
+    "group": "additional",
+    "slug": "af-doll",
+    "source": "/brands/generated/source/additional/af-doll.webp",
+    "site": "/brands/generated/additional/af-doll.webp",
+    "sheet": 4,
+    "position": 3
+  },
+  "Doll Forever": {
+    "group": "additional",
+    "slug": "doll-forever",
+    "source": "/brands/generated/source/additional/doll-forever.webp",
+    "site": "/brands/generated/additional/doll-forever.webp",
+    "sheet": 4,
+    "position": 4
+  },
+  "Fire Doll": {
+    "group": "additional",
+    "slug": "fire-doll",
+    "source": "/brands/generated/source/additional/fire-doll.webp",
+    "site": "/brands/generated/additional/fire-doll.webp",
+    "sheet": 4,
+    "position": 5
+  },
+  "Firefly Diary": {
+    "group": "additional",
+    "slug": "firefly-diary",
+    "source": "/brands/generated/source/additional/firefly-diary.webp",
+    "site": "/brands/generated/additional/firefly-diary.webp",
+    "sheet": 4,
+    "position": 6
+  },
+  "FJ Doll": {
+    "group": "additional",
+    "slug": "fj-doll",
+    "source": "/brands/generated/source/additional/fj-doll.webp",
+    "site": "/brands/generated/additional/fj-doll.webp",
+    "sheet": 4,
+    "position": 7
+  },
+  "FU Doll / Fudoll": {
+    "group": "additional",
+    "slug": "fu-doll-fudoll",
+    "source": "/brands/generated/source/additional/fu-doll-fudoll.webp",
+    "site": "/brands/generated/additional/fu-doll-fudoll.webp",
+    "sheet": 4,
+    "position": 8
+  },
+  "HR Doll": {
+    "group": "additional",
+    "slug": "hr-doll",
+    "source": "/brands/generated/source/additional/hr-doll.webp",
+    "site": "/brands/generated/additional/hr-doll.webp",
+    "sheet": 4,
+    "position": 9
+  },
+  "iDo Doll": {
+    "group": "additional",
+    "slug": "ido-doll",
+    "source": "/brands/generated/source/additional/ido-doll.webp",
+    "site": "/brands/generated/additional/ido-doll.webp",
+    "sheet": 4,
+    "position": 10
+  },
+  "IL Doll": {
+    "group": "additional",
+    "slug": "il-doll",
+    "source": "/brands/generated/source/additional/il-doll.webp",
+    "site": "/brands/generated/additional/il-doll.webp",
+    "sheet": 4,
+    "position": 11
+  },
+  "Jarliet Doll": {
+    "group": "additional",
+    "slug": "jarliet-doll",
+    "source": "/brands/generated/source/additional/jarliet-doll.webp",
+    "site": "/brands/generated/additional/jarliet-doll.webp",
+    "sheet": 4,
+    "position": 12
+  },
+  "JK Dolls": {
+    "group": "additional",
+    "slug": "jk-dolls",
+    "source": "/brands/generated/source/additional/jk-dolls.webp",
+    "site": "/brands/generated/additional/jk-dolls.webp",
+    "sheet": 5,
+    "position": 1
+  },
+  "JX Doll": {
+    "group": "additional",
+    "slug": "jx-doll",
+    "source": "/brands/generated/source/additional/jx-doll.webp",
+    "site": "/brands/generated/additional/jx-doll.webp",
+    "sheet": 5,
+    "position": 2
+  },
+  "JY Doll": {
+    "group": "additional",
+    "slug": "jy-doll",
+    "source": "/brands/generated/source/additional/jy-doll.webp",
+    "site": "/brands/generated/additional/jy-doll.webp",
+    "sheet": 5,
+    "position": 3
+  },
+  "LORIBEAR / GK Doll": {
+    "group": "additional",
+    "slug": "loribear-gk-doll",
+    "source": "/brands/generated/source/additional/loribear-gk-doll.webp",
+    "site": "/brands/generated/additional/loribear-gk-doll.webp",
+    "sheet": 5,
+    "position": 4
+  },
+  "Lushdoll": {
+    "group": "additional",
+    "slug": "lushdoll",
+    "source": "/brands/generated/source/additional/lushdoll.webp",
+    "site": "/brands/generated/additional/lushdoll.webp",
+    "sheet": 5,
+    "position": 5
+  },
+  "MD Doll": {
+    "group": "additional",
+    "slug": "md-doll",
+    "source": "/brands/generated/source/additional/md-doll.webp",
+    "site": "/brands/generated/additional/md-doll.webp",
+    "sheet": 5,
+    "position": 6
+  },
+  "MLW Doll": {
+    "group": "additional",
+    "slug": "mlw-doll",
+    "source": "/brands/generated/source/additional/mlw-doll.webp",
+    "site": "/brands/generated/additional/mlw-doll.webp",
+    "sheet": 5,
+    "position": 7
+  },
+  "ORdoll": {
+    "group": "additional",
+    "slug": "ordoll",
+    "source": "/brands/generated/source/additional/ordoll.webp",
+    "site": "/brands/generated/additional/ordoll.webp",
+    "sheet": 5,
+    "position": 8
+  },
+  "Rainstorm Doll": {
+    "group": "additional",
+    "slug": "rainstorm-doll",
+    "source": "/brands/generated/source/additional/rainstorm-doll.webp",
+    "site": "/brands/generated/additional/rainstorm-doll.webp",
+    "sheet": 5,
+    "position": 9
+  },
+  "Rosretty Doll": {
+    "group": "additional",
+    "slug": "rosretty-doll",
+    "source": "/brands/generated/source/additional/rosretty-doll.webp",
+    "site": "/brands/generated/additional/rosretty-doll.webp",
+    "sheet": 5,
+    "position": 10
+  },
+  "XY Doll": {
+    "group": "additional",
+    "slug": "xy-doll",
+    "source": "/brands/generated/source/additional/xy-doll.webp",
+    "site": "/brands/generated/additional/xy-doll.webp",
+    "sheet": 5,
+    "position": 11
+  },
+  "XYcolo Doll": {
+    "group": "additional",
+    "slug": "xycolo-doll",
+    "source": "/brands/generated/source/additional/xycolo-doll.webp",
+    "site": "/brands/generated/additional/xycolo-doll.webp",
+    "sheet": 5,
+    "position": 12
+  },
+  "Yearndoll": {
+    "group": "additional",
+    "slug": "yearndoll",
+    "source": "/brands/generated/source/additional/yearndoll.webp",
+    "site": "/brands/generated/additional/yearndoll.webp",
+    "sheet": 6,
+    "position": 1
+  },
+  "YL Doll": {
+    "group": "additional",
+    "slug": "yl-doll",
+    "source": "/brands/generated/source/additional/yl-doll.webp",
+    "site": "/brands/generated/additional/yl-doll.webp",
+    "sheet": 6,
+    "position": 2
+  },
+  "Yuedoll": {
+    "group": "additional",
+    "slug": "yuedoll",
+    "source": "/brands/generated/source/additional/yuedoll.webp",
+    "site": "/brands/generated/additional/yuedoll.webp",
+    "sheet": 6,
+    "position": 3
+  },
+  "AheadForm": {
+    "group": "robotics",
+    "slug": "aheadform",
+    "source": "/brands/generated/source/robotics/aheadform.webp",
+    "site": "/brands/generated/robotics/aheadform.webp",
+    "sheet": 6,
+    "position": 4
+  },
+  "EX Robots": {
+    "group": "robotics",
+    "slug": "ex-robots",
+    "source": "/brands/generated/source/robotics/ex-robots.webp",
+    "site": "/brands/generated/robotics/ex-robots.webp",
+    "sheet": 6,
+    "position": 5
+  },
+  "Noetix Robotics": {
+    "group": "robotics",
+    "slug": "noetix-robotics",
+    "source": "/brands/generated/source/robotics/noetix-robotics.webp",
+    "site": "/brands/generated/robotics/noetix-robotics.webp",
+    "sheet": 6,
+    "position": 6
+  },
+  "Realbotix": {
+    "group": "robotics",
+    "slug": "realbotix",
+    "source": "/brands/generated/source/robotics/realbotix.webp",
+    "site": "/brands/generated/robotics/realbotix.webp",
+    "sheet": 6,
+    "position": 7
+  },
+  "UBTECH Robotics": {
+    "group": "robotics",
+    "slug": "ubtech-robotics",
+    "source": "/brands/generated/source/robotics/ubtech-robotics.webp",
+    "site": "/brands/generated/robotics/ubtech-robotics.webp",
+    "sheet": 6,
+    "position": 8
+  },
+  "Aotume Doll": {
+    "group": "anime",
+    "slug": "aotume-doll",
+    "source": "/brands/generated/source/anime/aotume-doll.webp",
+    "site": "/brands/generated/anime/aotume-doll.webp",
+    "sheet": 6,
+    "position": 9
+  },
+  "BC Doll": {
+    "group": "anime",
+    "slug": "bc-doll",
+    "source": "/brands/generated/source/anime/bc-doll.webp",
+    "site": "/brands/generated/anime/bc-doll.webp",
+    "sheet": 6,
+    "position": 10
+  },
+  "Butterfly Doll": {
+    "group": "anime",
+    "slug": "butterfly-doll",
+    "source": "/brands/generated/source/anime/butterfly-doll.webp",
+    "site": "/brands/generated/anime/butterfly-doll.webp",
+    "sheet": 6,
+    "position": 11
+  },
+  "Croissant Doll": {
+    "group": "anime",
+    "slug": "croissant-doll",
+    "source": "/brands/generated/source/anime/croissant-doll.webp",
+    "site": "/brands/generated/anime/croissant-doll.webp",
+    "sheet": 6,
+    "position": 12
+  },
+  "Elsa Babe": {
+    "group": "anime",
+    "slug": "elsa-babe",
+    "source": "/brands/generated/source/anime/elsa-babe.webp",
+    "site": "/brands/generated/anime/elsa-babe.webp",
+    "sheet": 7,
+    "position": 1
+  },
+  "Irokebijin": {
+    "group": "anime",
+    "slug": "irokebijin",
+    "source": "/brands/generated/source/anime/irokebijin.webp",
+    "site": "/brands/generated/anime/irokebijin.webp",
+    "sheet": 7,
+    "position": 2
+  },
+  "MozuDoll": {
+    "group": "anime",
+    "slug": "mozudoll",
+    "source": "/brands/generated/source/anime/mozudoll.webp",
+    "site": "/brands/generated/anime/mozudoll.webp",
+    "sheet": 7,
+    "position": 3
+  },
+  "MRL Doll": {
+    "group": "anime",
+    "slug": "mrl-doll",
+    "source": "/brands/generated/source/anime/mrl-doll.webp",
+    "site": "/brands/generated/anime/mrl-doll.webp",
+    "sheet": 7,
+    "position": 4
+  },
+  "Moonvale, линейка SY Dolls": {
+    "group": "furry",
+    "slug": "moonvale",
+    "source": "/brands/generated/source/furry/moonvale.webp",
+    "site": "/brands/generated/furry/moonvale.webp",
+    "sheet": 7,
+    "position": 5
+  },
+  "Erovenus": {
+    "group": "torsos",
+    "slug": "erovenus",
+    "source": "/brands/generated/source/torsos/erovenus.webp",
+    "site": "/brands/generated/torsos/erovenus.webp",
+    "sheet": 7,
+    "position": 6
+  },
+  "JigglyJoy": {
+    "group": "torsos",
+    "slug": "jigglyjoy",
+    "source": "/brands/generated/source/torsos/jigglyjoy.webp",
+    "site": "/brands/generated/torsos/jigglyjoy.webp",
+    "sheet": 7,
+    "position": 7
+  },
+  "Tantaly": {
+    "group": "torsos",
+    "slug": "tantaly",
+    "source": "/brands/generated/source/torsos/tantaly.webp",
+    "site": "/brands/generated/torsos/tantaly.webp",
+    "sheet": 7,
+    "position": 8
+  },
+  "Yeloly": {
+    "group": "torsos",
+    "slug": "yeloly",
+    "source": "/brands/generated/source/torsos/yeloly.webp",
+    "site": "/brands/generated/torsos/yeloly.webp",
+    "sheet": 7,
+    "position": 9
+  },
+  "Teddy Babes": {
+    "group": "plush",
+    "slug": "teddy-babes",
+    "source": "/brands/generated/source/plush/teddy-babes.webp",
+    "site": "/brands/generated/plush/teddy-babes.webp",
+    "sheet": 7,
+    "position": 10
+  },
+  "Valentina Girls": {
+    "group": "plush",
+    "slug": "valentina-girls",
+    "source": "/brands/generated/source/plush/valentina-girls.webp",
+    "site": "/brands/generated/plush/valentina-girls.webp",
+    "sheet": 7,
+    "position": 11
+  }
+}
