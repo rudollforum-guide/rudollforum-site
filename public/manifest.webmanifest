@@ -1,0 +1,22 @@
+{
+  "name": "Rudollforum",
+  "short_name": "Rudollforum",
+  "description": "Независимый справочник по силиконовым и TPE-куклам",
+  "start_url": "/rudollforum-site/",
+  "scope": "/rudollforum-site/",
+  "display": "standalone",
+  "background_color": "#f8f4ed",
+  "theme_color": "#30213d",
+  "icons": [
+    {
+      "src": "/rudollforum-site/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/rudollforum-site/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
