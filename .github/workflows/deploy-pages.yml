@@ -36,8 +36,8 @@ jobs:
         run: npm run build:pages
         env:
           GITHUB_PAGES: "true"
-          NEXT_PUBLIC_BASE_PATH: "/rudollforum-site"
-          NEXT_PUBLIC_SITE_URL: "https://rudollforum-guide.github.io/rudollforum-site"
+          NEXT_PUBLIC_BASE_PATH: ""
+          NEXT_PUBLIC_SITE_URL: "https://rudollforum.ru"
 
       - name: Disable Jekyll processing
         run: touch out/.nojekyll
