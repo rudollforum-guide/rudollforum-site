@@ -20,8 +20,8 @@ const topics = [
 ] as const;
 
 export default function OwnerReviewsPage() {
-  const breadcrumb = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":siteUrl("/")},{"@type":"ListItem","position":2,"name":"Отзывы владельцев","item":siteUrl("/owner-reviews")}]};
-  const collection = {"@context":"https://schema.org","@type":"CollectionPage",name:"Отзывы владельцев силиконовых и TPE-кукол",description,url:siteUrl("/owner-reviews"),inLanguage:"ru-RU",datePublished:"2026-08-01",dateModified:"2026-08-01",publisher:{"@type":"Organization","name":"Rudollforum"}};
+  const breadcrumb = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":siteUrl("/")},{"@type":"ListItem","position":2,"name":"Отзывы владельцев","item":siteUrl("/owner-reviews/")}]};
+  const collection = {"@context":"https://schema.org","@type":"CollectionPage",name:"Отзывы владельцев силиконовых и TPE-кукол",description,url:siteUrl("/owner-reviews/"),inLanguage:"ru-RU",datePublished:"2026-08-01",dateModified:"2026-08-01",publisher:{"@type":"Organization","name":"Rudollforum"}};
 
   return <SiteShell>
     <JsonLd data={breadcrumb}/>

@@ -103,10 +103,10 @@ const faq = [
 ];
 
 export default function MoonDollGuidePage() {
-  const canonical = siteUrl("/shops/moon-doll-guide");
+  const canonical = siteUrl("/shops/moon-doll-guide/");
   const breadcrumb = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
     {"@type":"ListItem","position":1,"name":"Главная","item":siteUrl("/")},
-    {"@type":"ListItem","position":2,"name":"Покупка","item":siteUrl("/where-to-buy")},
+    {"@type":"ListItem","position":2,"name":"Покупка","item":siteUrl("/where-to-buy/")},
     {"@type":"ListItem","position":3,"name":"Как оформить заказ на Moon-Doll","item":canonical},
   ]};
   const article = {"@context":"https://schema.org","@type":"Article",headline:"Как оформить заказ на Moon-Doll",description:metadata.description,inLanguage:"ru-RU",datePublished:"2026-07-24",dateModified:"2026-07-24",author:{"@type":"Organization","name":"Редакция Rudollforum"},publisher:{"@type":"Organization","name":"Rudollforum"},mainEntityOfPage:canonical};

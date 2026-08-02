@@ -24,7 +24,7 @@ export default function BrandsPage() {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Главная", item: siteUrl("/") },
-      { "@type": "ListItem", position: 2, name: "Бренды", item: siteUrl("/brands") },
+      { "@type": "ListItem", position: 2, name: "Бренды", item: siteUrl("/brands/") },
     ],
   };
   const collection = {
@@ -32,7 +32,7 @@ export default function BrandsPage() {
     "@type": "CollectionPage",
     name: "Бренды силиконовых и ТПЕ-кукол",
     description: metadata.description,
-    url: siteUrl("/brands"),
+    url: siteUrl("/brands/"),
     inLanguage: "ru-RU",
   };
   const itemList = {
