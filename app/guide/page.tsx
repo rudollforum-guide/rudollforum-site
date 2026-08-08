@@ -31,7 +31,7 @@ export default function GuidePage() {
   const breadcrumb={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":siteUrl("/")},{"@type":"ListItem","position":2,"name":"Практическое руководство","item":siteUrl("/guide/")}]};
   const article={"@context":"https://schema.org","@type":"Article",headline:"Практическое руководство владельца",description:metadata.description,inLanguage:"ru-RU",datePublished:"2026-07-24",dateModified:"2026-07-24",author:{"@type":"Organization","name":"Редакция Rudollforum"},publisher:{"@type":"Organization","name":"Rudollforum"},mainEntityOfPage:siteUrl("/guide/")};
   return <SiteShell><JsonLd data={breadcrumb}/><JsonLd data={article}/><article className="article guide-page">
-    <nav className="breadcrumbs"><Link href="/">Главная</Link><span>→</span><span>Практическое руководство</span></nav>
+    <nav className="breadcrumbs"><Link href="/">Главная</Link><span aria-hidden="true">·</span><span>Практическое руководство</span></nav>
     <header className="article-hero"><span className="eyebrow">Навигация по знаниям</span><h1>Практическое руководство владельца</h1><p>Руководство Rudollforum посвящено выбору, покупке, эксплуатации, уходу, хранению и ремонту полноразмерных силиконовых и TPE-кукол. Оно основано на реальном опыте владельцев и систематизации практических ситуаций.</p></header>
     <section className="guide-pdf-card" aria-labelledby="guide-pdf-title">
       <figure className="guide-pdf-cover">
@@ -50,14 +50,14 @@ export default function GuidePage() {
         </ul>
         <p className="guide-pdf-warning">18+. Материал предназначен только для совершеннолетней аудитории.</p>
         <div className="guide-pdf-actions">
-          <a className="link-button-primary" href={publicPath("/documents/rudollforum-guide-tpe-silicone-2026.pdf")} target="_blank" rel="noopener noreferrer">Открыть полное руководство <span aria-hidden="true">↗</span></a>
-          <a className="link-button-secondary" href={publicPath("/documents/rudollforum-guide-tpe-silicone-2026.pdf")} download>Скачать PDF <span aria-hidden="true">↓</span></a>
+          <a className="link-button-primary" href={publicPath("/documents/rudollforum-guide-tpe-silicone-2026.pdf")} target="_blank" rel="noopener noreferrer">Открыть полное руководство</a>
+          <a className="link-button-secondary" href={publicPath("/documents/rudollforum-guide-tpe-silicone-2026.pdf")} download>Скачать PDF</a>
         </div>
         <p className="guide-pdf-rights">© Rudollforum, 2026. Разрешено личное использование и цитирование с указанием источника. Полное копирование, удаление авторства, публикация под другим именем и коммерческое распространение без письменного разрешения запрещены.</p>
       </div>
     </section>
     <section className="guide-intro"><p>Выберите тему, чтобы перейти к самостоятельной веб-статье. Рекомендации нужно сверять с точным материалом, конструкцией и инструкцией производителя. После выбора требований можно сравнить <Link href="/where-to-buy">магазины и официальные площадки</Link>.</p></section>
-    <div className="chapter-grid">{chapters.map(([title,text,href],index)=><Link href={href} key={href}><span>{String(index+1).padStart(2,"0")}</span><h2>{title}</h2><p>{text}</p><b>Открыть главу →</b></Link>)}</div>
+    <div className="chapter-grid">{chapters.map(([title,text,href],index)=><Link href={href} key={href}><span>{String(index+1).padStart(2,"0")}</span><h2>{title}</h2><p>{text}</p><b>Открыть главу</b></Link>)}</div>
     <MetaLine/>
   </article></SiteShell>
 }

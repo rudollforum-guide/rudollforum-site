@@ -20,26 +20,24 @@ type FeaturedLinkContentProps = {
   icon: string;
   title: string;
   description: string;
-  arrow: string;
 };
 
-function FeaturedLinkContent({icon,title,description,arrow}:FeaturedLinkContentProps) {
+function FeaturedLinkContent({icon,title,description}:FeaturedLinkContentProps) {
   return <>
     <span className="footer-featured-icon" aria-hidden="true">{icon}</span>
     <span className="footer-featured-copy"><b>{title}</b><small>{description}</small></span>
-    <span className="footer-featured-arrow" aria-hidden="true">{arrow}</span>
   </>;
 }
 
 export function FeaturedExternalLink({href,variant,icon,title,subtitle,rel="noopener noreferrer"}:FeaturedExternalLinkProps) {
   return <a className={`footer-featured-link footer-featured-link--${variant}`} href={href} target="_blank" rel={rel}>
-    <FeaturedLinkContent icon={icon} title={title} description={subtitle} arrow="↗"/>
+    <FeaturedLinkContent icon={icon} title={title} description={subtitle}/>
   </a>;
 }
 
-export function FeaturedInternalLink({href,icon,title,description,arrow="→"}:{href:string;icon:string;title:string;description:string;arrow?:string}) {
+export function FeaturedInternalLink({href,icon,title,description}:{href:string;icon:string;title:string;description:string}) {
   return <Link className="footer-featured-link footer-featured-link--internal" href={href}>
-    <FeaturedLinkContent icon={icon} title={title} description={description} arrow={arrow}/>
+    <FeaturedLinkContent icon={icon} title={title} description={description}/>
   </Link>;
 }
 

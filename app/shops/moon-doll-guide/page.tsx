@@ -115,7 +115,7 @@ export default function MoonDollGuidePage() {
   return <SiteShell>
     <JsonLd data={breadcrumb}/><JsonLd data={article}/><JsonLd data={howTo}/>
     <article className="article moon-guide">
-      <nav className="breadcrumbs"><Link href="/">Главная</Link><span>→</span><Link href="/where-to-buy">Покупка</Link><span>→</span><span>Moon-Doll</span></nav>
+      <nav className="breadcrumbs"><Link href="/">Главная</Link><span aria-hidden="true">·</span><Link href="/where-to-buy">Покупка</Link><span aria-hidden="true">·</span><span>Moon-Doll</span></nav>
       <header className="article-hero">
         <span className="eyebrow">Внешний магазин · независимая инструкция</span>
         <h1>Как оформить заказ на Moon-Doll</h1>
@@ -130,12 +130,12 @@ export default function MoonDollGuidePage() {
             {step.items&&<ul className="check-list">{step.items.map(item=><li key={item}>{item}</li>)}</ul>}
             {step.note&&<aside className="step-warning">{step.note}</aside>}
             {step.extra&&<p className="step-extra">{step.extra}</p>}
-            {index===2&&<div className="contact-card"><span>Справочные контакты</span><a className="link-inline-arrow" href="https://t.me/jackymoondoll" target="_blank" rel="noopener noreferrer sponsored">Telegram: @jackymoondoll <span aria-hidden="true">↗</span></a><a className="link-inline-arrow" href="mailto:sales@moon-doll.com">E-mail: sales@moon-doll.com <span aria-hidden="true">→</span></a><a className="link-inline-arrow" href="https://wa.me/601126685168" target="_blank" rel="noopener noreferrer sponsored">WhatsApp: +60 11-2668 5168 <span aria-hidden="true">↗</span></a></div>}
-            {index===4&&<div className="moon-promo"><span>Промокод Rudollforum</span><code>RUDOLLFORUM</code><a className="link-button-secondary" href="https://www.moon-doll.com/" target="_blank" rel="noopener noreferrer sponsored">Открыть Moon-Doll <b className="external-link-badge" aria-hidden="true">↗</b></a></div>}
+            {index===2&&<div className="contact-card"><span>Справочные контакты</span><a className="link-inline" href="https://t.me/jackymoondoll" target="_blank" rel="noopener noreferrer sponsored">Telegram: @jackymoondoll</a><a className="link-inline" href="mailto:sales@moon-doll.com">E-mail: sales@moon-doll.com</a><a className="link-inline" href="https://wa.me/601126685168" target="_blank" rel="noopener noreferrer sponsored">WhatsApp: +60 11-2668 5168</a></div>}
+            {index===4&&<div className="moon-promo"><span>Промокод Rudollforum</span><code>RUDOLLFORUM</code><a className="link-button-secondary" href="https://www.moon-doll.com/" target="_blank" rel="noopener noreferrer sponsored">Открыть Moon-Doll</a></div>}
             {index===5&&<div className="checkout-grid"><div><strong>Information</strong><p>Проверьте имя, адрес, телефон, электронную почту и промокод.</p></div><div><strong>Shipping</strong><p>Повторно проверьте адрес и действующие условия доставки.</p></div><div><strong>Payment</strong><p>На этапе оплаты выберите доступный для вашей страны и банка способ. Конкретные реквизиты и инструкции магазин может прислать отдельным письмом или инвойсом.</p></div><aside>Если банк приостановил перевод, свяжитесь со службой безопасности банка и менеджером магазина. Не повторяйте платёж несколько раз без подтверждения его статуса.</aside></div>}
-            {index===7&&<><a className="link-button-secondary" href="https://www.moon-doll.com/pages/cancellation-and-refund-policy" target="_blank" rel="noopener noreferrer sponsored">Проверить политику отмены и возврата <span className="external-link-badge" aria-hidden="true">↗</span></a><details className="inline-help"><summary>Справка по версии руководства</summary><p>В версии руководства Rudollforum на момент публикации указывались отдельные условия возврата до запуска производства. Перед оплатой обязательно проверьте действующую политику Moon-Doll.</p></details></>}
-            {index===12&&<Link className="link-button-secondary link-button-internal" href="/delivery-check">Открыть чек-лист проверки после доставки <span aria-hidden="true">→</span></Link>}
-            {index===14&&<a className="link-button-secondary" href="https://www.moon-doll.com/collections/defective-dolls-collection" target="_blank" rel="noopener noreferrer sponsored">Открыть раздел дефектных изделий <span className="external-link-badge" aria-hidden="true">↗</span></a>}
+            {index===7&&<><a className="link-button-secondary" href="https://www.moon-doll.com/pages/cancellation-and-refund-policy" target="_blank" rel="noopener noreferrer sponsored">Проверить политику отмены и возврата</a><details className="inline-help"><summary>Справка по версии руководства</summary><p>В версии руководства Rudollforum на момент публикации указывались отдельные условия возврата до запуска производства. Перед оплатой обязательно проверьте действующую политику Moon-Doll.</p></details></>}
+            {index===12&&<Link className="link-button-secondary link-button-internal" href="/delivery-check">Открыть чек-лист проверки после доставки</Link>}
+            {index===14&&<a className="link-button-secondary" href="https://www.moon-doll.com/collections/defective-dolls-collection" target="_blank" rel="noopener noreferrer sponsored">Открыть раздел дефектных изделий</a>}
           </div>
         </section>)}
       </div>
@@ -143,7 +143,7 @@ export default function MoonDollGuidePage() {
       <section className="reseller-note"><span className="section-no">Проверка цены</span><h2>Почему у реселлера цена может быть другой</h2><p>Цена у магазина-посредника может отличаться от цены на официальной витрине производителя из-за закупочных условий, партнёрской программы, акций, валютного курса и способа формирования доставки.</p><p>Разница в цене сама по себе не подтверждает ни подлинность, ни подделку. Перед заказом следует проверить происхождение товара, условия гарантии и связь продавца с производителем.</p></section>
 
       <section className="section faq moon-faq"><div className="section-head"><div><span className="section-no">FAQ</span><h2>Вопросы об оформлении заказа</h2></div></div>{faq.map(([q,a])=><details key={q}><summary>{q}</summary><p>{a}</p></details>)}</section>
-      <section className="related"><span className="section-no">Продолжить проверку</span><h2>Связанные материалы</h2><div><Link href="/safe-purchase">Безопасный выбор продавца <span>→</span></Link><Link href="/delivery-check">Проверка после доставки <span>→</span></Link><Link href="/useful-links">Полезные ссылки <span>→</span></Link></div></section>
+      <section className="related"><span className="section-no">Продолжить проверку</span><h2>Связанные материалы</h2><div><Link href="/safe-purchase">Безопасный выбор продавца</Link><Link href="/delivery-check">Проверка после доставки</Link><Link href="/useful-links">Полезные ссылки</Link></div></section>
       <MetaLine/>
     </article>
   </SiteShell>;

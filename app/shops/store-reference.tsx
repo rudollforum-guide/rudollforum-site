@@ -13,7 +13,7 @@ type StoreReferenceProps = {
 };
 
 export function CommercialLink({href,children,rel=sponsoredRel}:{href:string;children:React.ReactNode;rel?:string}) {
-  return <a className="store-reference-link" href={href} target="_blank" rel={rel}>{children}<span aria-hidden="true">↗</span></a>;
+  return <a className="store-reference-link" href={href} target="_blank" rel={rel}>{children}</a>;
 }
 
 export function StoreReference({slug,h1,description,intro,children}:StoreReferenceProps) {
@@ -22,15 +22,15 @@ export function StoreReference({slug,h1,description,intro,children}:StoreReferen
   const article={"@context":"https://schema.org","@type":"Article",headline:h1,description,url:canonical,mainEntityOfPage:canonical,inLanguage:"ru-RU",datePublished:"2026-08-08",dateModified:"2026-08-08",author:{"@type":"Organization","name":"Редакция Rudollforum"},publisher:{"@type":"Organization","name":"Rudollforum"}};
   const webPage={"@context":"https://schema.org","@type":"WebPage",name:h1,description,url:canonical,inLanguage:"ru-RU",datePublished:"2026-08-08",dateModified:"2026-08-08"};
   return <SiteShell><JsonLd data={breadcrumb}/><JsonLd data={article}/><JsonLd data={webPage}/><article className="article store-reference-page">
-    <nav className="breadcrumbs"><Link href="/">Главная</Link><span>→</span><Link href="/where-to-buy">Где купить</Link><span>→</span><span>{h1}</span></nav>
+    <nav className="breadcrumbs"><Link href="/">Главная</Link><span aria-hidden="true">·</span><Link href="/where-to-buy">Где купить</Link><span aria-hidden="true">·</span><span>{h1}</span></nav>
     <header className="article-hero"><span className="eyebrow">Внешний магазин · справочная страница · 18+</span><h1>{h1}</h1><p>{intro}</p></header>
     <aside className="notice">Rudollforum не продаёт товары, не принимает оплату и не является посредником или гарантом сделки. Покупатель самостоятельно проверяет продавца, предложение и условия заказа.</aside>
     <div className="article-body">{children}</div>
     <section className="related"><span className="section-no">Продолжить проверку</span><h2>Связанные материалы</h2><div>
-      <Link href="/where-to-buy">Магазины и официальные площадки <span>→</span></Link>
-      <Link href="/safe-purchase">Безопасная покупка <span>→</span></Link>
-      <Link href="/delivery-check">Проверка доставки <span>→</span></Link>
-      <Link href="/brands">Каталог брендов <span>→</span></Link>
+      <Link href="/where-to-buy">Магазины и официальные площадки</Link>
+      <Link href="/safe-purchase">Безопасная покупка</Link>
+      <Link href="/delivery-check">Проверка доставки</Link>
+      <Link href="/brands">Каталог брендов</Link>
     </div></section>
     <MetaLine published="2026-08-08" updated="2026-08-08"/>
   </article></SiteShell>;

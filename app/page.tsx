@@ -51,10 +51,10 @@ export default function Home() {
     <SectionDivider />
 
     <section className="section" id="topics"><div className="section-head"><div><span className="section-no">Навигация</span><h2>Ключевые темы справочника</h2></div><p>Краткие вводные ведут к отдельным подробным материалам.</p></div>
-      <div className="topic-grid">{sections.slice(0,4).map(([title, text, href, no, icon]) => <Link href={href} className="topic-card reveal" key={no}><div className="card-top"><span>{no}</span><i aria-hidden="true">{icon}</i></div><h3>{title}</h3><p>{text}</p><b>Читать материал →</b></Link>)}</div>
-      <figure className="editorial-visual guide-visual" id="guide-banner"><img src={publicPath("/guide-hanfu.webp")} alt="Взрослая женщина в светлом закрытом ханьфу читает справочник" width="1400" height="850" loading="lazy"/><figcaption><span>Осознанный выбор</span><strong>Сначала факты, затем решение</strong><Link href="/how-to-choose">Как выбрать модель →</Link><Link className="home-guide-link" href="/guide">Полное руководство владельца →</Link></figcaption></figure>
+      <div className="topic-grid">{sections.slice(0,4).map(([title, text, href, no, icon]) => <Link href={href} className="topic-card reveal" key={no}><div className="card-top"><span>{no}</span><i aria-hidden="true">{icon}</i></div><h3>{title}</h3><p>{text}</p><b>Читать материал</b></Link>)}</div>
+      <figure className="editorial-visual guide-visual" id="guide-banner"><img src={publicPath("/guide-hanfu.webp")} alt="Взрослая женщина в светлом закрытом ханьфу читает справочник" width="1400" height="850" loading="lazy"/><figcaption><span>Осознанный выбор</span><strong>Сначала факты, затем решение</strong><Link href="/how-to-choose">Как выбрать модель</Link><Link className="home-guide-link" href="/guide">Полное руководство владельца</Link></figcaption></figure>
       <aside className="external-card" aria-labelledby="moon-doll-title">
-        <div className="external-card-icon" aria-hidden="true">↗</div>
+        <div className="external-card-icon" aria-hidden="true">☾</div>
         <div className="external-card-copy">
           <span className="external-label">Внешний ресурс</span>
           <h3 id="moon-doll-title">Где посмотреть доступные модели</h3>
@@ -62,11 +62,11 @@ export default function Home() {
         </div>
         <div className="external-card-action">
           <div className="promo"><strong>Для читателей Rudollforum может быть доступна скидка 5% по промокоду <code>RUDOLLFORUM</code>.</strong><small>Перед оплатой проверьте актуальные условия, итоговую стоимость и применение промокода.</small></div>
-          <div className="external-actions"><a className="link-button-secondary" href="https://www.moon-doll.com/" target="_blank" rel="noopener noreferrer sponsored" aria-label="Открыть Moon-Doll во внешней вкладке">Открыть Moon-Doll <span className="external-link-badge" aria-hidden="true">↗</span></a><Link className="link-button-secondary link-button-internal" href="/shops/moon-doll-guide">Читать инструкцию <span aria-hidden="true">→</span></Link></div>
+          <div className="external-actions"><a className="link-button-secondary" href="https://www.moon-doll.com/" target="_blank" rel="noopener noreferrer sponsored" aria-label="Открыть Moon-Doll во внешней вкладке">Открыть Moon-Doll</a><Link className="link-button-secondary link-button-internal" href="/shops/moon-doll-guide">Читать инструкцию</Link></div>
         </div>
       </aside>
-      <div className="topic-grid topic-grid-continuation">{sections.slice(4).map(([title, text, href, no, icon]) => <Link href={href} className="topic-card reveal" key={no}><div className="card-top"><span>{no}</span><i aria-hidden="true">{icon}</i></div><h3>{title}</h3><p>{text}</p><b>Читать материал →</b></Link>)}</div>
-      <figure className="editorial-visual care-visual"><img src={publicPath("/care-hanfu.webp")} alt="Взрослая женщина в закрытом лиловом ханьфу аккуратно складывает ткань у сундука" width="1400" height="788" loading="lazy"/><figcaption><span>Уход и хранение</span><strong>Долговечность начинается с привычек</strong><Link href="/storage">Правила хранения →</Link></figcaption></figure>
+      <div className="topic-grid topic-grid-continuation">{sections.slice(4).map(([title, text, href, no, icon]) => <Link href={href} className="topic-card reveal" key={no}><div className="card-top"><span>{no}</span><i aria-hidden="true">{icon}</i></div><h3>{title}</h3><p>{text}</p><b>Читать материал</b></Link>)}</div>
+      <figure className="editorial-visual care-visual"><img src={publicPath("/care-hanfu.webp")} alt="Взрослая женщина в закрытом лиловом ханьфу аккуратно складывает ткань у сундука" width="1400" height="788" loading="lazy"/><figcaption><span>Уход и хранение</span><strong>Долговечность начинается с привычек</strong><Link href="/storage">Правила хранения</Link></figcaption></figure>
     </section>
     <SectionDivider />
 
@@ -87,12 +87,12 @@ export default function Home() {
     <section className="section split" aria-labelledby="purchase-guides-title">
       <div className="feature"><span className="section-no">Навигация по покупке</span><h2 id="purchase-guides-title">Как купить силиконовую или TPE-куклу</h2><p>Сначала определите подходящий материал и допустимый вес, затем сравните бренды и каналы покупки. В справочнике представлены разные варианты покупки: международные магазины, российские площадки и официальные сайты брендов. Rudollforum помогает проверить магазин и модель, но не оформляет заказы.</p></div>
       <div className="article-list">
-        <Link href="/buy-tpe-doll"><span>Материал</span><strong>Купить TPE-куклу: как выбрать</strong><small>→</small></Link>
-        <Link href="/buy-silicone-doll"><span>Материал</span><strong>Купить силиконовую куклу: как выбрать</strong><small>→</small></Link>
-        <Link href="/realistic-dolls"><span>Критерии</span><strong>Реалистичные модели</strong><small>→</small></Link>
-        <Link href="/brands"><span>Каталог</span><strong>Бренды и отдельные линейки</strong><small>→</small></Link>
-        <Link href="/where-to-buy"><span>Магазины</span><strong>Смотреть магазины и варианты покупки</strong><small>→</small></Link>
-        <Link href="/owner-reviews"><span>Опыт</span><strong>Отзывы владельцев</strong><small>→</small></Link>
+        <Link href="/buy-tpe-doll"><span>Материал</span><strong>Купить TPE-куклу: как выбрать</strong></Link>
+        <Link href="/buy-silicone-doll"><span>Материал</span><strong>Купить силиконовую куклу: как выбрать</strong></Link>
+        <Link href="/realistic-dolls"><span>Критерии</span><strong>Реалистичные модели</strong></Link>
+        <Link href="/brands"><span>Каталог</span><strong>Бренды и отдельные линейки</strong></Link>
+        <Link href="/where-to-buy"><span>Магазины</span><strong>Смотреть магазины и варианты покупки</strong></Link>
+        <Link href="/owner-reviews"><span>Опыт</span><strong>Отзывы владельцев</strong></Link>
       </div>
     </section>
     <SectionDivider />
@@ -111,13 +111,13 @@ export default function Home() {
       <div className="community-directions" aria-label="Направления сообщества">
         {["Доброжелательное общение владельцев","Помощь новичкам","Опыт эксплуатации","Галерея кукол участников","Уважительное отношение к куклам и их владельцам","Тематические фотосессии","Конкурсы и творческие проекты","Обсуждение брендов и моделей","Новости производителей и магазинов","Уход, хранение и ремонт","Одежда, парики и создание образов","Практические руководства"].map((item,index)=><span key={item}><i>{String(index+1).padStart(2,"0")}</i>{item}</span>)}
       </div>
-      <div className="community-actions"><a className="link-button-secondary" href="https://t.me/rudollforum" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">✉</span>Открыть Telegram Rudollforum <span className="external-link-badge" aria-hidden="true">↗</span></a><Link className="link-button-secondary link-button-internal" href="/community">О сообществе <span aria-hidden="true">→</span></Link><small>На канале доступны открытые материалы и информация о закрытой группе владельцев.</small></div>
+      <div className="community-actions"><a className="link-button-secondary" href="https://t.me/rudollforum" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">✈</span>Открыть Telegram Rudollforum</a><Link className="link-button-secondary link-button-internal" href="/community">О сообществе</Link><small>На канале доступны открытые материалы и информация о закрытой группе владельцев.</small></div>
     </section>
 
     <section className="section" aria-labelledby="owner-reviews-title">
       <div className="section-head"><div><span className="section-no">Редакционный раздел</span><h2 id="owner-reviews-title">Отзывы владельцев</h2></div><p>Будущая подборка будет опираться только на подтверждённый опыт без выдуманных оценок и количества отзывов.</p></div>
       <div className="topic-grid">
-        {[['Материалы','Состав, мягкость, текстура и изменения поверхности со временем.'],['Вес и переноска','Фактическая масса, скелет, суставы и бытовое удобство.'],['Уход и долговечность','Очистка, пятна, хранение, ремонт и состояние спустя месяцы.']].map(([title,text],index)=><Link href="/owner-reviews" className="topic-card" key={title}><div className="card-top"><span>{String(index+1).padStart(2,"0")}</span><i aria-hidden="true">◇</i></div><h3>{title}</h3><p>{text}</p><b>Открыть раздел →</b></Link>)}
+        {[['Материалы','Состав, мягкость, текстура и изменения поверхности со временем.'],['Вес и переноска','Фактическая масса, скелет, суставы и бытовое удобство.'],['Уход и долговечность','Очистка, пятна, хранение, ремонт и состояние спустя месяцы.']].map(([title,text],index)=><Link href="/owner-reviews" className="topic-card" key={title}><div className="card-top"><span>{String(index+1).padStart(2,"0")}</span><i aria-hidden="true">◇</i></div><h3>{title}</h3><p>{text}</p><b>Открыть раздел</b></Link>)}
       </div>
     </section>
 
@@ -130,10 +130,10 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="section faq" id="faq"><div className="section-head"><div><span className="section-no">FAQ</span><h2>Частые вопросы</h2></div><Link href="/useful-links">Дополнительные ресурсы →</Link></div>
+    <section className="section faq" id="faq"><div className="section-head"><div><span className="section-no">FAQ</span><h2>Частые вопросы</h2></div><Link href="/useful-links">Дополнительные ресурсы</Link></div>
       {faq.map(([q,a])=><details key={q}><summary>{q}</summary><p>{a}</p></details>)}
     </section>
-    <section className="policy-callout"><div><span>Редакционные принципы</span><h2>Информация отделена от коммерческих упоминаний</h2></div><p>Упоминание бренда или продавца не означает рекомендацию. Партнёрские ссылки и промокоды обозначаются явно.</p><Link href="/editorial-policy">Редакционная политика →</Link></section>
+    <section className="policy-callout"><div><span>Редакционные принципы</span><h2>Информация отделена от коммерческих упоминаний</h2></div><p>Упоминание бренда или продавца не означает рекомендацию. Партнёрские ссылки и промокоды обозначаются явно.</p><Link href="/editorial-policy">Редакционная политика</Link></section>
     <MetaLine />
   </SiteShell>;
 }

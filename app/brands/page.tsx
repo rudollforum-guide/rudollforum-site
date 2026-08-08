@@ -54,7 +54,7 @@ export default function BrandsPage() {
       <JsonLd data={collection} />
       <JsonLd data={itemList} />
       <article className="article brands-page">
-        <nav className="breadcrumbs"><Link href="/">Главная</Link><span>→</span><span>Бренды</span></nav>
+        <nav className="breadcrumbs"><Link href="/">Главная</Link><span aria-hidden="true">·</span><span>Бренды</span></nav>
         <header className="article-hero">
           <span className="eyebrow">Справочный каталог · 18+</span>
           <h1>Бренды силиконовых и ТПЕ-кукол</h1>
@@ -77,16 +77,16 @@ export default function BrandsPage() {
           <span className="section-no">Продолжить изучение</span>
           <h2>Перед выбором модели</h2>
           <div>
-            <Link href="/how-to-choose">Как выбрать модель <span>→</span></Link>
-            <Link href="/where-to-buy">Где купить и что проверить <span>→</span></Link>
-            <Link href="/silicone-or-tpe">Силикон или ТПЕ <span>→</span></Link>
-            <Link href="/realistic-dolls">Реалистичные модели <span>→</span></Link>
+            <Link href="/how-to-choose">Как выбрать модель</Link>
+            <Link href="/where-to-buy">Где купить и что проверить</Link>
+            <Link href="/silicone-or-tpe">Силикон или ТПЕ</Link>
+            <Link href="/realistic-dolls">Реалистичные модели</Link>
           </div>
         </section>
 
         <aside className="catalog-editorial">
           <p>Справочник составлен на основе открытых данных и материалов сообщества Rudollforum. Названия, сайты, линейки и особенности брендов могут изменяться. Обнаруженную неточность можно сообщить администрации Rudollforum.</p>
-          <a className="link-button-secondary" href="https://t.me/rudollforum" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">✉</span>Сообщить об изменении или дополнении <span className="external-link-badge" aria-hidden="true">↗</span></a>
+          <a className="link-button-secondary" href="https://t.me/rudollforum" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">✈</span>Сообщить об изменении или дополнении</a>
         </aside>
         <MetaLine />
       </article>

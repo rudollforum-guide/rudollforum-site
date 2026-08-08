@@ -27,7 +27,7 @@ export default function OwnerReviewsPage() {
     <JsonLd data={breadcrumb}/>
     <JsonLd data={collection}/>
     <article className="article owner-reviews-page">
-      <nav className="breadcrumbs"><Link href="/">Главная</Link><span>→</span><span>Отзывы владельцев</span></nav>
+      <nav className="breadcrumbs"><Link href="/">Главная</Link><span aria-hidden="true">·</span><span>Отзывы владельцев</span></nav>
       <header className="article-hero">
         <span className="eyebrow">Редакционный раздел · 18+</span>
         <h1>Отзывы владельцев силиконовых и TPE-кукол</h1>
@@ -69,10 +69,10 @@ export default function OwnerReviewsPage() {
         <span className="section-no">Полезные материалы</span>
         <h2 id="owner-related-title">Продолжить изучение</h2>
         <div>
-          <Link href="/brands">Каталог брендов<span aria-hidden="true">→</span></Link>
-          <Link href="/where-to-buy">Где купить<span aria-hidden="true">→</span></Link>
-          <Link href="/how-to-choose">Как выбрать<span aria-hidden="true">→</span></Link>
-          <Link href="/silicone-or-tpe">Сравнение силикона и TPE<span aria-hidden="true">→</span></Link>
+          <Link href="/brands">Каталог брендов</Link>
+          <Link href="/where-to-buy">Где купить</Link>
+          <Link href="/how-to-choose">Как выбрать</Link>
+          <Link href="/silicone-or-tpe">Сравнение силикона и TPE</Link>
         </div>
       </section>
       <MetaLine published="2026-08-01" updated="2026-08-01"/>

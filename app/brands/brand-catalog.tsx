@@ -81,11 +81,11 @@ function BrandCard({ brand }: { brand: Brand }) {
             <>
               <span className="external-label">Внешний сайт</span>
               <a className="link-button-primary brand-link" href={brand.url} target="_blank" rel="noopener noreferrer">
-                Открыть официальный сайт <span aria-hidden="true">↗</span>
+                Открыть официальный сайт
               </a>
               {brand.secondaryUrl && (
-                <a className="secondary-external link-inline-arrow" href={brand.secondaryUrl} target="_blank" rel="noopener noreferrer">
-                  Дополнительный официальный сайт ↗
+                <a className="secondary-external link-inline" href={brand.secondaryUrl} target="_blank" rel="noopener noreferrer">
+                  Дополнительный официальный сайт
                 </a>
               )}
             </>

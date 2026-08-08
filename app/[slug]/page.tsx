@@ -22,10 +22,9 @@ function ArticleItem({ item, heading }: { item: string; heading: string }) {
     const rel = isMoonDoll ? "noopener noreferrer sponsored" : "noopener noreferrer";
     return (
       <li className={isAction ? "article-link-action" : undefined}>
-        <a className={isAction ? "link-button-secondary" : "link-inline-arrow"} href={external[1]} target="_blank" rel={rel}>
+        <a className={isAction ? "link-button-secondary" : "link-inline"} href={external[1]} target="_blank" rel={rel}>
           {isTelegram && <span aria-hidden="true">✉</span>}
           {label}
-          <span className={isAction ? "external-link-badge" : undefined} aria-hidden="true">↗</span>
         </a>
       </li>
     );
@@ -35,8 +34,8 @@ function ArticleItem({ item, heading }: { item: string; heading: string }) {
     const label = heading === "Moon-Doll" ? "Читать инструкцию" : internal[1];
     return (
       <li className={isAction ? "article-link-action" : undefined}>
-        <Link className={isAction ? "link-button-secondary link-button-internal" : "link-inline-arrow"} href={internal[2]}>
-          {label}<span aria-hidden="true">→</span>
+        <Link className={isAction ? "link-button-secondary link-button-internal" : "link-inline"} href={internal[2]}>
+          {label}
         </Link>
       </li>
     );
@@ -67,5 +66,5 @@ export default async function Article({params}:{params:Promise<{slug:string}>}){
   const howToSteps=howToSectionIndexes[slug]?.map((index,position)=>({"@type":"HowToStep",position:position+1,name:a.sections[index].heading,text:[...a.sections[index].text,...(a.sections[index].items??[])].join(" ")}));
   const article={"@context":"https://schema.org","@type":a.schema||"Article",headline:a.h1,description:a.description,url:siteUrl(`/${slug}/`),inLanguage:"ru-RU",datePublished,dateModified,author:{"@type":"Organization","name":"Редакция Rudollforum"},publisher:{"@type":"Organization","name":"Rudollforum"},...(a.schema==="HowTo"&&howToSteps?{step:howToSteps}:{})};
   const webPage={"@context":"https://schema.org","@type":"WebPage",name:a.h1,description:a.description,url:siteUrl(`/${slug}/`),inLanguage:"ru-RU",datePublished,dateModified};
-  return <SiteShell><JsonLd data={breadcrumb}/><JsonLd data={article}/><JsonLd data={webPage}/><article className="article"><nav className="breadcrumbs"><Link href="/">Главная</Link><span>→</span><span>{a.h1}</span></nav><div className="article-hero"><span className="eyebrow">{a.kicker||"Справочник Rudollforum"}</span><h1>{a.h1}</h1><p>{a.intro}</p></div>{a.notice&&<aside className="notice">{a.notice}</aside>}<div className="article-body">{a.sections.map((s,i)=><section key={s.heading}><span className="chapter">{String(i+1).padStart(2,"0")}</span><div><h2>{s.heading}</h2>{s.text.map(p=><p key={p}>{p}</p>)}{s.heading === "Магазины и площадки" && (slug === "where-to-buy" || slug === "useful-links") ? <StoreDirectory compact={slug === "useful-links"}/> : s.items&&(slug === "community" && s.heading === "Опыт продолжается в обсуждениях" ? <CommunityDiscussionAction/> : <ul className={s.heading === "Moon-Doll" || s.heading === "Опыт продолжается в обсуждениях" ? "article-link-actions" : undefined}>{s.items.map(x=><ArticleItem item={x} heading={s.heading} key={x}/>)}</ul>)}{s.subsections?.map(subsection=><div className="article-subsection" key={subsection.heading}><h3>{subsection.heading}</h3>{subsection.text.map(p=><p key={p}>{p}</p>)}</div>)}{s.table&&<div className="table-wrap"><table><thead><tr>{s.table[0].map(c=><th key={c}>{c}</th>)}</tr></thead><tbody>{s.table.slice(1).map((r,j)=><tr key={j}>{r.map(c=><td key={c}>{c}</td>)}</tr>)}</tbody></table></div>}</div></section>)}</div><section className="related"><span className="section-no">Продолжить чтение</span><h2>Связанные материалы</h2><div>{a.related.map(([n,h])=><Link href={h} key={h}>{n}<span>→</span></Link>)}</div></section><MetaLine published={datePublished} updated={dateModified}/></article></SiteShell>
+  return <SiteShell><JsonLd data={breadcrumb}/><JsonLd data={article}/><JsonLd data={webPage}/><article className="article"><nav className="breadcrumbs"><Link href="/">Главная</Link><span aria-hidden="true">·</span><span>{a.h1}</span></nav><div className="article-hero"><span className="eyebrow">{a.kicker||"Справочник Rudollforum"}</span><h1>{a.h1}</h1><p>{a.intro}</p></div>{a.notice&&<aside className="notice">{a.notice}</aside>}<div className="article-body">{a.sections.map((s,i)=><section key={s.heading}><span className="chapter">{String(i+1).padStart(2,"0")}</span><div><h2>{s.heading}</h2>{s.text.map(p=><p key={p}>{p}</p>)}{s.heading === "Магазины и площадки" && (slug === "where-to-buy" || slug === "useful-links") ? <StoreDirectory compact={slug === "useful-links"}/> : s.items&&(slug === "community" && s.heading === "Опыт продолжается в обсуждениях" ? <CommunityDiscussionAction/> : <ul className={s.heading === "Moon-Doll" || s.heading === "Опыт продолжается в обсуждениях" ? "article-link-actions" : undefined}>{s.items.map(x=><ArticleItem item={x} heading={s.heading} key={x}/>)}</ul>)}{s.subsections?.map(subsection=><div className="article-subsection" key={subsection.heading}><h3>{subsection.heading}</h3>{subsection.text.map(p=><p key={p}>{p}</p>)}</div>)}{s.table&&<div className="table-wrap"><table><thead><tr>{s.table[0].map(c=><th key={c}>{c}</th>)}</tr></thead><tbody>{s.table.slice(1).map((r,j)=><tr key={j}>{r.map(c=><td key={c}>{c}</td>)}</tr>)}</tbody></table></div>}</div></section>)}</div><section className="related"><span className="section-no">Продолжить чтение</span><h2>Связанные материалы</h2><div>{a.related.map(([n,h])=><Link href={h} key={h}>{n}</Link>)}</div></section><MetaLine published={datePublished} updated={dateModified}/></article></SiteShell>
 }

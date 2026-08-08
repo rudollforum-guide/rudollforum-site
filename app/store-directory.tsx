@@ -4,7 +4,7 @@ const sponsoredRel = "noopener noreferrer sponsored";
 const editorialRel = "noopener noreferrer";
 
 function PlatformLink({ href, children, rel = sponsoredRel }: { href: string; children: React.ReactNode; rel?: string }) {
-  return <a href={href} target="_blank" rel={rel}>{children}<span aria-hidden="true">↗</span></a>;
+  return <a href={href} target="_blank" rel={rel}>{children}</a>;
 }
 
 export function StoreDirectory({ compact = false }: { compact?: boolean }) {
