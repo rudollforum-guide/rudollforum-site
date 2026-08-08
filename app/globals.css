@@ -707,3 +707,26 @@ main{padding-top:12px}
 .article-body .store-platforms a:focus-visible{outline:3px solid #9a7ca566;outline-offset:3px}
 @media(max-width:600px){.article-list a{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.related a,.catalog-links a,.article-body .store-platforms a{transition:none!important}.related a:hover,.article-body .store-platforms a:hover{transform:none}}
+
+/* Store directory emphasis on the purchase guide. */
+.article:has(.store-directory:not(.store-directory--compact)){max-width:1240px}
+.store-directory:not(.store-directory--compact){gap:24px;margin-top:36px}
+.store-directory:not(.store-directory--compact) .store-card{min-height:600px;gap:24px;padding:30px;border-radius:22px;box-shadow:0 18px 42px rgba(64,43,72,.11);transition:transform 180ms ease,border-color 180ms ease,box-shadow 180ms ease}
+.store-directory:not(.store-directory--compact) .store-card:hover{transform:translateY(-2px);border-color:rgba(181,140,67,.62);box-shadow:0 22px 48px rgba(64,43,72,.15)}
+.store-directory:not(.store-directory--compact) .store-card h3{font-size:32px}
+.store-directory:not(.store-directory--compact) .store-card>p{font-size:16px;line-height:1.7}
+.store-directory:not(.store-directory--compact) .store-feature{gap:7px;padding:16px}
+.store-directory:not(.store-directory--compact) .store-feature b{font-size:12px}
+.store-directory:not(.store-directory--compact) .store-feature span{font-size:12px;line-height:1.6}
+.store-directory:not(.store-directory--compact) .store-card-actions{gap:12px}
+.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-link{min-height:54px;padding:8px 12px}
+.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-icon{width:36px;height:36px}
+.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-copy b{font-size:13px}
+.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-copy small{font-size:10px}
+@media(max-width:700px){
+  .store-directory:not(.store-directory--compact){gap:18px;margin-top:28px}
+  .store-directory:not(.store-directory--compact) .store-card{min-height:0;gap:20px;padding:24px}
+  .store-directory:not(.store-directory--compact) .store-card h3{font-size:28px}
+  .store-directory:not(.store-directory--compact) .store-card>p{font-size:15px}
+}
+@media(prefers-reduced-motion:reduce){.store-directory:not(.store-directory--compact) .store-card{transition:none}.store-directory:not(.store-directory--compact) .store-card:hover{transform:none}}
