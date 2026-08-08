@@ -9,7 +9,7 @@ export function MetaLine({published="2026-07-24",updated="2026-07-24"}:{publishe
 
 type FeaturedExternalLinkProps = {
   href: string;
-  variant: "pdf" | "telegram" | "moon";
+  variant: "pdf" | "telegram" | "moon" | "store";
   icon: string;
   title: string;
   subtitle: string;

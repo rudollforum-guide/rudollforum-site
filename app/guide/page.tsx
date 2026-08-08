@@ -56,7 +56,7 @@ export default function GuidePage() {
         <p className="guide-pdf-rights">© Rudollforum, 2026. Разрешено личное использование и цитирование с указанием источника. Полное копирование, удаление авторства, публикация под другим именем и коммерческое распространение без письменного разрешения запрещены.</p>
       </div>
     </section>
-    <section className="guide-intro"><p>Выберите тему, чтобы перейти к самостоятельной веб-статье. Рекомендации нужно сверять с точным материалом, конструкцией и инструкцией производителя.</p></section>
+    <section className="guide-intro"><p>Выберите тему, чтобы перейти к самостоятельной веб-статье. Рекомендации нужно сверять с точным материалом, конструкцией и инструкцией производителя. После выбора требований можно сравнить <Link href="/where-to-buy">магазины и официальные площадки</Link>.</p></section>
     <div className="chapter-grid">{chapters.map(([title,text,href],index)=><Link href={href} key={href}><span>{String(index+1).padStart(2,"0")}</span><h2>{title}</h2><p>{text}</p><b>Открыть главу →</b></Link>)}</div>
     <MetaLine/>
   </article></SiteShell>

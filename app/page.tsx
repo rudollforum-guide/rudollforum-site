@@ -85,13 +85,13 @@ export default function Home() {
     <SectionDivider />
 
     <section className="section split" aria-labelledby="purchase-guides-title">
-      <div className="feature"><span className="section-no">Навигация по покупке</span><h2 id="purchase-guides-title">Как купить силиконовую или TPE-куклу</h2><p>Сначала определите подходящий материал и допустимый вес, затем сравните бренды и каналы покупки. Rudollforum помогает проверить магазин и модель, но не оформляет заказы.</p></div>
+      <div className="feature"><span className="section-no">Навигация по покупке</span><h2 id="purchase-guides-title">Как купить силиконовую или TPE-куклу</h2><p>Сначала определите подходящий материал и допустимый вес, затем сравните бренды и каналы покупки. В справочнике представлены разные варианты покупки: международные магазины, российские площадки и официальные сайты брендов. Rudollforum помогает проверить магазин и модель, но не оформляет заказы.</p></div>
       <div className="article-list">
         <Link href="/buy-tpe-doll"><span>Материал</span><strong>Купить TPE-куклу: как выбрать</strong><small>→</small></Link>
         <Link href="/buy-silicone-doll"><span>Материал</span><strong>Купить силиконовую куклу: как выбрать</strong><small>→</small></Link>
         <Link href="/realistic-dolls"><span>Критерии</span><strong>Реалистичные модели</strong><small>→</small></Link>
         <Link href="/brands"><span>Каталог</span><strong>Бренды и отдельные линейки</strong><small>→</small></Link>
-        <Link href="/where-to-buy"><span>Магазины</span><strong>Где купить и что проверить</strong><small>→</small></Link>
+        <Link href="/where-to-buy"><span>Магазины</span><strong>Смотреть магазины и варианты покупки</strong><small>→</small></Link>
         <Link href="/owner-reviews"><span>Опыт</span><strong>Отзывы владельцев</strong><small>→</small></Link>
       </div>
     </section>
