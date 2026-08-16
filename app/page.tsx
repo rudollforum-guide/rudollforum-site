@@ -41,7 +41,7 @@ export default function Home() {
         <div className="hero-note"><span>Практика владельцев</span><span>Независимо от брендов</span><span>Без приёма оплаты</span></div>
         <p className="trust-copy">Справочник систематизирует практический опыт сообщества. Отдельные рекомендации могут не подходить конкретной модели, поэтому перед применением необходимо учитывать материал и инструкцию производителя.</p>
       </div>
-      <figure className="hero-art"><img src={publicPath("/hero-hanfu.webp")} alt="Взрослая женщина в закрытом традиционном ханьфу среди белых лотосов" width="900" height="1800" fetchPriority="high" /></figure>
+      <figure className="hero-art"><img src={publicPath("/images/home-hero-new.webp")} alt="Взрослая женщина в закрытом традиционном ханьфу среди белых лотосов" width="1586" height="992" fetchPriority="high" /></figure>
     </section>
 
     <section className="intro-grid">
