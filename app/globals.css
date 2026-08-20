@@ -734,3 +734,70 @@ main{padding-top:12px}
   .store-directory:not(.store-directory--compact) .store-card>p{font-size:15px}
 }
 @media(prefers-reduced-motion:reduce){.store-directory:not(.store-directory--compact) .store-card{transition:none}.store-directory:not(.store-directory--compact) .store-card:hover{transform:none}}
+
+/* Full-width homepage hero artwork. */
+.hero{
+  display:block;
+  min-height:660px;
+  padding:68px 60px 68px 72px;
+  overflow:hidden;
+  border:1px solid #e6d9e2;
+  border-radius:40px 140px 40px 100px;
+  background:#f8f2ed;
+  box-shadow:0 30px 80px #533f6410;
+}
+.hero:before{
+  inset:0;
+  z-index:1;
+  border:0;
+  border-radius:inherit;
+  background:linear-gradient(90deg,rgba(255,253,248,.97) 0%,rgba(255,253,248,.9) 48%,rgba(255,253,248,.48) 64%,rgba(255,253,248,.08) 82%);
+  box-shadow:none;
+  pointer-events:none;
+}
+.hero:after{display:none}
+.hero-copy{
+  position:relative;
+  z-index:3;
+  width:min(64%,760px);
+}
+.hero-art{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  width:100%;
+  max-width:none;
+  height:100%;
+  margin:0;
+  overflow:hidden;
+  border:0;
+  border-radius:inherit;
+  background:none;
+  box-shadow:none;
+  transform:none;
+  transition:none;
+}
+.hero-art:before{display:none}
+.hero-art img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:76% center;
+  background:none;
+}
+@media(max-width:900px){
+  .hero{min-height:620px;padding:56px 42px 60px}
+  .hero-copy{width:min(68%,680px)}
+  .hero-art{width:100%;height:100%;max-width:none;margin:0}
+}
+@media(max-width:768px){
+  .hero{display:block;min-height:880px;padding:48px 24px 52px;border-radius:28px 60px 28px 48px}
+  .hero:before{inset:0;background:linear-gradient(90deg,rgba(255,253,248,.98) 0%,rgba(255,253,248,.94) 72%,rgba(255,253,248,.42) 100%)}
+  .hero-copy{width:90%;max-width:100%}
+  .hero-art{position:absolute;inset:0;order:initial;width:100%;max-width:none;height:100%;margin:0}
+  .hero-art img{object-fit:cover;object-position:74% center}
+}
+@media(max-width:480px){
+  .hero{min-height:940px;padding:42px 22px 46px}
+  .hero-copy{width:92%}
+}
