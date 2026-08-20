@@ -742,6 +742,7 @@ main{padding-top:12px}
   padding:68px 60px 68px 72px;
   overflow:hidden;
   border:1px solid #e6d9e2;
+  border-bottom:0;
   border-radius:40px 140px 40px 100px;
   background:#f8f2ed;
   box-shadow:0 30px 80px #533f6410;
@@ -756,6 +757,7 @@ main{padding-top:12px}
   pointer-events:none;
 }
 .hero:after{display:none}
+.hero + .intro-grid{border-top:0}
 .hero-copy{
   position:relative;
   z-index:3;
@@ -782,8 +784,10 @@ main{padding-top:12px}
   width:100%;
   height:100%;
   object-fit:cover;
-  object-position:76% center;
+  object-position:86% 42%;
   background:none;
+  transform:scale(1.12);
+  transform-origin:88% 35%;
 }
 @media(max-width:900px){
   .hero{min-height:620px;padding:56px 42px 60px}
@@ -795,7 +799,7 @@ main{padding-top:12px}
   .hero:before{inset:0;background:linear-gradient(90deg,rgba(255,253,248,.98) 0%,rgba(255,253,248,.94) 72%,rgba(255,253,248,.42) 100%)}
   .hero-copy{width:90%;max-width:100%}
   .hero-art{position:absolute;inset:0;order:initial;width:100%;max-width:none;height:100%;margin:0}
-  .hero-art img{object-fit:cover;object-position:74% center}
+  .hero-art img{object-fit:cover;object-position:77% 42%;transform:scale(1.1);transform-origin:78% 34%}
 }
 @media(max-width:480px){
   .hero{min-height:940px;padding:42px 22px 46px}
