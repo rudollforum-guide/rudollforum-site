@@ -66,7 +66,7 @@ export default function Home() {
         </div>
       </aside>
       <div className="topic-grid topic-grid-continuation">{sections.slice(4).map(([title, text, href, no, icon]) => <Link href={href} className="topic-card reveal" key={no}><div className="card-top"><span>{no}</span><i aria-hidden="true">{icon}</i></div><h3>{title}</h3><p>{text}</p><b>Читать материал</b></Link>)}</div>
-      <figure className="editorial-visual care-visual"><img src={publicPath("/care-hanfu.webp")} alt="Взрослая женщина в закрытом лиловом ханьфу аккуратно складывает ткань у сундука" width="1400" height="788" loading="lazy"/><figcaption><span>Уход и хранение</span><strong>Долговечность начинается с привычек</strong><Link href="/storage">Правила хранения</Link></figcaption></figure>
+      <figure className="editorial-visual care-visual"><img src={publicPath("/images/home-storage-new.webp")} alt="Взрослая женщина в закрытом лиловом ханьфу аккуратно складывает ткань у сундука" width="2172" height="724" loading="lazy"/><figcaption><span>Уход и хранение</span><strong>Долговечность начинается с привычек</strong><Link href="/storage">Правила хранения</Link></figcaption></figure>
     </section>
     <SectionDivider />
 

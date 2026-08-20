@@ -47,6 +47,7 @@ main{padding-top:12px}
 .guide-visual{height:clamp(500px,48vw,610px);background:linear-gradient(110deg,#fffaf2 0 40%,#f5edf0 100%)}
 .guide-visual img{object-fit:cover;object-position:right center}
 .guide-visual figcaption{left:5%;width:38%;max-width:390px}
+.care-visual img{object-fit:cover;object-position:center center}
 @media(max-width:900px){
   :root{--header-offset:133px}
   main{padding-top:8px}
@@ -76,10 +77,13 @@ main{padding-top:12px}
   .hero-art img{object-fit:cover;object-position:right center}
   .guide-visual{height:auto;min-height:0;display:flex;flex-direction:column;padding:16px}
   .guide-visual img{height:auto;max-height:none;width:100%;object-fit:contain;object-position:center center}
+  .care-visual{height:auto;min-height:0;display:flex;flex-direction:column;padding:16px}
+  .care-visual img{height:260px;width:100%;object-fit:cover;object-position:25% center}
   body,main{max-width:100%}
   main{width:100%}
   .article-list strong{width:auto;overflow-wrap:anywhere}
   .guide-visual figcaption{position:relative;left:auto;right:auto;top:auto;bottom:auto;transform:none;width:auto;max-width:none;margin-top:12px}
+  .care-visual figcaption{position:relative;left:auto;right:auto;top:auto;bottom:auto;transform:none;width:auto;max-width:none;margin-top:12px}
 }
 @media(max-width:600px){
   :root{--header-offset:146px}
