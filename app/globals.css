@@ -45,7 +45,7 @@ main{padding-top:12px}
 .topic-card{height:100%;display:flex;flex-direction:column}
 .topic-card b{margin-top:auto;padding-top:14px}
 .guide-visual{height:clamp(500px,48vw,610px);background:linear-gradient(110deg,#fffaf2 0 40%,#f5edf0 100%)}
-.guide-visual img{object-fit:contain;object-position:center center}
+.guide-visual img{object-fit:cover;object-position:right center}
 .guide-visual figcaption{left:5%;width:38%;max-width:390px}
 @media(max-width:900px){
   :root{--header-offset:133px}
@@ -75,7 +75,7 @@ main{padding-top:12px}
   .hero:after{display:none}
   .hero-art img{object-fit:cover;object-position:right center}
   .guide-visual{height:auto;min-height:0;display:flex;flex-direction:column;padding:16px}
-  .guide-visual img{height:auto;max-height:none;width:100%;object-fit:contain;object-position:center}
+  .guide-visual img{height:auto;max-height:none;width:100%;object-fit:contain;object-position:center center}
   body,main{max-width:100%}
   main{width:100%}
   .article-list strong{width:auto;overflow-wrap:anywhere}

@@ -52,7 +52,7 @@ export default function Home() {
 
     <section className="section" id="topics"><div className="section-head"><div><span className="section-no">Навигация</span><h2>Ключевые темы справочника</h2></div><p>Краткие вводные ведут к отдельным подробным материалам.</p></div>
       <div className="topic-grid">{sections.slice(0,4).map(([title, text, href, no, icon]) => <Link href={href} className="topic-card reveal" key={no}><div className="card-top"><span>{no}</span><i aria-hidden="true">{icon}</i></div><h3>{title}</h3><p>{text}</p><b>Читать материал</b></Link>)}</div>
-      <figure className="editorial-visual guide-visual" id="guide-banner"><img src={publicPath("/guide-hanfu.webp")} alt="Взрослая женщина в светлом закрытом ханьфу читает справочник" width="1400" height="850" loading="lazy"/><figcaption><span>Осознанный выбор</span><strong>Сначала факты, затем решение</strong><Link href="/how-to-choose">Как выбрать модель</Link><Link className="home-guide-link" href="/guide">Полное руководство владельца</Link></figcaption></figure>
+      <figure className="editorial-visual guide-visual" id="guide-banner"><img src={publicPath("/images/home-choice-new.webp")} alt="Взрослая женщина в светлом закрытом ханьфу читает справочник" width="1672" height="941" loading="lazy"/><figcaption><span>Осознанный выбор</span><strong>Сначала факты, затем решение</strong><Link href="/how-to-choose">Как выбрать модель</Link><Link className="home-guide-link" href="/guide">Полное руководство владельца</Link></figcaption></figure>
       <aside className="external-card" aria-labelledby="moon-doll-title">
         <div className="external-card-icon" aria-hidden="true">☾</div>
         <div className="external-card-copy">
