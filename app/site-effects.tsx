@@ -28,9 +28,10 @@ const petals: PetalStyle[] = [
 ];
 
 function petalCount(pathname: string) {
-  if (pathname === "/") return 10;
-  if (pathname === "/community") return 8;
-  if (pathname === "/brands" || pathname === "/guide" || pathname === "/shops/moon-doll-guide") return 4;
+  const normalizedPath = pathname === "/" ? pathname : pathname.replace(/\/+$/, "");
+  if (normalizedPath === "/") return 10;
+  if (normalizedPath === "/community") return 8;
+  if (normalizedPath === "/brands" || normalizedPath === "/guide" || normalizedPath === "/shops/moon-doll-guide") return 4;
   return 2;
 }
 
