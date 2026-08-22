@@ -18,7 +18,7 @@ export function StoreDirectory({ compact = false }: { compact?: boolean }) {
   }
 
   return <div className="store-directory">
-    <article className="store-card">
+    <article className="store-card store-card--moon-doll">
       <header><span className="store-type">Внешний международный магазин</span><h3>Moon-Doll</h3></header>
       <p>Международный мультибрендовый магазин с отдельной инструкцией Rudollforum по оформлению заказа.</p>
       <div className="store-feature"><b>Промокод Rudollforum</b><span>Для читателей может быть доступна скидка 5% по промокоду <strong>RUDOLLFORUM</strong>. Перед оплатой проверьте применение промокода и актуальные условия.</span></div>
@@ -29,7 +29,7 @@ export function StoreDirectory({ compact = false }: { compact?: boolean }) {
       <small>Самостоятельно проверяйте модель, материал, вес, комплектацию, оплату, доставку и гарантию.</small>
     </article>
 
-    <article className="store-card">
+    <article className="store-card store-card--hanidoll">
       <header><span className="store-type">Бренд и магазин · РФ и международно</span><h3>Hanidoll</h3></header>
       <p>Hanidoll — бренд и магазин TPE- и силиконовых кукол, торсов и сопутствующих товаров. Есть русскоязычная площадка, международный сайт и страницы на маркетплейсах.</p>
       <nav className="store-platforms" aria-label="Основные площадки Hanidoll">
@@ -46,7 +46,7 @@ export function StoreDirectory({ compact = false }: { compact?: boolean }) {
       </div>
     </article>
 
-    <article className="store-card">
+    <article className="store-card store-card--sexdollshop">
       <header><span className="store-type">Российский интернет-магазин</span><h3>SexDollShop</h3></header>
       <p>SexDollShop — российский интернет-магазин с каталогом реалистичных кукол, торсов, голов, аксессуаров, париков и средств ухода.</p>
       <nav className="store-platforms" aria-label="Основные площадки SexDollShop">
