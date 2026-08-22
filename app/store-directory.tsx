@@ -1,4 +1,5 @@
 import { FeaturedExternalLink, FeaturedInternalLink } from "./site";
+import { publicPath } from "./site-config";
 
 const sponsoredRel = "noopener noreferrer sponsored";
 const editorialRel = "noopener noreferrer";
@@ -22,8 +23,8 @@ export function StoreDirectory({ compact = false }: { compact?: boolean }) {
       <p>Международный мультибрендовый магазин с отдельной инструкцией Rudollforum по оформлению заказа.</p>
       <div className="store-feature"><b>Промокод Rudollforum</b><span>Для читателей может быть доступна скидка 5% по промокоду <strong>RUDOLLFORUM</strong>. Перед оплатой проверьте применение промокода и актуальные условия.</span></div>
       <div className="store-card-actions">
-        <FeaturedExternalLink href="https://www.moon-doll.com/" variant="moon" icon="☾" title="Открыть Moon-Doll" subtitle="официальный сайт" rel={sponsoredRel}/>
-        <FeaturedInternalLink href="/shops/moon-doll-guide" icon="▤" title="Инструкция по заказу" description="справочная страница Rudollforum"/>
+        <FeaturedExternalLink href="https://www.moon-doll.com/" variant="moon" iconImage={publicPath("/images/where-to-buy/moondoll-open.png")} title="Открыть Moon-Doll" subtitle="официальный сайт" rel={sponsoredRel}/>
+        <FeaturedInternalLink href="/shops/moon-doll-guide" iconImage={publicPath("/images/where-to-buy/moondoll-guide.png")} title="Инструкция по заказу" description="справочная страница Rudollforum"/>
       </div>
       <small>Самостоятельно проверяйте модель, материал, вес, комплектацию, оплату, доставку и гарантию.</small>
     </article>
@@ -40,8 +41,8 @@ export function StoreDirectory({ compact = false }: { compact?: boolean }) {
       </nav>
       <div className="store-feature"><b>Специальное предложение</b><span>Для участников сообщества может действовать скидка 10%. Актуальность и порядок применения нужно уточнить до заказа.</span></div>
       <div className="store-card-actions">
-        <FeaturedExternalLink href="https://www.hanidoll.ru/" variant="store" icon="◇" title="Открыть Hanidoll" subtitle="официальная площадка для РФ" rel={sponsoredRel}/>
-        <FeaturedInternalLink href="/shops/hanidoll" icon="▤" title="Подробнее о Hanidoll" description="площадки, контакты и безопасность"/>
+        <FeaturedExternalLink href="https://www.hanidoll.ru/" variant="store" iconImage={publicPath("/images/where-to-buy/hanidoll-open.png")} title="Открыть Hanidoll" subtitle="официальная площадка для РФ" rel={sponsoredRel}/>
+        <FeaturedInternalLink href="/shops/hanidoll" iconImage={publicPath("/images/where-to-buy/hanidoll-info.png")} title="Подробнее о Hanidoll" description="площадки, контакты и безопасность"/>
       </div>
     </article>
 
@@ -54,8 +55,8 @@ export function StoreDirectory({ compact = false }: { compact?: boolean }) {
       </nav>
       <div className="store-feature"><b>Если модели нет в каталоге</b><span>Менеджеру можно отправить ссылку или фотографию и уточнить заказ, цену, опции, сроки и доставку.</span></div>
       <div className="store-card-actions">
-        <FeaturedExternalLink href="https://sexdollshop.ru/" variant="store" icon="✦" title="Открыть SexDollShop" subtitle="официальный сайт" rel={editorialRel}/>
-        <FeaturedInternalLink href="/shops/sexdollshop" icon="▤" title="Подробнее о магазине" description="контакты и проверка заказа"/>
+        <FeaturedExternalLink href="https://sexdollshop.ru/" variant="store" iconImage={publicPath("/images/where-to-buy/sexdollshop-open.png")} title="Открыть SexDollShop" subtitle="официальный сайт" rel={editorialRel}/>
+        <FeaturedInternalLink href="/shops/sexdollshop" iconImage={publicPath("/images/where-to-buy/sexdollshop-info.png")} title="Подробнее о магазине" description="контакты и проверка заказа"/>
       </div>
     </article>
   </div>;

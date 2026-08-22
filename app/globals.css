@@ -728,8 +728,11 @@ main{padding-top:12px}
 .store-directory:not(.store-directory--compact) .store-card-actions{gap:12px}
 .article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-link{min-height:54px;padding:8px 12px}
 .article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-icon{width:36px;height:36px}
+.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-icon--image{border:0;background:transparent}
+.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-icon--image img{width:34px;height:34px;object-fit:contain}
 .article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-copy b{font-size:13px}
 .article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-copy small{font-size:10px}
+@media(max-width:700px){.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-icon--image img{width:30px;height:30px}}
 @media(max-width:700px){
   .store-directory:not(.store-directory--compact){gap:18px;margin-top:28px}
   .store-directory:not(.store-directory--compact) .store-card{min-height:0;gap:20px;padding:24px}
