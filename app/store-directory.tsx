@@ -8,6 +8,13 @@ function PlatformLink({ href, children, rel = sponsoredRel }: { href: string; ch
   return <a href={href} target="_blank" rel={rel}>{children}</a>;
 }
 
+function StoreHeading({ icon, type, title }: { icon: string; type: string; title: string }) {
+  return <header className="store-card-heading">
+    <img className="store-heading-icon" src={publicPath(icon)} alt="" aria-hidden="true" width="60" height="60"/>
+    <div className="store-heading-copy"><span className="store-type">{type}</span><h3>{title}</h3></div>
+  </header>;
+}
+
 export function StoreDirectory({ compact = false }: { compact?: boolean }) {
   if (compact) {
     return <div className="store-directory store-directory--compact">
@@ -19,7 +26,7 @@ export function StoreDirectory({ compact = false }: { compact?: boolean }) {
 
   return <div className="store-directory">
     <article className="store-card store-card--moon-doll">
-      <header><span className="store-type">Внешний международный магазин</span><h3>Moon-Doll</h3></header>
+      <StoreHeading icon="/images/where-to-buy/moondoll-heading-icon.png" type="Внешний международный магазин" title="Moon-Doll"/>
       <p>Международный мультибрендовый магазин с отдельной инструкцией Rudollforum по оформлению заказа.</p>
       <div className="store-feature"><b>Промокод Rudollforum</b><span>Для читателей может быть доступна скидка 5% по промокоду <strong>RUDOLLFORUM</strong>. Перед оплатой проверьте применение промокода и актуальные условия.</span></div>
       <div className="store-card-actions">
@@ -30,7 +37,7 @@ export function StoreDirectory({ compact = false }: { compact?: boolean }) {
     </article>
 
     <article className="store-card store-card--hanidoll">
-      <header><span className="store-type">Бренд и магазин · РФ и международно</span><h3>Hanidoll</h3></header>
+      <StoreHeading icon="/images/where-to-buy/hanidoll-heading-icon.png" type="Бренд и магазин · РФ и международно" title="Hanidoll"/>
       <p>Hanidoll — бренд и магазин TPE- и силиконовых кукол, торсов и сопутствующих товаров. Есть русскоязычная площадка, международный сайт и страницы на маркетплейсах.</p>
       <nav className="store-platforms" aria-label="Основные площадки Hanidoll">
         <PlatformLink href="https://www.hanidoll.ru/">Сайт для РФ</PlatformLink>
@@ -47,7 +54,7 @@ export function StoreDirectory({ compact = false }: { compact?: boolean }) {
     </article>
 
     <article className="store-card store-card--sexdollshop">
-      <header><span className="store-type">Российский интернет-магазин</span><h3>SexDollShop</h3></header>
+      <StoreHeading icon="/images/where-to-buy/sexdollshop-heading-icon.png" type="Российский интернет-магазин" title="SexDollShop"/>
       <p>SexDollShop — российский интернет-магазин с каталогом реалистичных кукол, торсов, голов, аксессуаров, париков и средств ухода.</p>
       <nav className="store-platforms" aria-label="Основные площадки SexDollShop">
         <PlatformLink href="https://sexdollshop.ru/" rel={editorialRel}>Официальный сайт</PlatformLink>
