@@ -99,7 +99,10 @@ export default function Home() {
 
     <section className="community-home section" aria-labelledby="community-title">
       <div className="community-heading">
-        <span className="section-no">Справочник и сообщество владельцев</span>
+        <div className="community-heading-mark">
+          <span className="section-no">Справочник и сообщество владельцев</span>
+          <img src={publicPath("/images/home/community-emblem.png")} alt="" aria-hidden="true" width="170" height="170" draggable="false" />
+        </div>
         <h2 id="community-title">Rudollforum — место, где владельцы делятся реальным опытом</h2>
       </div>
       <div className="community-copy">
