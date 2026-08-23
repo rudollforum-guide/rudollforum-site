@@ -462,6 +462,7 @@ main{padding-top:12px}
 .link-inline:hover{border-bottom-color:currentColor;color:#4f3b5e}
 .external-actions{display:flex;align-items:stretch;gap:12px;flex-wrap:wrap}
 .external-actions>*{flex:1 1 190px}
+.external-card-icon--image{border:0;background:transparent}.external-card-icon--image img{display:block;width:38px;height:38px;object-fit:contain}.external-actions .link-button-secondary{justify-content:flex-start;padding-block:6px}.external-action-icon{display:block;flex:0 0 auto;width:32px;height:32px;object-fit:contain}
 .article-link-actions{display:flex;align-items:stretch;gap:12px;flex-wrap:wrap;margin:24px 0 0;padding:0;list-style:none}
 .article-link-actions .article-link-action{display:flex;margin:0}
 .article-link-actions .link-button-secondary{min-width:210px;height:100%}
@@ -500,6 +501,7 @@ main{padding-top:12px}
 }
 @media(max-width:768px){
   .external-actions,.article-link-actions{flex-direction:column;gap:11px}
+  .external-actions>*{flex:0 0 auto}
   .external-actions>*,.article-link-actions .article-link-action,.article-link-actions .link-button-secondary,.community-actions .link-button-secondary,.catalog-editorial .link-button-secondary,.moon-promo .link-button-secondary,.moon-step-card>.link-button-secondary{
     width:100%;
     max-width:100%;
@@ -507,6 +509,7 @@ main{padding-top:12px}
   }
   .article-link-actions .article-link-action{display:block}
   .link-button-primary,.link-button-secondary{white-space:normal;text-align:left}
+  .external-card-icon--image img{width:34px;height:34px}.external-action-icon{width:30px;height:30px}
   .catalog-controls{position:relative;top:auto;z-index:1}
 }
 @media(max-width:390px){
