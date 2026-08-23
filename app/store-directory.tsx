@@ -11,9 +11,9 @@ function PlatformLink({ href, children, rel = sponsoredRel }: { href: string; ch
 export function StoreDirectory({ compact = false }: { compact?: boolean }) {
   if (compact) {
     return <div className="store-directory store-directory--compact">
-      <FeaturedInternalLink href="/shops/moon-doll-guide" icon="☾" title="Moon-Doll" description="международный мультибрендовый магазин" />
-      <FeaturedInternalLink href="/shops/hanidoll" icon="◇" title="Hanidoll" description="магазин и бренд, есть площадка для РФ" />
-      <FeaturedInternalLink href="/shops/sexdollshop" icon="✦" title="SexDollShop" description="российский интернет-магазин" />
+      <FeaturedInternalLink href="/shops/moon-doll-guide" iconImage={publicPath("/images/useful-links/moondoll-icon.png")} title="Moon-Doll" description="международный мультибрендовый магазин" />
+      <FeaturedInternalLink href="/shops/hanidoll" iconImage={publicPath("/images/useful-links/hanidoll-icon.png")} title="Hanidoll" description="магазин и бренд, есть площадка для РФ" />
+      <FeaturedInternalLink href="/shops/sexdollshop" iconImage={publicPath("/images/useful-links/sexdollshop-icon.png")} title="SexDollShop" description="российский интернет-магазин" />
     </div>;
   }
 
