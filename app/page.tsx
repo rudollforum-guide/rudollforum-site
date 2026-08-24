@@ -91,7 +91,7 @@ export default function Home() {
         <Link className="button primary" href="/brands">Открыть каталог брендов</Link>
         <small>Список не является рейтингом или рекомендацией.</small>
       </div>
-      <div className="brand-preview-list" aria-label="Примеры брендов">
+      <div className="brand-preview-list compact-index-list" aria-label="Примеры брендов">
         {brandExamples.map((name, index) => <span key={name}><i aria-hidden="true">{String(index + 1).padStart(2, "0")}</i>{name}</span>)}
       </div>
     </section>
@@ -124,7 +124,7 @@ export default function Home() {
         <p>На Telegram-канале публикуются руководства, новости, обзоры брендов, полезные материалы и навигация. При канале работает закрытая группа владельцев с обсуждениями, тематическими разделами и галереей кукол участников.</p>
         <p>В закрытом сообществе проходят обсуждения, фотосессии, творческие конкурсы, публикации новостей, обмен опытом, разборы проблем, советы по уходу, хранению, ремонту, одежде, парикам и созданию образов.</p>
       </div>
-      <div className="community-directions" aria-label="Направления сообщества">
+      <div className="community-directions compact-index-list" aria-label="Направления сообщества">
         {["Доброжелательное общение владельцев","Помощь новичкам","Опыт эксплуатации","Галерея кукол участников","Уважительное отношение к куклам и их владельцам","Тематические фотосессии","Конкурсы и творческие проекты","Обсуждение брендов и моделей","Новости производителей и магазинов","Уход, хранение и ремонт","Одежда, парики и создание образов","Практические руководства"].map((item,index)=><span key={item}><i>{String(index+1).padStart(2,"0")}</i>{item}</span>)}
       </div>
       <div className="community-actions"><a className="link-button-secondary" href="https://t.me/rudollforum" target="_blank" rel="noopener noreferrer"><img className="external-action-icon" src={publicPath("/images/home/community-telegram-icon.png")} alt="" aria-hidden="true" width="32" height="32"/>Открыть Telegram Rudollforum</a><Link className="link-button-secondary link-button-internal" href="/community"><img className="external-action-icon" src={publicPath("/images/home/community-about-icon.png")} alt="" aria-hidden="true" width="32" height="32"/>О сообществе</Link><small>На канале доступны открытые материалы и информация о закрытой группе владельцев.</small></div>
