@@ -55,11 +55,11 @@ export default function Home() {
       <figure className="editorial-visual guide-visual" id="guide-banner"><img src={publicPath("/images/home-choice-new.webp")} alt="Взрослая женщина в светлом закрытом ханьфу читает справочник" width="1672" height="941" loading="lazy"/><figcaption><span>Осознанный выбор</span><strong>Сначала факты, затем решение</strong><Link href="/how-to-choose">Как выбрать модель</Link><Link className="home-guide-link" href="/guide">Полное руководство владельца</Link></figcaption></figure>
       <aside className="external-card" aria-labelledby="moon-doll-title">
         <div className="external-card-icon external-card-icon--image" aria-hidden="true"><img src={publicPath("/images/home/external-resource-icon.png")} alt="" width="38" height="38"/></div>
-        <div className="external-card-copy">
+        <div className="external-card-heading">
           <span className="external-label">Внешний ресурс</span>
           <h3 id="moon-doll-title">Где посмотреть доступные модели</h3>
-          <p>В качестве одного из внешних примеров магазина можно посмотреть каталог Moon-Doll. На сайте представлены силиконовые и ТПЕ-куклы разных брендов и конфигураций. Перед заказом самостоятельно проверяйте материал, фактический вес, комплектацию, условия оплаты, доставки и гарантии.</p>
         </div>
+        <p className="external-card-description">В качестве одного из внешних примеров магазина можно посмотреть каталог Moon-Doll. На сайте представлены силиконовые и ТПЕ-куклы разных брендов и конфигураций. Перед заказом самостоятельно проверяйте материал, фактический вес, комплектацию, условия оплаты, доставки и гарантии.</p>
         <div className="external-card-action">
           <div className="promo"><strong>Для читателей Rudollforum может быть доступна скидка 5% по промокоду <code>RUDOLLFORUM</code>.</strong><small>Перед оплатой проверьте актуальные условия, итоговую стоимость и применение промокода.</small></div>
           <div className="external-actions"><a className="link-button-secondary" href="https://www.moon-doll.com/" target="_blank" rel="noopener noreferrer sponsored" aria-label="Открыть Moon-Doll во внешней вкладке"><img className="external-action-icon" src={publicPath("/images/home/moondoll-link-icon.png")} alt="" aria-hidden="true" width="32" height="32"/>Открыть Moon-Doll</a><Link className="link-button-secondary link-button-internal" href="/shops/moon-doll-guide"><img className="external-action-icon" src={publicPath("/images/home/guide-link-icon.png")} alt="" aria-hidden="true" width="32" height="32"/>Читать инструкцию</Link></div>
