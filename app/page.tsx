@@ -43,11 +43,11 @@ export default function Home() {
       <div className="hero-copy"><div className="eyebrow">Независимый справочник · 18+</div>
         <h1>TPE и силиконовые куклы: выбор, покупка и правильный уход</h1>
         <p className="lead">Rudollforum не продаёт кукол и не принимает оплату. Справочник помогает выбрать магазин, модель и материал, проверить продавца, подготовиться к доставке и организовать правильный уход.</p>
-        <div className="actions"><Link className="button primary" href="/how-to-choose">Начать со справочника</Link><Link className="button" href="/silicone-or-tpe">Сравнить силикон и ТПЕ</Link></div>
+        <div className="actions"><Link className="button primary hero-action hero-action--guide" href="/how-to-choose"><img className="hero-action-icon" src={publicPath("/images/home/hero-guide-icon.png")} alt="" aria-hidden="true" width="24" height="24" />Начать со справочника</Link><Link className="button hero-action hero-action--compare" href="/silicone-or-tpe"><img className="hero-action-icon" src={publicPath("/images/home/hero-compare-icon.png")} alt="" aria-hidden="true" width="24" height="24" />Сравнить силикон и ТПЕ</Link></div>
         <div className="hero-note"><span>Практика владельцев</span><span>Независимо от брендов</span><span>Без приёма оплаты</span></div>
         <p className="trust-copy">Справочник систематизирует практический опыт сообщества. Отдельные рекомендации могут не подходить конкретной модели, поэтому перед применением необходимо учитывать материал и инструкцию производителя.</p>
       </div>
-      <figure className="hero-art"><img src={publicPath("/images/home-hero-new.webp")} alt="Взрослая женщина в закрытом традиционном ханьфу среди белых лотосов" width="1586" height="992" fetchPriority="high" /></figure>
+      <figure className="hero-art"><img src={publicPath("/images/home/home-hero-rudollforum-flag.png")} alt="Взрослая женщина в закрытом традиционном ханьфу среди белых лотосов" width="1672" height="941" fetchPriority="high" /></figure>
     </section>
 
     <section className="intro-grid">
