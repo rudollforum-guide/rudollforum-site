@@ -140,6 +140,26 @@ export default function MoonDollGuidePage() {
         </section>)}
       </div>
 
+      <section className="loyalty-section" id="loyalty">
+        <div className="loyalty-heading"><span className="section-no">Программа лояльности</span><h2>Система баллов и VIP-уровней Moon-Doll</h2><p>Moon-Doll работает в том числе с покупателями из России и принимает заказы с доставкой в РФ. На сайте действует программа лояльности: она включает начисление баллов за покупки и отдельные действия, использование баллов при следующих заказах, специальные обмены баллов и VIP-уровни с дополнительными скидками.</p></div>
+
+        <div className="loyalty-info-grid">
+          <section className="loyalty-card"><h3>Начисление баллов</h3><ul><li>1 балл за каждый потраченный $1.</li><li>1000 баллов за регистрацию нового аккаунта.</li><li>1500 баллов за положительный отзыв о заказе на сайте Moon-Doll.</li><li>Ещё 1500 баллов за положительный отзыв о том же заказе на <a href="https://dollforum.com/" target="_blank" rel="noopener noreferrer">TDF</a>.</li></ul><p>В отдельные периоды могут проводиться акции с повышенным начислением, например двойными баллами.</p></section>
+          <section className="loyalty-card"><h3>Использование баллов</h3><p className="loyalty-rate"><strong>50 баллов</strong><span>=</span><strong>$1</strong></p><div className="loyalty-examples"><span>1000 баллов = $20</span><span>1500 баллов = $30</span><span>3000 баллов = $60</span><span>5000 баллов = $100</span></div><p>При оформлении заказа система может предложить использовать накопленные баллы для уменьшения суммы оплаты. Moon-Doll также периодически может проводить отдельные акции с обменом баллов на скидки или товары.</p></section>
+        </div>
+
+        <section className="loyalty-vip"><h3>VIP-уровни</h3><div className="vip-grid"><article><span>Lv.1</span><strong>Regular Member</strong><small>Отдельная VIP-скидка не указана.</small></article><article><span>Lv.2</span><strong>VIP</strong><small>Дополнительная скидка: 2%</small></article><article><span>Lv.3</span><strong>Silver VIP</strong><small>Дополнительная скидка: 5%</small></article><article><span>Lv.4</span><strong>Gold VIP</strong><small>Дополнительная скидка: 7%</small></article><article><span>Lv.5</span><strong>Diamond VIP</strong><small>Скидка: 10%</small></article></div></section>
+
+        <div className="loyalty-info-grid loyalty-info-grid--secondary">
+          <section className="loyalty-card"><h3>Пороги накопленного потребления</h3><p>Moon-Doll отображает эти суммы как показатели накопленного потребления, используемые системой повышения уровня:</p><div className="loyalty-thresholds"><span>€2 595,96</span><span>€4 326,60</span><span>€12 979,80</span><span>€43 266,00</span></div></section>
+          <section className="loyalty-card"><h3>Срок действия баллов</h3><p>По правилам Moon-Doll баллы не имеют установленного срока действия.</p><p>Баланс, начисления и списания можно посмотреть в личном кабинете в разделе <strong>Points Center</strong>.</p></section>
+          <section className="loyalty-card"><h3>Где посмотреть баллы и уровни</h3><p>Чтобы открыть систему баллов и VIP-уровней на сайте Moon-Doll, нажмите на значок <strong>Rewards</strong> — кнопку в виде коробки со звездой в левом нижнем углу сайта.</p></section>
+        </div>
+
+        <aside className="loyalty-notice"><strong>Важно</strong><ul><li>Баллы привязаны к аккаунту.</li><li>Передача баллов другому пользователю не предусмотрена.</li><li>Обмен на наличные деньги не предусмотрен.</li><li>Условия начисления, использования баллов и VIP-программы могут изменяться.</li><li>Совместимость VIP-скидок с другими акциями и промокодами лучше проверять при оформлении конкретного заказа.</li></ul></aside>
+        <p className="loyalty-disclaimer">Материал носит справочный характер и описывает механику программы лояльности Moon-Doll по доступной на момент подготовки информации. Условия программы могут изменяться.</p>
+      </section>
+
       <section className="reseller-note"><span className="section-no">Проверка цены</span><h2>Почему у реселлера цена может быть другой</h2><p>Цена у магазина-посредника может отличаться от цены на официальной витрине производителя из-за закупочных условий, партнёрской программы, акций, валютного курса и способа формирования доставки.</p><p>Разница в цене сама по себе не подтверждает ни подлинность, ни подделку. Перед заказом следует проверить происхождение товара, условия гарантии и связь продавца с производителем.</p></section>
 
       <section className="section faq moon-faq"><div className="section-head"><div><span className="section-no">FAQ</span><h2>Вопросы об оформлении заказа</h2></div></div>{faq.map(([q,a])=><details key={q}><summary>{q}</summary><p>{a}</p></details>)}</section>

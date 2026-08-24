@@ -37,8 +37,8 @@ export function FeaturedExternalLink({href,variant,icon,iconImage,title,subtitle
   </a>;
 }
 
-export function FeaturedInternalLink({href,icon,iconImage,title,description}:{href:string;icon?:string;iconImage?:string;title:string;description:string}) {
-  return <Link className="footer-featured-link footer-featured-link--internal" href={href}>
+export function FeaturedInternalLink({href,icon,iconImage,title,description,className}:{href:string;icon?:string;iconImage?:string;title:string;description:string;className?:string}) {
+  return <Link className={`footer-featured-link footer-featured-link--internal${className ? ` ${className}` : ""}`} href={href}>
     <FeaturedLinkContent icon={icon} iconImage={iconImage} title={title} description={description}/>
   </Link>;
 }

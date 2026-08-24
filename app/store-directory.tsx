@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FeaturedExternalLink, FeaturedInternalLink } from "./site";
 import { publicPath } from "./site-config";
 
@@ -18,9 +19,9 @@ function StoreHeading({ icon, type, title }: { icon: string; type: string; title
 export function StoreDirectory({ compact = false }: { compact?: boolean }) {
   if (compact) {
     return <div className="store-directory store-directory--compact">
-      <FeaturedInternalLink href="/shops/moon-doll-guide" iconImage={publicPath("/images/useful-links/moondoll-icon.png")} title="Moon-Doll" description="международный мультибрендовый магазин" />
-      <FeaturedInternalLink href="/shops/hanidoll" iconImage={publicPath("/images/useful-links/hanidoll-icon.png")} title="Hanidoll" description="магазин и бренд, есть площадка для РФ" />
-      <FeaturedInternalLink href="/shops/sexdollshop" iconImage={publicPath("/images/useful-links/sexdollshop-icon.png")} title="SexDollShop" description="российский интернет-магазин" />
+      <FeaturedInternalLink className="store-directory-link store-directory-link--moon" href="/shops/moon-doll-guide" iconImage={publicPath("/images/useful-links/moondoll-icon.png")} title="Moon-Doll" description="международный мультибрендовый магазин" />
+      <FeaturedInternalLink className="store-directory-link store-directory-link--hanidoll" href="/shops/hanidoll" iconImage={publicPath("/images/useful-links/hanidoll-icon.png")} title="Hanidoll" description="магазин и бренд, есть площадка для РФ" />
+      <FeaturedInternalLink className="store-directory-link store-directory-link--sexdollshop" href="/shops/sexdollshop" iconImage={publicPath("/images/useful-links/sexdollshop-icon.png")} title="SexDollShop" description="российский интернет-магазин" />
     </div>;
   }
 
@@ -29,11 +30,12 @@ export function StoreDirectory({ compact = false }: { compact?: boolean }) {
       <StoreHeading icon="/images/where-to-buy/moondoll-heading-icon.png" type="Внешний международный магазин" title="Moon-Doll"/>
       <p>Международный мультибрендовый магазин с отдельной инструкцией Rudollforum по оформлению заказа.</p>
       <div className="store-feature"><b>Промокод Rudollforum</b><span>Для читателей может быть доступна скидка 5% по промокоду <strong>RUDOLLFORUM</strong>. Перед оплатой проверьте применение промокода и актуальные условия.</span></div>
+      <div className="store-feature store-loyalty"><b>Баллы и VIP-уровни Moon-Doll</b><span>На сайте действует программа лояльности: за покупки и отдельные действия начисляются баллы для следующих заказов. Также предусмотрены VIP-уровни с дополнительными скидками.</span><strong>Стандартный курс: 50 баллов = $1. VIP-скидки могут достигать 10%.</strong><small>Условия могут изменяться — проверяйте их в аккаунте Moon-Doll перед заказом.</small><Link className="store-loyalty-link" href="/shops/moon-doll-guide/#loyalty">Подробнее о баллах и VIP</Link></div>
+      <small>Самостоятельно проверяйте модель, материал, вес, комплектацию, оплату, доставку и гарантию.</small>
       <div className="store-card-actions">
         <FeaturedExternalLink href="https://www.moon-doll.com/" variant="moon" iconImage={publicPath("/images/where-to-buy/moondoll-open.png")} title="Открыть Moon-Doll" subtitle="официальный сайт" rel={sponsoredRel}/>
         <FeaturedInternalLink href="/shops/moon-doll-guide" iconImage={publicPath("/images/where-to-buy/moondoll-guide.png")} title="Инструкция по заказу" description="справочная страница Rudollforum"/>
       </div>
-      <small>Самостоятельно проверяйте модель, материал, вес, комплектацию, оплату, доставку и гарантию.</small>
     </article>
 
     <article className="store-card store-card--hanidoll">
