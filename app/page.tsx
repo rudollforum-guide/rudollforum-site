@@ -12,14 +12,20 @@ export const metadata = {
 };
 
 const sections = [
-  ["С чего начать новичку", "Разберитесь в материалах, весе, конструкции и условиях хранения до выбора первой модели.", "/how-to-choose", "01", "✦"],
-  ["Силикон или ТПЕ", "Сравнение мягкости, ухода, устойчивости к пятнам, ремонта и стоимости без универсального «лучше».", "/silicone-or-tpe", "02", "⚖"],
-  ["Как выбрать модель", "Рост, фактический вес, скелет, суставы, пальцы, стопы, крепление головы и комплектация.", "/how-to-choose", "03", "⌕"],
-  ["Что проверить перед покупкой", "Продавец, реальные фотографии, гарантия, доставка, переписка и видеозапись распаковки.", "/how-to-buy", "04", "▣"],
-  ["Основы ухода", "Раздельные инструкции для ТПЕ и силикона с учётом совместимости средств.", "/tpe-care", "05", "◉"],
-  ["Полная сушка", "Почему протирания у входа недостаточно и как организовать циркуляцию воздуха.", "/internal-drying", "06", "≋"],
-  ["Безопасное хранение", "Положение тела, нагрузка на мягкие зоны, одежда, температура и регулярный осмотр.", "/storage", "07", "⌂"],
-  ["Распространённые повреждения", "Надрывы, проколы, повреждения стоп и ситуации, когда нужен специалист.", "/repair", "08", "⌁"],
+  ["С чего начать новичку", "Разберитесь в материалах, весе, конструкции и условиях хранения до выбора первой модели.", "/how-to-choose", "01", "getting-started-icon.png"],
+  ["Силикон или ТПЕ", "Сравнение мягкости, ухода, устойчивости к пятнам, ремонта и стоимости без универсального «лучше».", "/silicone-or-tpe", "02", "silicone-tpe-icon.png"],
+  ["Как выбрать модель", "Рост, фактический вес, скелет, суставы, пальцы, стопы, крепление головы и комплектация.", "/how-to-choose", "03", "choose-model-icon.png"],
+  ["Что проверить перед покупкой", "Продавец, реальные фотографии, гарантия, доставка, переписка и видеозапись распаковки.", "/how-to-buy", "04", "pre-purchase-check-icon.png"],
+  ["Основы ухода", "Раздельные инструкции для ТПЕ и силикона с учётом совместимости средств.", "/tpe-care", "05", "care-basics-icon.png"],
+  ["Полная сушка", "Почему протирания у входа недостаточно и как организовать циркуляцию воздуха.", "/internal-drying", "06", "drying-icon.png"],
+  ["Безопасное хранение", "Положение тела, нагрузка на мягкие зоны, одежда, температура и регулярный осмотр.", "/storage", "07", "safe-storage-icon.png"],
+  ["Распространённые повреждения", "Надрывы, проколы, повреждения стоп и ситуации, когда нужен специалист.", "/repair", "08", "damage-repair-icon.png"],
+];
+
+const ownerReviewCards = [
+  ["Материалы", "Состав, мягкость, текстура и изменения поверхности со временем.", "materials-icon.png"],
+  ["Вес и переноска", "Фактическая масса, скелет, суставы и бытовое удобство.", "weight-portability-icon.png"],
+  ["Уход и долговечность", "Очистка, пятна, хранение, ремонт и состояние спустя месяцы.", "care-longevity-icon.png"],
 ];
 
 const faq = [
@@ -51,7 +57,7 @@ export default function Home() {
     <SectionDivider />
 
     <section className="section" id="topics"><div className="section-head"><div><span className="section-no">Навигация</span><h2>Ключевые темы справочника</h2></div><p>Краткие вводные ведут к отдельным подробным материалам.</p></div>
-      <div className="topic-grid">{sections.slice(0,4).map(([title, text, href, no, icon]) => <Link href={href} className="topic-card reveal" key={no}><div className="card-top"><span>{no}</span><i aria-hidden="true">{icon}</i></div><h3>{title}</h3><p>{text}</p><b>Читать материал</b></Link>)}</div>
+      <div className="topic-grid">{sections.slice(0,4).map(([title, text, href, no, icon]) => <Link href={href} className="topic-card home-guide-card reveal" key={no}><div className="card-top"><span>{no}</span><img src={publicPath(`/images/home/guide-cards/${icon}`)} alt="" aria-hidden="true" width="52" height="52" loading="lazy" draggable="false" /></div><h3>{title}</h3><p>{text}</p><b>Читать материал</b></Link>)}</div>
       <figure className="editorial-visual guide-visual" id="guide-banner"><img src={publicPath("/images/home-choice-new.webp")} alt="Взрослая женщина в светлом закрытом ханьфу читает справочник" width="1672" height="941" loading="lazy"/><figcaption><span>Осознанный выбор</span><strong>Сначала факты, затем решение</strong><Link href="/how-to-choose">Как выбрать модель</Link><Link className="home-guide-link" href="/guide">Полное руководство владельца</Link></figcaption></figure>
       <aside className="external-card" aria-labelledby="moon-doll-title">
         <div className="external-card-icon external-card-icon--image" aria-hidden="true"><img src={publicPath("/images/home/external-resource-icon.png")} alt="" width="38" height="38"/></div>
@@ -72,7 +78,7 @@ export default function Home() {
           <div className="external-actions"><a className="link-button-secondary" href="https://www.moon-doll.com/" target="_blank" rel="noopener noreferrer sponsored" aria-label="Открыть Moon-Doll во внешней вкладке"><img className="external-action-icon" src={publicPath("/images/home/moondoll-link-icon.png")} alt="" aria-hidden="true" width="32" height="32"/>Открыть Moon-Doll</a><Link className="link-button-secondary link-button-internal" href="/shops/moon-doll-guide"><img className="external-action-icon" src={publicPath("/images/home/guide-link-icon.png")} alt="" aria-hidden="true" width="32" height="32"/>Читать инструкцию</Link></div>
         </div>
       </aside>
-      <div className="topic-grid topic-grid-continuation">{sections.slice(4).map(([title, text, href, no, icon]) => <Link href={href} className="topic-card reveal" key={no}><div className="card-top"><span>{no}</span><i aria-hidden="true">{icon}</i></div><h3>{title}</h3><p>{text}</p><b>Читать материал</b></Link>)}</div>
+      <div className="topic-grid topic-grid-continuation">{sections.slice(4).map(([title, text, href, no, icon]) => <Link href={href} className="topic-card home-guide-card reveal" key={no}><div className="card-top"><span>{no}</span><img src={publicPath(`/images/home/guide-cards/${icon}`)} alt="" aria-hidden="true" width="52" height="52" loading="lazy" draggable="false" /></div><h3>{title}</h3><p>{text}</p><b>Читать материал</b></Link>)}</div>
       <figure className="editorial-visual care-visual"><img src={publicPath("/images/home-storage-new.webp")} alt="Взрослая женщина в закрытом лиловом ханьфу аккуратно складывает ткань у сундука" width="2172" height="724" loading="lazy"/><figcaption><span>Уход и хранение</span><strong>Долговечность начинается с привычек</strong><Link href="/storage">Правила хранения</Link></figcaption></figure>
     </section>
     <SectionDivider />
@@ -127,7 +133,7 @@ export default function Home() {
     <section className="section" aria-labelledby="owner-reviews-title">
       <div className="section-head"><div><span className="section-no">Редакционный раздел</span><h2 id="owner-reviews-title">Отзывы владельцев</h2></div><p>Будущая подборка будет опираться только на подтверждённый опыт без выдуманных оценок и количества отзывов.</p></div>
       <div className="topic-grid">
-        {[['Материалы','Состав, мягкость, текстура и изменения поверхности со временем.'],['Вес и переноска','Фактическая масса, скелет, суставы и бытовое удобство.'],['Уход и долговечность','Очистка, пятна, хранение, ремонт и состояние спустя месяцы.']].map(([title,text],index)=><Link href="/owner-reviews" className="topic-card" key={title}><div className="card-top"><span>{String(index+1).padStart(2,"0")}</span><i aria-hidden="true">◇</i></div><h3>{title}</h3><p>{text}</p><b>Открыть раздел</b></Link>)}
+        {ownerReviewCards.map(([title,text,icon],index)=><Link href="/owner-reviews" className="topic-card home-guide-card" key={title}><div className="card-top"><span>{String(index+1).padStart(2,"0")}</span><img src={publicPath(`/images/home/guide-cards/${icon}`)} alt="" aria-hidden="true" width="52" height="52" loading="lazy" draggable="false" /></div><h3>{title}</h3><p>{text}</p><b>Открыть раздел</b></Link>)}
       </div>
     </section>
 
