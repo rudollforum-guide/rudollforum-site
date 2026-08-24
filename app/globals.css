@@ -470,16 +470,31 @@ main{padding-top:12px}
 .external-actions>*{flex:1 1 190px}
 .external-card{grid-template-columns:76px minmax(0,1.25fr) minmax(300px,.75fr);column-gap:20px;row-gap:12px}
 .external-card-icon--image{width:76px;height:76px;border:0;background:transparent}
-.external-card-icon--image img{display:block;width:76px;height:76px;padding:3px;border:1px solid rgba(90,126,211,.68);border-radius:22px;background:linear-gradient(145deg,rgba(222,239,255,.86),rgba(236,228,253,.78));box-shadow:inset 0 0 0 1px rgba(255,255,255,.72),0 0 22px rgba(76,132,225,.3);object-fit:contain}
+.external-card-icon--image img{display:block;width:76px;height:76px;padding:3px;border:1px solid rgba(42,157,140,.7);border-radius:22px;background:linear-gradient(145deg,rgba(221,251,240,.88),rgba(220,247,249,.8));box-shadow:inset 0 0 0 1px rgba(255,255,255,.76),0 0 22px rgba(27,177,155,.3);object-fit:contain;filter:none}
 .external-card-heading{grid-column:2;grid-row:1;align-self:center;min-width:0}
 .external-card-description{grid-column:2;grid-row:2}
 .external-card-action{grid-column:3;grid-row:1/3}
-.external-actions .link-button-secondary{justify-content:flex-start;padding-block:6px}
+.external-card .promo{display:grid;gap:11px;padding:16px;border-color:rgba(211,155,82,.62);background:linear-gradient(145deg,#fffaf0,#fff4e8);box-shadow:inset 0 1px 0 rgba(255,255,255,.82),0 9px 24px rgba(122,71,43,.08)}
+.external-card .promo-heading{display:grid;grid-template-columns:48px minmax(0,1fr);gap:12px;align-items:center}
+.external-card .promo-icon{display:block;width:48px;height:48px;object-fit:contain;filter:none}
+.external-card .promo-kicker{display:block;margin-bottom:3px;color:#9a4b3b;font-size:9px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.external-card .promo strong{font-size:12px;line-height:1.4}
+.external-card .promo-discount{display:inline-flex;align-items:baseline;gap:4px;color:#a43d32;font-weight:800;white-space:nowrap}
+.external-card .promo-discount b{color:#ba3d2f;font-size:21px;line-height:1}
+.external-card .promo-code{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.external-card .promo-code>span{color:#8b665a;font-size:9px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.external-card .promo code{display:inline-flex;width:max-content;max-width:100%;padding:7px 10px;border:1px solid rgba(196,83,50,.62);border-radius:9px;background:#fffdf7;color:#8f2f2a;font:800 16px/1 Arial,sans-serif;letter-spacing:.09em;box-shadow:0 5px 14px rgba(171,71,40,.1)}
+.external-card .promo small{margin-top:0;color:#766c6c;font-size:10px;line-height:1.45}
+.external-card .external-actions .link-button-secondary{justify-content:flex-start;min-height:56px;padding:9px 15px;background:linear-gradient(135deg,#fffdf8,#f4edf6);font-size:14px;line-height:1.25}
 .external-action-icon{display:block;flex:0 0 auto;width:32px;height:32px;object-fit:contain}
-.external-card .external-actions>a:first-child .external-action-icon{padding:1px;border:1px solid rgba(52,153,194,.72);border-radius:10px;background:linear-gradient(145deg,rgba(219,247,251,.9),rgba(224,238,255,.78));box-shadow:inset 0 0 0 1px rgba(255,255,255,.75),0 0 13px rgba(49,170,211,.3);transition:border-color 180ms ease,box-shadow 180ms ease}
-.external-card .external-actions>.link-button-internal .external-action-icon{padding:1px;border:1px solid rgba(194,79,166,.68);border-radius:10px;background:linear-gradient(145deg,rgba(255,230,247,.9),rgba(241,226,253,.8));box-shadow:inset 0 0 0 1px rgba(255,255,255,.76),0 0 13px rgba(207,70,174,.28);transition:border-color 180ms ease,box-shadow 180ms ease}
-.external-card .external-actions>a:first-child:hover .external-action-icon{border-color:rgba(35,143,188,.9);box-shadow:inset 0 0 0 1px rgba(255,255,255,.84),0 0 18px rgba(41,169,216,.42)}
-.external-card .external-actions>.link-button-internal:hover .external-action-icon{border-color:rgba(183,59,153,.88);box-shadow:inset 0 0 0 1px rgba(255,255,255,.84),0 0 18px rgba(210,66,176,.4)}
+.external-card .external-actions>a:first-child{border-color:rgba(55,139,207,.56)}
+.external-card .external-actions>.link-button-internal{border-color:rgba(190,77,160,.46)}
+.external-card .external-actions>a:first-child .external-action-icon{padding:1px;border:1px solid rgba(36,145,217,.78);border-radius:10px;background:linear-gradient(145deg,rgba(218,246,255,.94),rgba(220,234,255,.84));box-shadow:inset 0 0 0 1px rgba(255,255,255,.78),0 0 14px rgba(36,153,225,.36);filter:none;transition:border-color 180ms ease,box-shadow 180ms ease}
+.external-card .external-actions>.link-button-internal .external-action-icon{padding:1px;border:1px solid rgba(209,58,162,.76);border-radius:10px;background:linear-gradient(145deg,rgba(255,226,247,.94),rgba(246,220,255,.84));box-shadow:inset 0 0 0 1px rgba(255,255,255,.78),0 0 14px rgba(215,51,170,.34);filter:none;transition:border-color 180ms ease,box-shadow 180ms ease}
+.external-card .external-actions>a:first-child:hover{border-color:rgba(38,132,203,.82)}
+.external-card .external-actions>.link-button-internal:hover{border-color:rgba(183,57,151,.74)}
+.external-card .external-actions>a:first-child:hover .external-action-icon{border-color:rgba(29,132,207,.96);box-shadow:inset 0 0 0 1px rgba(255,255,255,.88),0 0 20px rgba(30,153,231,.5)}
+.external-card .external-actions>.link-button-internal:hover .external-action-icon{border-color:rgba(190,40,143,.94);box-shadow:inset 0 0 0 1px rgba(255,255,255,.88),0 0 20px rgba(215,45,168,.48)}
 .article-link-actions{display:flex;align-items:stretch;gap:12px;flex-wrap:wrap;margin:24px 0 0;padding:0;list-style:none}
 .article-link-actions .article-link-action{display:flex;margin:0}
 .article-link-actions .link-button-secondary{min-width:210px;height:100%}
@@ -529,6 +544,9 @@ main{padding-top:12px}
   .external-card{grid-template-columns:58px minmax(0,1fr);column-gap:13px;row-gap:14px}
   .external-card-icon--image{width:58px;height:58px}
   .external-card-icon--image img{width:58px;height:58px;border-radius:18px}.external-action-icon{width:30px;height:30px}
+  .external-card .promo-heading{grid-template-columns:40px minmax(0,1fr);gap:10px}
+  .external-card .promo-icon{width:40px;height:40px}
+  .external-card .external-actions .link-button-secondary{min-height:54px;padding:8px 14px;font-size:14px}
   .external-card-heading{grid-column:2;grid-row:1}
   .external-card-description{grid-column:1/-1;grid-row:2}
   .external-card-action{grid-column:1/-1;grid-row:3}
