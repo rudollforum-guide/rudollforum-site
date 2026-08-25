@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { articles } from "../articles";
-import { FeaturedExternalLink, JsonLd, MetaLine, SiteShell } from "../site";
+import { FeaturedExternalLink, FeaturedInternalLink, JsonLd, MetaLine, SiteShell } from "../site";
 import { StoreDirectory } from "../store-directory";
 import { OPEN_GRAPH_IMAGE, publicPath, siteUrl } from "../site-config";
 
@@ -47,6 +47,7 @@ function ArticleItem({ item, heading }: { item: string; heading: string }) {
 function CommunityDiscussionAction() {
   return <div className="resource-featured-links community-featured-action">
     <FeaturedExternalLink href="https://t.me/rudollforum" variant="telegram" iconImage={publicPath("/images/community/telegram-icon.png")} title="Открыть Telegram Rudollforum" subtitle="канал и вход в закрытое сообщество владельцев"/>
+    <FeaturedInternalLink href="/events" icon="◇" title="Мероприятия и конкурсы" description="Текущие события и архив конкурсов Rudollforum"/>
     <small className="article-featured-note">Информация об условиях входа в закрытую группу опубликована в открытом канале.</small>
   </div>;
 }
