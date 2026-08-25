@@ -11,20 +11,20 @@ export const metadata: Metadata = {
 };
 
 const chapters = [
-  ["Введение","Бытовые ожидания, форматы и подготовка до первой покупки.","/getting-started"],
-  ["Материалы","Силикон и TPE без универсальных обещаний.","/silicone-or-tpe"],
-  ["Размеры и вес","Фактическая нагрузка, переноска и хранение.","/weight-and-size"],
-  ["Базовый уход","Очистка, сушка, пудра, одежда и осмотр.","/care"],
-  ["Проверка после получения","Пошаговый чек-лист распаковки.","/delivery-check"],
-  ["Безопасная покупка","Продавец, происхождение, гарантия и доставка.","/safe-purchase"],
-  ["Бренды","Справочный каталог с поиском и фильтрами.","/brands"],
-  ["Скелеты","Суставы, стопы, пальцы и дополнительные системы.","/skeleton"],
-  ["Слабые места","Ранние признаки повреждений и профилактика.","/weak-points"],
-  ["Одежда и пятна","Ткани, парики, аксессуары и красители.","/clothing-and-stains"],
-  ["Хранение","Положения, мягкие зоны и длительный контроль.","/storage"],
-  ["Ремонт","Различия восстановления TPE и силикона.","/repair"],
-  ["Старение","Изменения материалов и признаки износа.","/material-aging"],
-  ["Опыт владельца","Ожидания, образы, границы и уважение.","/owner-experience"],
+  { title:"Введение", text:"Бытовые ожидания, форматы и подготовка до первой покупки.", href:"/getting-started", icon:"01-introduction.png" },
+  { title:"Материалы", text:"Силикон и TPE без универсальных обещаний.", href:"/silicone-or-tpe", icon:"02-materials.png" },
+  { title:"Размеры и вес", text:"Фактическая нагрузка, переноска и хранение.", href:"/weight-and-size", icon:"03-size-weight.png" },
+  { title:"Базовый уход", text:"Очистка, сушка, пудра, одежда и осмотр.", href:"/care", icon:"04-basic-care.png" },
+  { title:"Проверка после получения", text:"Пошаговый чек-лист распаковки.", href:"/delivery-check", icon:"05-delivery-check.png" },
+  { title:"Безопасная покупка", text:"Продавец, происхождение, гарантия и доставка.", href:"/safe-purchase", icon:"06-safe-purchase.png" },
+  { title:"Бренды", text:"Справочный каталог с поиском и фильтрами.", href:"/brands", icon:"07-brands.png" },
+  { title:"Скелеты", text:"Суставы, стопы, пальцы и дополнительные системы.", href:"/skeleton", icon:"08-skeletons.png" },
+  { title:"Слабые места", text:"Ранние признаки повреждений и профилактика.", href:"/weak-points", icon:"09-weak-points.png" },
+  { title:"Одежда и пятна", text:"Ткани, парики, аксессуары и красители.", href:"/clothing-and-stains", icon:"10-clothing-stains.png" },
+  { title:"Хранение", text:"Положения, мягкие зоны и длительный контроль.", href:"/storage", icon:"11-storage.png" },
+  { title:"Ремонт", text:"Различия восстановления TPE и силикона.", href:"/repair", icon:"12-repair.png" },
+  { title:"Старение", text:"Изменения материалов и признаки износа.", href:"/material-aging", icon:"13-aging.png" },
+  { title:"Опыт владельца", text:"Ожидания, образы, границы и уважение.", href:"/owner-experience", icon:"14-owner-experience.png" },
 ];
 
 export default function GuidePage() {
@@ -69,7 +69,7 @@ export default function GuidePage() {
       </div>
     </section>
     <section className="guide-intro"><p>Выберите тему, чтобы перейти к самостоятельной веб-статье. Рекомендации нужно сверять с точным материалом, конструкцией и инструкцией производителя. После выбора требований можно сравнить <Link href="/where-to-buy">магазины и официальные площадки</Link>.</p></section>
-    <div className="chapter-grid">{chapters.map(([title,text,href],index)=><Link href={href} key={href}><span>{String(index+1).padStart(2,"0")}</span><h2>{title}</h2><p>{text}</p><b>Открыть главу</b></Link>)}</div>
+    <div className="chapter-grid">{chapters.map(({title,text,href,icon},index)=><Link href={href} key={href}><div className="chapter-card-top"><span className="chapter-index">{String(index+1).padStart(2,"0")}</span><img className="chapter-icon" src={publicPath(`/images/guide/chapters/${icon}`)} alt="" aria-hidden="true" width="72" height="72" loading="lazy"/></div><h2>{title}</h2><p>{text}</p><b>Открыть главу</b></Link>)}</div>
     <MetaLine/>
   </article></SiteShell>
 }

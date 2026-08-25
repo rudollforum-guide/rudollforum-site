@@ -287,12 +287,21 @@ main{padding-top:12px}
 .guide-pdf-rights{margin:24px 0 0;padding-top:18px;border-top:1px solid #dfd0bd;color:var(--muted);font-size:11px;line-height:1.7}
 .home-guide-link{margin-top:8px;padding-top:8px;border-top:1px solid #d9c89d}
 .chapter-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;padding:15px 0 70px}
-.chapter-grid>a{min-height:235px;padding:24px;border:1px solid #e1d6ce;border-radius:20px;background:linear-gradient(155deg,#fff,#fbf7f3);box-shadow:0 10px 30px #4f3c510d;transition:transform .2s,border-color .2s}
-.chapter-grid>a:hover{transform:translateY(-4px);border-color:#c8ad72}
-.chapter-grid span{color:var(--gold);font:14px Georgia,serif}
-.chapter-grid h2{margin:25px 0 10px;font:26px/1.15 Georgia,serif}
-.chapter-grid p{color:var(--muted);font-size:13px}
-.chapter-grid b{color:var(--violet);font-size:11px}
+.chapter-grid>a{display:flex;min-width:0;flex-direction:column;padding:25px;border:1px solid rgba(196,163,92,.3);border-radius:20px;background:linear-gradient(135deg,rgba(255,255,255,.98),rgba(248,243,249,.96));box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 10px 30px rgba(79,60,81,.07);text-decoration:none;transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease,background 200ms ease}
+.chapter-grid>a:hover{transform:translateY(-2px);border-color:rgba(183,151,83,.56);background:linear-gradient(135deg,#fff,rgba(244,236,249,.98));box-shadow:inset 0 1px 0 #fff,0 16px 36px rgba(79,60,81,.13);text-decoration:none}
+.chapter-grid>a:focus-visible{outline:3px solid rgba(112,83,128,.42);outline-offset:3px;text-decoration:none}
+.chapter-grid>a:active{text-decoration:none}
+.chapter-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.chapter-index{display:inline-flex;min-width:38px;height:30px;flex:0 0 auto;align-items:center;justify-content:center;padding:0 10px;border:1px solid rgba(196,163,92,.56);border-radius:999px;background:linear-gradient(135deg,rgba(255,253,248,.99),rgba(244,236,249,.98));box-shadow:inset 0 1px 0 rgba(255,255,255,.92);color:#956f32;font:700 13px/1 Arial,Helvetica,sans-serif;letter-spacing:.07em;font-variant-numeric:tabular-nums}
+.chapter-icon{display:block;width:72px;height:72px;flex:0 0 72px;object-fit:contain;pointer-events:none;filter:none}
+.chapter-grid h2{margin:22px 0 10px;font:26px/1.15 Georgia,serif}
+.chapter-grid p{flex:1;margin:0 0 20px;color:var(--muted);font-size:13px}
+.chapter-grid b{color:#544060;font-size:12px;font-weight:700;text-decoration:none;transition:color 200ms ease}
+.chapter-grid b:before,.chapter-grid b:after{display:none}
+.chapter-grid>a:hover b,.chapter-grid>a:focus-visible b{color:#74527f;text-decoration:none}
+@media(prefers-reduced-motion:reduce){
+  .chapter-grid>a:hover{transform:none}
+}
 .guide-menu{padding:0;border:0}
 .guide-menu>summary{padding:8px;color:var(--violet);font-weight:700}
 .guide-menu>div{display:grid;padding:0 0 7px 14px;border-left:2px solid #dbc99f}
@@ -304,6 +313,8 @@ main{padding-top:12px}
   .community-heading-mark{gap:16px}
   .community-heading-mark img{width:112px;height:112px}
   .community-directions,.chapter-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .chapter-grid>a{padding:23px}
+  .chapter-icon{width:64px;height:64px;flex-basis:64px}
   .guide-page .article-hero{padding:50px 44px;background-position:center,76% center}
   .guide-section-heading{grid-template-columns:82px minmax(0,1fr);column-gap:18px}
   .guide-section-emblem{width:82px;height:82px}
@@ -402,7 +413,10 @@ main{padding-top:12px}
   .community-actions{align-items:stretch}
   .community-actions .button{width:100%;justify-content:center;text-align:center}
   .guide-intro{grid-template-columns:1fr}
-  .chapter-grid>a{min-height:auto}
+  .chapter-grid>a{padding:21px}
+  .chapter-card-top{gap:12px}
+  .chapter-index{min-width:34px;height:27px;padding:0 8px;font-size:12px}
+  .chapter-icon{width:56px;height:56px;flex-basis:56px}
 }
 
 /* Decorative Rudollforum emblems: these are not official brand logos. */
