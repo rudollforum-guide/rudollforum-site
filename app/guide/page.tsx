@@ -32,7 +32,14 @@ export default function GuidePage() {
   const article={"@context":"https://schema.org","@type":"Article",headline:"Практическое руководство владельца",description:metadata.description,inLanguage:"ru-RU",datePublished:"2026-07-24",dateModified:"2026-07-24",author:{"@type":"Organization","name":"Редакция Rudollforum"},publisher:{"@type":"Organization","name":"Rudollforum"},mainEntityOfPage:siteUrl("/guide/")};
   return <SiteShell><JsonLd data={breadcrumb}/><JsonLd data={article}/><article className="article guide-page">
     <nav className="breadcrumbs"><Link href="/">Главная</Link><span aria-hidden="true">·</span><span>Практическое руководство</span></nav>
-    <header className="article-hero"><span className="eyebrow">Навигация по знаниям</span><h1>Практическое руководство владельца</h1><p>Руководство Rudollforum посвящено выбору, покупке, эксплуатации, уходу, хранению и ремонту полноразмерных силиконовых и TPE-кукол. Оно основано на реальном опыте владельцев и систематизации практических ситуаций.</p></header>
+    <header className="article-hero">
+      <div className="guide-section-heading">
+        <img className="guide-section-emblem" src={publicPath("/images/guide/guide-section-emblem.png")} alt="" aria-hidden="true" width="92" height="92"/>
+        <span className="eyebrow">Навигация по знаниям</span>
+        <h1>Практическое руководство владельца</h1>
+        <p>Руководство Rudollforum посвящено выбору, покупке, эксплуатации, уходу, хранению и ремонту полноразмерных силиконовых и TPE-кукол. Оно основано на реальном опыте владельцев и систематизации практических ситуаций.</p>
+      </div>
+    </header>
     <section className="guide-pdf-card" aria-labelledby="guide-pdf-title">
       <figure className="guide-pdf-cover">
         <img src={publicPath("/images/guide/rudollforum-guide-cover.webp")} alt="Обложка руководства Rudollforum по уходу за силиконовыми и TPE-куклами" width="1000" height="1414" loading="lazy"/>
