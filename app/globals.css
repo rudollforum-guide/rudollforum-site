@@ -260,20 +260,26 @@ main{padding-top:12px}
 }
 .guide-intro{padding:30px 0}
 .guide-intro p{margin:0;color:var(--muted)}
-.guide-pdf-card{display:grid;grid-template-columns:minmax(230px,320px) minmax(0,1fr);gap:38px;margin:42px 0 20px;padding:32px;border:1px solid #cdb477;border-radius:26px;background:linear-gradient(135deg,#fffdf8,#f6eff7);box-shadow:0 18px 48px #4f3c5114}
-.guide-pdf-cover{align-self:start;margin:0;padding:12px;border:1px solid #dac79b;border-radius:18px;background:#fff;box-shadow:0 12px 30px #4e39511b}
-.guide-pdf-cover img{display:block;width:100%;height:auto;aspect-ratio:1000/1414;object-fit:contain;border-radius:10px}
+.guide-pdf-card{display:grid;grid-template-columns:minmax(260px,290px) minmax(0,1fr);gap:42px;margin:42px 0 20px;padding:32px;border:1px solid #cdb477;border-radius:26px;background:linear-gradient(135deg,#fffdf8,#f6eff7);box-shadow:0 18px 48px #4f3c5114}
+.guide-pdf-cover{align-self:start;width:290px;max-width:100%;margin:0}
+.guide-pdf-cover img{display:block;width:100%;height:auto;aspect-ratio:1000/1414;object-fit:contain;border-radius:14px;box-shadow:0 14px 32px rgba(60,39,67,.16)}
 .guide-pdf-copy{min-width:0}
+.guide-pdf-heading{display:flex;align-items:flex-start;gap:20px}
+.guide-pdf-heading-icon{display:block;flex:0 0 80px;width:80px;height:80px;object-fit:contain;pointer-events:none;filter:none}
+.guide-pdf-heading>div{min-width:0}
 .guide-pdf-label{display:inline-flex;padding:5px 10px;border:1px solid #c8ac6d;border-radius:999px;background:#fff8e9;color:#654d72;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
-.guide-pdf-copy h2{max-width:720px;margin:18px 0 14px;color:#352b3d;font:clamp(30px,4vw,44px)/1.08 Georgia,serif}
+.guide-pdf-copy h2{max-width:720px;margin:12px 0 16px;color:#352b3d;font:clamp(30px,4vw,44px)/1.08 Georgia,serif}
 .guide-pdf-description{max-width:760px;margin:0;color:#554f58;font-size:16px}
-.guide-pdf-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 22px;margin:22px 0;padding:0;list-style:none}
+.guide-pdf-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 22px;margin:24px 0;padding:0;list-style:none}
 .guide-pdf-meta li{position:relative;padding-left:20px;color:var(--muted);font-size:13px}
 .guide-pdf-meta li:before{content:"◆";position:absolute;left:0;top:.35em;color:var(--gold);font-size:8px}
 .guide-pdf-warning{margin:20px 0 0;padding:13px 16px;border-left:3px solid var(--gold);background:#faf3e7;color:#493f4d;font-size:14px;font-weight:700}
-.guide-pdf-actions{display:flex;align-items:stretch;gap:12px;flex-wrap:wrap;margin-top:20px}
-.guide-pdf-actions a{min-width:220px}
-.guide-pdf-rights{margin:20px 0 0;padding-top:17px;border-top:1px solid #dfd0bd;color:var(--muted);font-size:11px;line-height:1.6}
+.guide-pdf-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin-top:22px}
+.guide-pdf-actions a{display:flex;align-items:center;justify-content:flex-start;gap:13px;min-width:0;min-height:60px;padding:10px 17px;border-radius:14px;font-size:15px;font-weight:700;line-height:1.25;text-align:left}
+.guide-pdf-actions .link-button-primary{border:1px solid rgba(92,63,111,.82);background:linear-gradient(135deg,#4a345b,#6c4b7c);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 10px 24px rgba(64,40,75,.18)}
+.guide-pdf-actions .link-button-secondary{border:1px solid rgba(196,163,92,.56);background:linear-gradient(135deg,rgba(255,255,255,.98),rgba(244,236,249,.98));color:#43304f;box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 9px 22px rgba(76,58,86,.1)}
+.guide-pdf-action-icon{display:block;flex:0 0 38px;width:38px;height:38px;object-fit:contain;pointer-events:none;filter:none}
+.guide-pdf-rights{margin:24px 0 0;padding-top:18px;border-top:1px solid #dfd0bd;color:var(--muted);font-size:11px;line-height:1.7}
 .home-guide-link{margin-top:8px;padding-top:8px;border-top:1px solid #d9c89d}
 .chapter-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;padding:15px 0 70px}
 .chapter-grid>a{min-height:235px;padding:24px;border:1px solid #e1d6ce;border-radius:20px;background:linear-gradient(155deg,#fff,#fbf7f3);box-shadow:0 10px 30px #4f3c510d;transition:transform .2s,border-color .2s}
@@ -293,7 +299,8 @@ main{padding-top:12px}
   .community-heading-mark{gap:16px}
   .community-heading-mark img{width:112px;height:112px}
   .community-directions,.chapter-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .guide-pdf-card{grid-template-columns:minmax(190px,250px) minmax(0,1fr);gap:26px;padding:26px}
+  .guide-pdf-card{grid-template-columns:minmax(210px,240px) minmax(0,1fr);gap:30px;padding:26px}
+  .guide-pdf-cover{width:240px}
   .guide-pdf-meta{grid-template-columns:1fr}
 }
 @media(max-width:768px){
@@ -304,9 +311,12 @@ main{padding-top:12px}
   .guide-page .article-hero>p{margin-top:24px;font-size:17px}
   .guide-page .article-hero:after{display:none}
   .guide-pdf-card{grid-template-columns:1fr;margin-top:28px;padding:22px;border-radius:20px}
-  .guide-pdf-cover{width:min(100%,330px);margin:0 auto}
-  .guide-pdf-actions{flex-direction:column}
-  .guide-pdf-actions a{width:100%;min-width:0;justify-content:space-between}
+  .guide-pdf-cover{width:min(100%,250px);margin:0 auto}
+  .guide-pdf-heading{flex-direction:column;gap:14px}
+  .guide-pdf-heading-icon{flex-basis:56px;width:56px;height:56px}
+  .guide-pdf-actions{grid-template-columns:1fr;gap:11px}
+  .guide-pdf-actions a{width:100%;min-height:56px;padding:9px 15px;gap:11px;font-size:14px}
+  .guide-pdf-action-icon{flex-basis:34px;width:34px;height:34px}
   .chapter-grid{grid-template-columns:1fr}
 }
 

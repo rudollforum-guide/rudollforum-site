@@ -38,8 +38,13 @@ export default function GuidePage() {
         <img src={publicPath("/images/guide/rudollforum-guide-cover.webp")} alt="Обложка руководства Rudollforum по уходу за силиконовыми и TPE-куклами" width="1000" height="1414" loading="lazy"/>
       </figure>
       <div className="guide-pdf-copy">
-        <span className="guide-pdf-label">Полная версия · PDF · 18+</span>
-        <h2 id="guide-pdf-title">Руководство по эксплуатации силиконовых и TPE-кукол</h2>
+        <div className="guide-pdf-heading">
+          <img className="guide-pdf-heading-icon" src={publicPath("/images/guide/guide-hero-icon.png")} alt="" aria-hidden="true" width="80" height="80"/>
+          <div>
+            <span className="guide-pdf-label">Полная версия · PDF · 18+</span>
+            <h2 id="guide-pdf-title">Руководство по эксплуатации силиконовых и TPE-кукол</h2>
+          </div>
+        </div>
         <p className="guide-pdf-description">Полное практическое издание Rudollforum о выборе, покупке, эксплуатации, уходе, хранении и ремонте полноразмерных силиконовых и TPE-кукол.</p>
         <ul className="guide-pdf-meta">
           <li>Издание 2026 года</li>
@@ -50,8 +55,8 @@ export default function GuidePage() {
         </ul>
         <p className="guide-pdf-warning">18+. Материал предназначен только для совершеннолетней аудитории.</p>
         <div className="guide-pdf-actions">
-          <a className="link-button-primary" href={publicPath("/documents/rudollforum-guide-tpe-silicone-2026.pdf")} target="_blank" rel="noopener noreferrer">Открыть полное руководство</a>
-          <a className="link-button-secondary" href={publicPath("/documents/rudollforum-guide-tpe-silicone-2026.pdf")} download>Скачать PDF</a>
+          <a className="link-button-primary" href={publicPath("/documents/rudollforum-guide-tpe-silicone-2026.pdf")} target="_blank" rel="noopener noreferrer"><img className="guide-pdf-action-icon" src={publicPath("/images/guide/open-guide-icon.png")} alt="" aria-hidden="true" width="38" height="38"/><span>Открыть полное руководство</span></a>
+          <a className="link-button-secondary" href={publicPath("/documents/rudollforum-guide-tpe-silicone-2026.pdf")} download><img className="guide-pdf-action-icon" src={publicPath("/images/guide/download-pdf-icon.png")} alt="" aria-hidden="true" width="38" height="38"/><span>Скачать PDF</span></a>
         </div>
         <p className="guide-pdf-rights">© Rudollforum, 2026. Разрешено личное использование и цитирование с указанием источника. Полное копирование, удаление авторства, публикация под другим именем и коммерческое распространение без письменного разрешения запрещены.</p>
       </div>
