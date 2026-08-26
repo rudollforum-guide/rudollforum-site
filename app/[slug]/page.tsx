@@ -58,6 +58,7 @@ const articleHeroEmblems: Record<string, string> = {
   "where-to-buy": "/images/where-to-buy/where-to-buy-hero-emblem.png",
   care: "/images/care/care-hero-emblem.png",
   storage: "/images/storage/storage-hero-emblem.png",
+  repair: "/images/repair/repair-hero-emblem.png",
 };
 
 export const dynamicParams = false;
