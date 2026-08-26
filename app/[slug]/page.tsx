@@ -57,6 +57,7 @@ const articleHeroEmblems: Record<string, string> = {
   "silicone-or-tpe": "/images/silicone-or-tpe/silicone-tpe-hero-emblem.png",
   "where-to-buy": "/images/where-to-buy/where-to-buy-hero-emblem.png",
   care: "/images/care/care-hero-emblem.png",
+  storage: "/images/storage/storage-hero-emblem.png",
 };
 
 export const dynamicParams = false;
