@@ -3,7 +3,7 @@ import Link from "next/link";
 import { JsonLd, MetaLine, SiteShell } from "../site";
 import { BrandCatalog } from "./brand-catalog";
 import { brands } from "./brands-data";
-import { OPEN_GRAPH_IMAGE, siteUrl } from "../site-config";
+import { OPEN_GRAPH_IMAGE, publicPath, siteUrl } from "../site-config";
 
 export const metadata: Metadata = {
   title: "Бренды силиконовых и ТПЕ-кукол — каталог Rudollforum",
@@ -56,9 +56,12 @@ export default function BrandsPage() {
       <article className="article brands-page">
         <nav className="breadcrumbs"><Link href="/">Главная</Link><span aria-hidden="true">·</span><span>Бренды</span></nav>
         <header className="article-hero">
-          <span className="eyebrow">Справочный каталог · 18+</span>
-          <h1>Бренды силиконовых и ТПЕ-кукол</h1>
-          <p>В этом разделе собраны бренды силиконовых, ТПЕ, аниме, фурри, роботизированных, торсовых и других кукол. Каталог предназначен для навигации по рынку и не является рейтингом.</p>
+          <div className="article-emblem-heading">
+            <img className="article-hero-emblem" src={publicPath("/images/brands/brands-hero-emblem.png")} alt="" aria-hidden="true" width="92" height="92" />
+            <span className="eyebrow">Справочный каталог · 18+</span>
+            <h1>Бренды силиконовых и ТПЕ-кукол</h1>
+            <p>В этом разделе собраны бренды силиконовых, ТПЕ, аниме, фурри, роботизированных, торсовых и других кукол. Каталог предназначен для навигации по рынку и не является рейтингом.</p>
+          </div>
           <p className="catalog-scope-note">Теги и описания относятся к отдельным моделям или линейкам и не означают, что весь каталог бренда ограничен указанной категорией.</p>
           <p className="catalog-disclaimer">Информация о линейках, материалах, особенностях и доступности моделей может меняться. Перед покупкой проверяйте сведения на официальном сайте бренда или у продавца.</p>
           <aside className="notice">Присутствие бренда в справочнике не означает партнёрство с Rudollforum и не подтверждает все заявления производителя.</aside>
