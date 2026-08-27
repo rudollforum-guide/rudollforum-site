@@ -64,7 +64,7 @@ export default function EventsPage() {
           <header className={`archive-event-heading${event.year === 2025 ? " archive-event-heading--illustrated" : ""}`}>
             <div className={event.year === 2025 ? "archive-contest-heading" : undefined}>
               {event.year === 2025 && <img className="archive-contest-icon" src={publicPath("/images/events/beauty-contest-2025-icon.png")} alt="" aria-hidden="true" width="118" height="118" loading="lazy"/>}
-              <div className="event-meta"><span className="event-status event-status--complete">{event.status}</span>{event.participants && <span>{event.participants} участниц</span>}</div>
+              <div className="event-meta"><span className="event-status event-status--complete">{event.status}</span>{event.participants && <span>{event.year === 2025 ? <><b className="contest-participant-count">{event.participants}</b> участниц</> : <>{event.participants} участниц</>}</span>}</div>
               <h3>{event.title}</h3>
             </div>
             <p>{event.summary}</p>
@@ -74,7 +74,7 @@ export default function EventsPage() {
               {event.winners.map(winner => <figure className={`winner-card winner-card--${winner.place}`} key={winner.place}>
                 <div className="winner-photo"><img src={publicPath(winner.image)} alt={winner.alt} width="785" height="981" loading="lazy"/></div>
                 <figcaption>
-                  <span className="winner-place">{placeLabels[winner.place]}</span>
+                  <span className="winner-place">{event.year === 2025 ? <><b className="winner-place-number">{winner.place}</b><span>место</span></> : placeLabels[winner.place]}</span>
                   <h4 className={event.year === 2025 ? "winner-name" : undefined}>{event.year === 2025 && <img className="winner-award-icon" src={publicPath(contest2025PlaceIcons[winner.place])} alt="" aria-hidden="true" width="56" height="56" loading="lazy"/>}<span>{winner.name}</span></h4>
                   <p>{winner.caption}</p>
                 </figcaption>
