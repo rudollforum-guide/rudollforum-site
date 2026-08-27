@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd, MetaLine, SiteShell } from "../../site";
-import { OPEN_GRAPH_IMAGE, siteUrl } from "../../site-config";
+import { OPEN_GRAPH_IMAGE, publicPath, siteUrl } from "../../site-config";
 
 export const metadata: Metadata = {
   title: "Как купить куклу на Moon-Doll — оформление, оплата и доставка",
@@ -117,9 +117,12 @@ export default function MoonDollGuidePage() {
     <article className="article moon-guide">
       <nav className="breadcrumbs"><Link href="/">Главная</Link><span aria-hidden="true">·</span><Link href="/where-to-buy">Покупка</Link><span aria-hidden="true">·</span><span>Moon-Doll</span></nav>
       <header className="article-hero">
-        <span className="eyebrow">Внешний магазин · независимая инструкция</span>
-        <h1>Как оформить заказ на Moon-Doll</h1>
-        <p>Ниже приведён общий порядок оформления заказа на сайте Moon-Doll. Инструкция помогает понять последовательность действий, однако перед оплатой необходимо повторно проверить выбранную модель, комплектацию, итоговую стоимость и актуальные условия магазина.</p>
+        <div className="article-emblem-heading moon-guide-heading">
+          <img className="article-hero-emblem" src={publicPath("/images/shops/moon-doll-guide/moon-doll-guide-hero-emblem.png")} width={128} height={128} alt="" aria-hidden="true" />
+          <span className="eyebrow">Внешний магазин · независимая инструкция</span>
+          <h1>Как оформить заказ на Moon-Doll</h1>
+          <p>Ниже приведён общий порядок оформления заказа на сайте Moon-Doll. Инструкция помогает понять последовательность действий, однако перед оплатой необходимо повторно проверить выбранную модель, комплектацию, итоговую стоимость и актуальные условия магазина.</p>
+        </div>
       </header>
       <aside className="moon-disclaimer"><strong>18+ · Справочный материал для совершеннолетних</strong><p>Условия оплаты, скидок, производства, доставки, возврата и связи с магазином могут меняться. Перед оформлением заказа проверяйте актуальные сведения на сайте Moon-Doll и уточняйте детали у менеджера.</p><p>Rudollforum не принимает оплату, не оформляет заказ от имени покупателя и не является стороной сделки.</p></aside>
 
