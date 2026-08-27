@@ -86,10 +86,13 @@ export default function EventsPage() {
       </section>
 
       <section className="events-continuation" aria-labelledby="events-continuation-title">
-        <div><span className="section-no">Новые главы</span><h2 id="events-continuation-title">История продолжается</h2><p>После конкурса 2025 года формат получил продолжение. Новые мероприятия Rudollforum будут постепенно добавляться в этот раздел вместе с итогами и архивными материалами.</p></div>
+        <div className="events-continuation-heading">
+          <img className="events-history-icon" src={publicPath("/images/events/events-history-icon.png")} alt="" aria-hidden="true" width="112" height="112" loading="lazy"/>
+          <span className="section-no">Новые главы</span><h2 id="events-continuation-title">История продолжается</h2><p>После конкурса 2025 года формат получил продолжение. Новые мероприятия Rudollforum будут постепенно добавляться в этот раздел вместе с итогами и архивными материалами.</p>
+        </div>
         <div className="events-actions">
-          <FeaturedExternalLink href="https://t.me/rudollforum" variant="telegram" icon="✦" title="Следить за мероприятиями Rudollforum" subtitle="новости в открытом Telegram-канале"/>
-          <FeaturedInternalLink href="/community" icon="◇" title="О сообществе" description="как устроен Rudollforum"/>
+          <FeaturedExternalLink href="https://t.me/rudollforum" variant="telegram" iconImage={publicPath("/images/events/events-follow-icon.png")} title="Следить за мероприятиями Rudollforum" subtitle="новости в открытом Telegram-канале"/>
+          <FeaturedInternalLink href="/community" iconImage={publicPath("/images/events/events-community-icon.png")} title="О сообществе" description="как устроен Rudollforum"/>
         </div>
       </section>
     </article>
