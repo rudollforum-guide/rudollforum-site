@@ -27,9 +27,12 @@ export default function EventsPage() {
     <article className="events-page">
       <nav className="breadcrumbs"><Link href="/">Главная</Link><span aria-hidden="true">·</span><span>Мероприятия</span></nav>
       <header className="events-hero">
-        <span className="eyebrow">Сообщество · Конкурсы · Архив</span>
-        <h1>Мероприятия Rudollforum</h1>
-        <p>Конкурсы, тематические события и архив мероприятий сообщества Rudollforum. Здесь сохраняются результаты прошлых конкурсов, призёры и материалы будущих мероприятий.</p>
+        <div className="events-hero-heading">
+          <img className="events-hero-emblem" src={publicPath("/images/events/events-hero-emblem.png")} alt="" aria-hidden="true" width="118" height="118"/>
+          <span className="eyebrow">Сообщество · Конкурсы · Архив</span>
+          <h1>Мероприятия Rudollforum</h1>
+          <p>Конкурсы, тематические события и архив мероприятий сообщества Rudollforum. Здесь сохраняются результаты прошлых конкурсов, призёры и материалы будущих мероприятий.</p>
+        </div>
       </header>
 
       <section className="events-section events-current" aria-labelledby="events-current-title">
