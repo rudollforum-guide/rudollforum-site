@@ -863,18 +863,27 @@ main{padding-top:12px}
 .store-directory:not(.store-directory--compact) .store-feature{gap:7px;padding:16px}
 .store-directory:not(.store-directory--compact) .store-feature b{font-size:12px}
 .store-directory:not(.store-directory--compact) .store-feature span{font-size:12px;line-height:1.6}
-.store-directory:not(.store-directory--compact) .store-card-actions{gap:12px}
-.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-link{min-height:54px;padding:8px 12px;border:1px solid rgba(196,163,92,.58);border-radius:13px;background:linear-gradient(135deg,#fffdf8,#f4edf6);color:#4e3e59;box-shadow:inset 0 1px 0 rgba(255,255,255,.82),0 8px 22px rgba(77,56,83,.09);transition:transform 180ms ease,border-color 180ms ease,background 180ms ease,box-shadow 180ms ease,color 180ms ease}
-.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-link:hover{transform:translateY(-1px);border-color:#c5a252;background:linear-gradient(135deg,#fffdf9,#eee3f1);color:#3f2e4a;box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 11px 26px rgba(77,56,83,.13)}
-.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-link--moon,.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-link--store{border-color:rgba(184,139,57,.76);box-shadow:inset 0 1px 0 rgba(255,255,255,.88),0 9px 24px rgba(116,80,66,.1)}
-.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-link--moon:hover,.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-link--store:hover{border-color:#b7893f;background:linear-gradient(135deg,#fffdf9,#ece2f1);box-shadow:inset 0 1px 0 rgba(255,255,255,.92),0 12px 28px rgba(112,77,64,.15),0 0 16px rgba(197,157,77,.1)}
-.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-icon{width:36px;height:36px}
-.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-icon--image{border:1px solid var(--store-icon-border);border-radius:11px;background:var(--store-icon-bg);box-shadow:inset 0 0 0 1px rgba(255,255,255,.72),0 0 14px var(--store-icon-glow);transition:border-color 180ms ease,box-shadow 180ms ease}
-.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-link:hover .footer-featured-icon--image{border-color:color-mix(in srgb,var(--store-icon-border) 82%,#fff 18%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.82),0 0 19px var(--store-icon-glow)}
-.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-icon--image img{width:34px;height:34px;object-fit:contain}
-.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-copy b{color:#43304f;font-size:13px}
-.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-copy small{color:#6f6874;font-size:10px}
-@media(max-width:700px){.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-icon--image img{width:30px;height:30px}}
+.store-directory:not(.store-directory--compact) .store-card-actions{gap:12px;grid-auto-rows:1fr;--store-action-icon:44px}
+.store-card--moon-doll .store-card-actions{--store-action-bg:linear-gradient(135deg,rgba(245,248,255,.98),rgba(235,240,255,.96),rgba(250,244,255,.97));--store-action-hover:linear-gradient(135deg,#f1f5ff,#e2eaff,#f5eaff);--store-action-border:rgba(111,145,222,.48);--store-action-hover-border:rgba(84,124,211,.78);--store-action-shadow:49,68,118}
+.store-card--hanidoll .store-card-actions{--store-action-bg:linear-gradient(135deg,rgba(255,247,252,.98),rgba(250,237,249,.96),rgba(255,248,239,.97));--store-action-hover:linear-gradient(135deg,#fff1f9,#f5e2f2,#fff4e8);--store-action-border:rgba(210,139,181,.48);--store-action-hover-border:rgba(194,101,159,.78);--store-action-shadow:117,62,94}
+.store-card--sexdollshop .store-card-actions{--store-action-bg:linear-gradient(135deg,rgba(244,253,250,.98),rgba(234,249,246,.96),rgba(255,248,239,.97));--store-action-hover:linear-gradient(135deg,#effcf7,#dcf3ed,#fff4e8);--store-action-border:rgba(88,175,163,.46);--store-action-hover-border:rgba(52,151,137,.78);--store-action-shadow:47,102,95}
+.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-link{grid-template-columns:var(--store-action-icon) minmax(0,1fr);gap:14px;min-height:68px;padding:12px 16px;border:1px solid var(--store-action-border);border-radius:17px;background:var(--store-action-bg);color:#43304f;box-shadow:0 7px 20px rgba(var(--store-action-shadow),.08),0 2px 5px rgba(var(--store-action-shadow),.05);transition:transform 200ms ease,border-color 200ms ease,background 200ms ease,box-shadow 200ms ease}
+.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-link:hover{transform:translateY(-2px);border-color:var(--store-action-hover-border);background:var(--store-action-hover);box-shadow:0 10px 24px rgba(var(--store-action-shadow),.14),0 3px 7px rgba(var(--store-action-shadow),.08)}
+.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-link:focus-visible{outline:3px solid var(--store-action-hover-border);outline-offset:3px}
+.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-icon--image{width:var(--store-action-icon);height:var(--store-action-icon);padding:0;border:0;border-radius:0;background:none;box-shadow:none;outline:none;pointer-events:none}
+.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-icon--image img{width:100%;height:100%;object-fit:contain;pointer-events:none}
+.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-copy b{color:#43304f;font-size:16px;font-weight:700;line-height:1.25}
+.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-copy small{color:#665f70;font-size:12.5px;line-height:1.4}
+@media(max-width:1024px){
+  .store-directory:not(.store-directory--compact) .store-card-actions{--store-action-icon:40px}
+  .article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-link{gap:12px;min-height:64px;padding:12px 15px}
+  .article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-copy b{font-size:15px}
+  .article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-copy small{font-size:12px}
+}
+@media(max-width:700px){
+  .store-directory:not(.store-directory--compact) .store-card-actions{--store-action-icon:36px}
+  .article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-link{gap:11px;min-height:62px;padding:11px 14px}
+}
 @media(max-width:700px){
   .store-directory:not(.store-directory--compact){gap:18px;margin-top:28px}
   .store-directory:not(.store-directory--compact) .store-card{min-height:0;gap:20px;padding:24px}
@@ -886,7 +895,7 @@ main{padding-top:12px}
   .store-directory:not(.store-directory--compact) .store-card h3{font-size:28px}
   .store-directory:not(.store-directory--compact) .store-card>p{font-size:15px}
 }
-@media(prefers-reduced-motion:reduce){.store-directory:not(.store-directory--compact) .store-card{transition:none}.store-directory:not(.store-directory--compact) .store-card:hover,.store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-link:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){.store-directory:not(.store-directory--compact) .store-card,.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-link{transition:none}.store-directory:not(.store-directory--compact) .store-card:hover,.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-link:hover{transform:none}}
 
 /* Prominent store links on the useful-links page. */
 .article-body .store-directory--compact .store-directory-link{grid-template-columns:42px minmax(0,1fr);gap:13px;width:100%;max-width:none;height:100%;min-height:90px;margin:0;padding:16px;border:1px solid rgba(128,92,151,.42);border-radius:15px;background:linear-gradient(135deg,rgba(255,255,255,.98),rgba(241,233,247,.97));color:#4e3e59;box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 11px 28px rgba(73,55,82,.11)}

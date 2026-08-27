@@ -33,8 +33,8 @@ export function StoreDirectory({ compact = false }: { compact?: boolean }) {
       <div className="store-feature store-loyalty"><b>Баллы и VIP-уровни Moon-Doll</b><span>На сайте действует программа лояльности: за покупки и отдельные действия начисляются баллы для следующих заказов. Также предусмотрены VIP-уровни с дополнительными скидками.</span><strong>Стандартный курс: 50 баллов = $1. VIP-скидки могут достигать 10%.</strong><small>Условия могут изменяться — проверяйте их в аккаунте Moon-Doll перед заказом.</small><Link className="store-loyalty-link" href="/shops/moon-doll-guide/#loyalty">Подробнее о баллах и VIP</Link></div>
       <small>Самостоятельно проверяйте модель, материал, вес, комплектацию, оплату, доставку и гарантию.</small>
       <div className="store-card-actions">
-        <FeaturedExternalLink href="https://www.moon-doll.com/" variant="moon" iconImage={publicPath("/images/where-to-buy/moondoll-open.png")} title="Открыть Moon-Doll" subtitle="официальный сайт" rel={sponsoredRel}/>
-        <FeaturedInternalLink href="/shops/moon-doll-guide" iconImage={publicPath("/images/where-to-buy/moondoll-guide.png")} title="Инструкция по заказу" description="справочная страница Rudollforum"/>
+        <FeaturedExternalLink href="https://www.moon-doll.com/" variant="moon" iconImage={publicPath("/images/where-to-buy/moon-doll-open.png")} title="Открыть Moon-Doll" subtitle="официальный сайт" rel={sponsoredRel}/>
+        <FeaturedInternalLink href="/shops/moon-doll-guide" iconImage={publicPath("/images/where-to-buy/moon-doll-guide.png")} title="Инструкция по заказу" description="справочная страница Rudollforum"/>
       </div>
     </article>
 
