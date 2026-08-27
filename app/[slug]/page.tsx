@@ -47,7 +47,7 @@ function ArticleItem({ item, heading }: { item: string; heading: string }) {
 function CommunityDiscussionAction() {
   return <div className="resource-featured-links community-featured-action">
     <FeaturedExternalLink href="https://t.me/rudollforum" variant="telegram" iconImage={publicPath("/images/community/telegram-icon.png")} title="Открыть Telegram Rudollforum" subtitle="канал и вход в закрытое сообщество владельцев"/>
-    <FeaturedInternalLink href="/events" icon="◇" title="Мероприятия и конкурсы" description="Текущие события и архив конкурсов Rudollforum"/>
+    <FeaturedInternalLink href="/events" iconImage={publicPath("/images/community/events-link-icon.png")} title="Мероприятия и конкурсы" description="Текущие события и архив конкурсов Rudollforum"/>
     <small className="article-featured-note">Информация об условиях входа в закрытую группу опубликована в открытом канале.</small>
   </div>;
 }

@@ -1232,6 +1232,7 @@ footer .footer-featured-link:focus-visible{
   object-fit:contain;
 }
 .article-body .community-featured-action .footer-featured-copy{min-width:0;line-height:1.35}
+.community-featured-action .footer-featured-link--internal .footer-featured-icon--image{pointer-events:none}
 .article-body .community-featured-action .footer-featured-copy b{
   color:#43304f;
   font-size:15px;
