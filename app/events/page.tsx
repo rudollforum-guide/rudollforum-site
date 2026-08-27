@@ -16,6 +16,11 @@ export const metadata: Metadata = {
 };
 
 const placeLabels = { 1: "1 место", 2: "2 место", 3: "3 место" } as const;
+const contest2025PlaceIcons = {
+  1: "/images/events/contest-first-place-icon.png",
+  2: "/images/events/contest-second-place-icon.png",
+  3: "/images/events/contest-third-place-icon.png",
+} as const;
 
 export default function EventsPage() {
   const breadcrumb = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":siteUrl("/")},{"@type":"ListItem","position":2,"name":"Мероприятия","item":siteUrl("/events/")}]} as const;
@@ -56,8 +61,9 @@ export default function EventsPage() {
           <h2 id="events-archive-title">Архив мероприятий</h2>
         </div>
         {archivedEvents.map(event => <article className="archive-event" key={event.year}>
-          <header className="archive-event-heading">
-            <div>
+          <header className={`archive-event-heading${event.year === 2025 ? " archive-event-heading--illustrated" : ""}`}>
+            <div className={event.year === 2025 ? "archive-contest-heading" : undefined}>
+              {event.year === 2025 && <img className="archive-contest-icon" src={publicPath("/images/events/beauty-contest-2025-icon.png")} alt="" aria-hidden="true" width="96" height="96" loading="lazy"/>}
               <div className="event-meta"><span className="event-status event-status--complete">{event.status}</span>{event.participants && <span>{event.participants} участниц</span>}</div>
               <h3>{event.title}</h3>
             </div>
@@ -69,7 +75,7 @@ export default function EventsPage() {
                 <div className="winner-photo"><img src={publicPath(winner.image)} alt={winner.alt} width="785" height="981" loading="lazy"/></div>
                 <figcaption>
                   <span className="winner-place">{placeLabels[winner.place]}</span>
-                  <h4>{winner.name}</h4>
+                  <h4 className={event.year === 2025 ? "winner-name" : undefined}>{event.year === 2025 && <img className="winner-award-icon" src={publicPath(contest2025PlaceIcons[winner.place])} alt="" aria-hidden="true" width="42" height="42" loading="lazy"/>}<span>{winner.name}</span></h4>
                   <p>{winner.caption}</p>
                 </figcaption>
               </figure>)}
