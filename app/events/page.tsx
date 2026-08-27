@@ -60,10 +60,10 @@ export default function EventsPage() {
           <span className="section-no">История сообщества</span>
           <h2 id="events-archive-title">Архив мероприятий</h2>
         </div>
-        {archivedEvents.map(event => <article className="archive-event" key={event.year}>
+        {archivedEvents.map(event => <article className={`archive-event${event.year === 2025 ? " archive-event--beauty-2025" : ""}`} key={event.year}>
           <header className={`archive-event-heading${event.year === 2025 ? " archive-event-heading--illustrated" : ""}`}>
             <div className={event.year === 2025 ? "archive-contest-heading" : undefined}>
-              {event.year === 2025 && <img className="archive-contest-icon" src={publicPath("/images/events/beauty-contest-2025-icon.png")} alt="" aria-hidden="true" width="96" height="96" loading="lazy"/>}
+              {event.year === 2025 && <img className="archive-contest-icon" src={publicPath("/images/events/beauty-contest-2025-icon.png")} alt="" aria-hidden="true" width="118" height="118" loading="lazy"/>}
               <div className="event-meta"><span className="event-status event-status--complete">{event.status}</span>{event.participants && <span>{event.participants} участниц</span>}</div>
               <h3>{event.title}</h3>
             </div>
@@ -75,7 +75,7 @@ export default function EventsPage() {
                 <div className="winner-photo"><img src={publicPath(winner.image)} alt={winner.alt} width="785" height="981" loading="lazy"/></div>
                 <figcaption>
                   <span className="winner-place">{placeLabels[winner.place]}</span>
-                  <h4 className={event.year === 2025 ? "winner-name" : undefined}>{event.year === 2025 && <img className="winner-award-icon" src={publicPath(contest2025PlaceIcons[winner.place])} alt="" aria-hidden="true" width="42" height="42" loading="lazy"/>}<span>{winner.name}</span></h4>
+                  <h4 className={event.year === 2025 ? "winner-name" : undefined}>{event.year === 2025 && <img className="winner-award-icon" src={publicPath(contest2025PlaceIcons[winner.place])} alt="" aria-hidden="true" width="56" height="56" loading="lazy"/>}<span>{winner.name}</span></h4>
                   <p>{winner.caption}</p>
                 </figcaption>
               </figure>)}
