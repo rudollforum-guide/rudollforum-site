@@ -125,7 +125,7 @@ export default function MoonDollGuidePage() {
       <nav className="breadcrumbs"><Link href="/">Главная</Link><span aria-hidden="true">·</span><Link href="/where-to-buy">Покупка</Link><span aria-hidden="true">·</span><span>Moon-Doll</span></nav>
       <header className="article-hero">
         <div className="article-emblem-heading moon-guide-heading">
-          <img className="article-hero-emblem" src={publicPath("/images/shops/moon-doll-guide/moon-doll-guide-hero-emblem.png")} width={128} height={128} alt="" aria-hidden="true" />
+          <img className="article-hero-emblem" src={publicPath("/images/shops/moon-doll-guide/moon-doll-guide-brand-emblem.png")} width={128} height={128} alt="" aria-hidden="true" />
           <span className="eyebrow">Внешний магазин · независимая инструкция</span>
           <h1>Как оформить заказ на Moon-Doll</h1>
           <p>Ниже приведён общий порядок оформления заказа на сайте Moon-Doll. Инструкция помогает понять последовательность действий, однако перед оплатой необходимо повторно проверить выбранную модель, комплектацию, итоговую стоимость и актуальные условия магазина.</p>
