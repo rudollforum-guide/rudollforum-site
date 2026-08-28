@@ -581,10 +581,12 @@ main{padding-top:12px}
 .moon-guide{max-width:1080px}
 .moon-disclaimer{margin:30px 0 12px;padding:25px 28px;border:1px solid rgba(150,110,175,.32);border-left:5px solid rgba(75,132,207,.72);border-radius:18px;background:linear-gradient(135deg,rgba(255,253,255,.96),rgba(244,236,249,.96));box-shadow:inset 0 1px 0 rgba(255,255,255,.84),0 12px 34px rgba(65,105,170,.09)}
 .moon-disclaimer strong{display:block;color:var(--violet);font-size:12px;letter-spacing:.1em;text-transform:uppercase}.moon-disclaimer p{margin:9px 0 0;color:#504a53}
-.moon-timeline{position:relative;padding:35px 0 20px}.moon-timeline:before{content:"";position:absolute;left:45px;top:40px;bottom:40px;width:1px;background:linear-gradient(#c8ad72,#d9cce0,#c8ad72)}
+.moon-timeline{position:relative;padding:35px 0 20px}.moon-timeline:before{content:"";position:absolute;left:45px;top:40px;bottom:40px;width:1px;transform:translateX(-50%);background:linear-gradient(#c8ad72,#d9cce0,#c8ad72)}
 .moon-step{position:relative;display:grid;grid-template-columns:90px minmax(0,1fr);gap:20px;padding:16px 0}
-.moon-step-marker{position:sticky;top:calc(var(--header-offset) + 18px);align-self:start;z-index:2;display:grid;justify-items:center;gap:8px}
-.moon-step-marker span{color:var(--gold);font:13px Georgia,serif}.moon-step-marker i{display:grid;place-items:center;width:50px;height:50px;border:1px solid #c3a65f;border-radius:18px;background:#fffdf8;color:var(--violet);box-shadow:0 8px 22px #4c385019;font:21px Georgia,serif}
+.moon-step-marker{position:sticky;top:calc(var(--header-offset) + 18px);align-self:start;z-index:2;display:grid;min-width:0;grid-template-columns:minmax(0,1fr);justify-items:center;gap:8px}
+.moon-step-marker span{color:var(--gold);font:13px Georgia,serif}
+.moon-step-icon{display:block;width:58px;height:58px;max-width:none;object-fit:contain;pointer-events:none}
+@media(max-width:900px){.moon-step-icon{width:52px;height:52px}}
 .moon-step-card{min-width:0;padding:28px 30px;border:1px solid #dfd1c7;border-radius:22px;background:linear-gradient(150deg,#fff,#fbf7f3);box-shadow:0 12px 34px #4f3c510c}
 .moon-step-card h2{margin:0 0 17px;font:32px/1.15 Georgia,serif}.moon-step-card p{color:#504d55}.moon-step-card>.button{margin-top:14px}
 .check-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px 18px;margin:20px 0;padding:0;list-style:none}.check-list li{position:relative;padding-left:23px;color:#514d55;font-size:14px}.check-list li:before{content:"✓";position:absolute;left:0;color:#80698d;font-weight:700}
@@ -610,7 +612,7 @@ main{padding-top:12px}
 @media(max-width:700px){
   .brand-card{padding:20px}.brand-card-head{grid-template-columns:82px minmax(0,1fr);gap:14px;min-height:90px}.brand-icon{width:80px}.brand-card h3{font-size:21px}
   .brand-tag-section{min-height:0}
-  .moon-timeline:before{left:25px}.moon-step{grid-template-columns:50px minmax(0,1fr);gap:11px}.moon-step-marker{position:relative;top:auto}.moon-step-marker span{font-size:10px}.moon-step-marker i{width:42px;height:42px;border-radius:14px;font-size:17px}
+  .moon-timeline:before{left:25px}.moon-step{grid-template-columns:50px minmax(0,1fr);gap:11px}.moon-step-marker{position:relative;top:auto;gap:7px}.moon-step-marker span{font-size:10px}.moon-step-icon{width:44px;height:44px}
   .moon-step-card{padding:22px 18px;border-radius:18px}.moon-step-card h2{font-size:27px}.check-list{grid-template-columns:1fr}.checkout-grid{grid-template-columns:1fr}.checkout-grid aside{grid-column:1}.reseller-note{padding:25px 20px}.reseller-note h2{font-size:30px}
   .loyalty-section{margin-top:34px;padding:24px 18px;border-radius:18px}.loyalty-heading h2{font-size:30px}.loyalty-heading p{font-size:14px}.loyalty-info-grid,.loyalty-info-grid--secondary,.vip-grid,.loyalty-notice ul{grid-template-columns:1fr}.loyalty-card,.loyalty-vip,.loyalty-notice{padding:18px}.loyalty-card h3,.loyalty-vip h3{font-size:23px}.loyalty-examples,.loyalty-thresholds{grid-template-columns:1fr 1fr}
 }
@@ -639,7 +641,7 @@ main{padding-top:12px}
   .catalog-controls{position:relative;top:auto;z-index:1}
 }
 @media(max-width:390px){
-  .moon-step{grid-template-columns:42px minmax(0,1fr);gap:8px}.moon-timeline:before{left:21px}.moon-step-marker i{width:38px;height:38px}.moon-step-card{padding:20px 15px}.contact-card a{overflow-wrap:anywhere}.moon-promo code{font-size:15px}
+  .moon-step{grid-template-columns:42px minmax(0,1fr);gap:8px}.moon-timeline:before{left:21px}.moon-step-card{padding:20px 15px}.contact-card a{overflow-wrap:anywhere}.moon-promo code{font-size:15px}
 }
 
 /* Homepage hero spacing */
