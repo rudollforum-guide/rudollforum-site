@@ -154,7 +154,10 @@ export default function MoonDollGuidePage() {
       </div>
 
       <section className="loyalty-section" id="loyalty">
-        <div className="loyalty-heading"><span className="section-no">Программа лояльности</span><h2>Система баллов и VIP-уровней Moon-Doll</h2><p>Moon-Doll работает в том числе с покупателями из России и принимает заказы с доставкой в РФ. На сайте действует программа лояльности: она включает начисление баллов за покупки и отдельные действия, использование баллов при следующих заказах, специальные обмены баллов и VIP-уровни с дополнительными скидками.</p></div>
+        <div className="loyalty-heading moon-section-heading">
+          <img className="moon-section-emblem" src={publicPath("/images/shops/moon-doll-guide/section-emblems/vip-levels-emblem.png")} width={118} height={118} alt="" aria-hidden="true" loading="lazy" />
+          <span className="section-no">Программа лояльности</span><h2>Система баллов и VIP-уровней Moon-Doll</h2><p>Moon-Doll работает в том числе с покупателями из России и принимает заказы с доставкой в РФ. На сайте действует программа лояльности: она включает начисление баллов за покупки и отдельные действия, использование баллов при следующих заказах, специальные обмены баллов и VIP-уровни с дополнительными скидками.</p>
+        </div>
 
         <div className="loyalty-info-grid">
           <section className="loyalty-card"><h3>Начисление баллов</h3><ul><li><strong>1 балл</strong> за каждый потраченный $1.</li><li><strong>1000 баллов</strong> за регистрацию нового аккаунта.</li><li><strong>1500 баллов</strong> за положительный отзыв о заказе на сайте Moon-Doll.</li><li>Ещё <strong>1500 баллов</strong> за положительный отзыв о том же заказе на <a href="https://dollforum.com/" target="_blank" rel="noopener noreferrer">TDF</a>.</li></ul><p>В отдельные периоды могут проводиться акции с повышенным начислением, например двойными баллами.</p></section>
@@ -173,7 +176,12 @@ export default function MoonDollGuidePage() {
         <p className="loyalty-disclaimer">Материал носит справочный характер и описывает механику программы лояльности Moon-Doll по доступной на момент подготовки информации. Условия программы могут изменяться.</p>
       </section>
 
-      <section className="reseller-note"><span className="section-no">Проверка цены</span><h2>Почему у реселлера цена может быть другой</h2><p>Цена у магазина-посредника может отличаться от цены на официальной витрине производителя из-за закупочных условий, партнёрской программы, акций, валютного курса и способа формирования доставки.</p><p>Разница в цене сама по себе не подтверждает ни подлинность, ни подделку. Перед заказом следует проверить происхождение товара, условия гарантии и связь продавца с производителем.</p></section>
+      <section className="reseller-note">
+        <div className="moon-section-heading">
+          <img className="moon-section-emblem" src={publicPath("/images/shops/moon-doll-guide/section-emblems/reseller-price-emblem.png")} width={118} height={118} alt="" aria-hidden="true" loading="lazy" />
+          <span className="section-no">Проверка цены</span><h2>Почему у реселлера цена может быть другой</h2><p>Цена у магазина-посредника может отличаться от цены на официальной витрине производителя из-за закупочных условий, партнёрской программы, акций, валютного курса и способа формирования доставки.</p><p>Разница в цене сама по себе не подтверждает ни подлинность, ни подделку. Перед заказом следует проверить происхождение товара, условия гарантии и связь продавца с производителем.</p>
+        </div>
+      </section>
 
       <section className="section faq moon-faq"><div className="section-head"><div><span className="section-no">FAQ</span><h2>Вопросы об оформлении заказа</h2></div></div>{faq.map(([q,a])=><details key={q}><summary>{q}</summary><p>{a}</p></details>)}</section>
       <section className="related"><span className="section-no">Продолжить проверку</span><h2>Связанные материалы</h2><div><Link href="/safe-purchase">Безопасный выбор продавца</Link><Link href="/delivery-check">Проверка после доставки</Link><Link href="/useful-links">Полезные ссылки</Link></div></section>
