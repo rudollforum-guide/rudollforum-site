@@ -11,7 +11,7 @@ function PlatformLink({ href, children, rel = sponsoredRel }: { href: string; ch
 
 function StoreHeading({ icon, type, title }: { icon: string; type: string; title: string }) {
   return <header className="store-card-heading">
-    <img className="store-heading-icon" src={publicPath(icon)} alt="" aria-hidden="true" width="60" height="60"/>
+    <img className="store-heading-icon" src={publicPath(icon)} alt="" aria-hidden="true" width="72" height="72"/>
     <div className="store-heading-copy"><span className="store-type">{type}</span><h3>{title}</h3></div>
   </header>;
 }
@@ -27,19 +27,19 @@ export function StoreDirectory({ compact = false }: { compact?: boolean }) {
 
   return <div className="store-directory">
     <article className="store-card store-card--moon-doll">
-      <StoreHeading icon="/images/where-to-buy/moondoll-heading-icon.png" type="Внешний международный магазин" title="Moon-Doll"/>
+      <StoreHeading icon="/images/where-to-buy/moon-doll-logo.png" type="Внешний международный магазин" title="Moon-Doll"/>
       <p>Международный мультибрендовый магазин с отдельной инструкцией Rudollforum по оформлению заказа.</p>
       <div className="store-feature"><b>Промокод Rudollforum</b><span>Для читателей может быть доступна скидка 5% по промокоду <strong>RUDOLLFORUM</strong>. Перед оплатой проверьте применение промокода и актуальные условия.</span></div>
       <div className="store-feature store-loyalty"><b>Баллы и VIP-уровни Moon-Doll</b><span>На сайте действует программа лояльности: за покупки и отдельные действия начисляются баллы для следующих заказов. Также предусмотрены VIP-уровни с дополнительными скидками.</span><strong>Стандартный курс: 50 баллов = $1. VIP-скидки могут достигать 10%.</strong><small>Условия могут изменяться — проверяйте их в аккаунте Moon-Doll перед заказом.</small><Link className="store-loyalty-link" href="/shops/moon-doll-guide/#loyalty">Подробнее о баллах и VIP</Link></div>
       <small>Самостоятельно проверяйте модель, материал, вес, комплектацию, оплату, доставку и гарантию.</small>
       <div className="store-card-actions">
-        <FeaturedExternalLink href="https://www.moon-doll.com/" variant="moon" iconImage={publicPath("/images/where-to-buy/moon-doll-open.png")} title="Открыть Moon-Doll" subtitle="официальный сайт" rel={sponsoredRel}/>
+        <FeaturedExternalLink href="https://www.moon-doll.com/" variant="moon" iconImage={publicPath("/images/where-to-buy/moon-doll-cta-logo.png")} title="Открыть Moon-Doll" subtitle="официальный сайт" rel={sponsoredRel}/>
         <FeaturedInternalLink href="/shops/moon-doll-guide" iconImage={publicPath("/images/where-to-buy/moon-doll-guide.png")} title="Инструкция по заказу" description="справочная страница Rudollforum"/>
       </div>
     </article>
 
     <article className="store-card store-card--hanidoll">
-      <StoreHeading icon="/images/where-to-buy/hanidoll-heading-icon.png" type="Бренд и магазин · РФ и международно" title="Hanidoll"/>
+      <StoreHeading icon="/images/where-to-buy/hanidoll-logo.png" type="Бренд и магазин · РФ и международно" title="Hanidoll"/>
       <p>Hanidoll — бренд и магазин TPE- и силиконовых кукол, торсов и сопутствующих товаров. Есть русскоязычная площадка, международный сайт и страницы на маркетплейсах.</p>
       <nav className="store-platforms" aria-label="Основные площадки Hanidoll">
         <PlatformLink href="https://www.hanidoll.ru/">Сайт для РФ</PlatformLink>
@@ -50,13 +50,13 @@ export function StoreDirectory({ compact = false }: { compact?: boolean }) {
       </nav>
       <div className="store-feature"><b>Специальное предложение</b><span>Для участников сообщества может действовать скидка 10%. Актуальность и порядок применения нужно уточнить до заказа.</span></div>
       <div className="store-card-actions">
-        <FeaturedExternalLink href="https://www.hanidoll.ru/" variant="store" iconImage={publicPath("/images/where-to-buy/hanidoll-open.png")} title="Открыть Hanidoll" subtitle="официальная площадка для РФ" rel={sponsoredRel}/>
+        <FeaturedExternalLink href="https://www.hanidoll.ru/" variant="store" iconImage={publicPath("/images/where-to-buy/hanidoll-cta-logo.png")} title="Открыть Hanidoll" subtitle="официальная площадка для РФ" rel={sponsoredRel}/>
         <FeaturedInternalLink href="/shops/hanidoll" iconImage={publicPath("/images/where-to-buy/hanidoll-info.png")} title="Подробнее о Hanidoll" description="площадки, контакты и безопасность"/>
       </div>
     </article>
 
     <article className="store-card store-card--sexdollshop">
-      <StoreHeading icon="/images/where-to-buy/sexdollshop-heading-icon.png" type="Российский интернет-магазин" title="SexDollShop"/>
+      <StoreHeading icon="/images/where-to-buy/sexdollshop-logo.png" type="Российский интернет-магазин" title="SexDollShop"/>
       <p>SexDollShop — российский интернет-магазин с каталогом реалистичных кукол, торсов, голов, аксессуаров, париков и средств ухода.</p>
       <nav className="store-platforms" aria-label="Основные площадки SexDollShop">
         <PlatformLink href="https://sexdollshop.ru/" rel={editorialRel}>Официальный сайт</PlatformLink>
@@ -64,7 +64,7 @@ export function StoreDirectory({ compact = false }: { compact?: boolean }) {
       </nav>
       <div className="store-feature"><b>Если модели нет в каталоге</b><span>Менеджеру можно отправить ссылку или фотографию и уточнить заказ, цену, опции, сроки и доставку.</span></div>
       <div className="store-card-actions">
-        <FeaturedExternalLink href="https://sexdollshop.ru/" variant="store" iconImage={publicPath("/images/where-to-buy/sexdollshop-open.png")} title="Открыть SexDollShop" subtitle="официальный сайт" rel={editorialRel}/>
+        <FeaturedExternalLink href="https://sexdollshop.ru/" variant="store" iconImage={publicPath("/images/where-to-buy/sexdollshop-cta-logo.png")} title="Открыть SexDollShop" subtitle="официальный сайт" rel={editorialRel}/>
         <FeaturedInternalLink href="/shops/sexdollshop" iconImage={publicPath("/images/where-to-buy/sexdollshop-info.png")} title="Подробнее о магазине" description="контакты и проверка заказа"/>
       </div>
     </article>

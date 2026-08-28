@@ -965,9 +965,9 @@ main{padding-top:12px}
 .store-directory:not(.store-directory--compact) .store-card[class*="store-card--"]::before{z-index:0;background-image:var(--store-card-art);background-position:var(--store-card-position);background-repeat:no-repeat;background-size:cover;opacity:var(--store-card-art-opacity)}
 .store-directory:not(.store-directory--compact) .store-card[class*="store-card--"]::after{z-index:1;background:var(--store-card-overlay)}
 .store-directory:not(.store-directory--compact) .store-card[class*="store-card--"]>*{position:relative;z-index:2}
-.store-directory:not(.store-directory--compact) .store-card-heading{display:grid;grid-template-columns:60px minmax(0,1fr);align-items:center;gap:15px}
+.store-directory:not(.store-directory--compact) .store-card-heading{display:grid;grid-template-columns:72px minmax(0,1fr);align-items:center;gap:16px}
 .store-directory:not(.store-directory--compact) .store-heading-copy{min-width:0}
-.store-directory:not(.store-directory--compact) .store-heading-icon{display:block;width:60px;height:60px;max-width:100%;object-fit:contain;pointer-events:none}
+.store-directory:not(.store-directory--compact) .store-heading-icon{display:block;width:72px;height:72px;max-width:100%;object-fit:contain;pointer-events:none}
 .store-card--moon-doll{--store-card-art:url("/images/where-to-buy/moon-doll-card-bg.png");--store-card-position:62% center;--store-card-art-opacity:.8;--store-card-overlay:linear-gradient(90deg,rgba(255,253,248,.86) 0%,rgba(252,249,250,.66) 52%,rgba(238,235,253,.28) 100%);--store-icon-border:rgba(83,139,218,.58);--store-icon-bg:rgba(230,242,255,.74);--store-icon-glow:rgba(74,139,226,.26)}
 .store-card--hanidoll{--store-card-art:url("/images/where-to-buy/hanidoll-card-bg.png");--store-card-position:72% center;--store-card-art-opacity:.78;--store-card-overlay:linear-gradient(90deg,rgba(255,253,248,.87) 0%,rgba(255,247,250,.67) 52%,rgba(253,224,240,.3) 100%);--store-icon-border:rgba(205,91,151,.58);--store-icon-bg:rgba(255,230,243,.74);--store-icon-glow:rgba(211,70,146,.25)}
 .store-card--sexdollshop{--store-card-art:url("/images/where-to-buy/sexdollshop-card-bg.png");--store-card-position:68% center;--store-card-art-opacity:.82;--store-card-overlay:linear-gradient(90deg,rgba(255,253,248,.88) 0%,rgba(255,251,246,.68) 52%,rgba(226,245,239,.3) 100%);--store-icon-border:rgba(67,164,153,.56);--store-icon-bg:rgba(226,247,242,.76);--store-icon-glow:rgba(49,164,151,.24)}
@@ -988,7 +988,7 @@ main{padding-top:12px}
 .article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-link:hover{transform:translateY(-2px);border-color:var(--store-action-hover-border);background:var(--store-action-hover);box-shadow:0 10px 24px rgba(var(--store-action-shadow),.14),0 3px 7px rgba(var(--store-action-shadow),.08)}
 .article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-link:focus-visible{outline:3px solid var(--store-action-hover-border);outline-offset:3px}
 .article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-icon--image{width:var(--store-action-icon);height:var(--store-action-icon);padding:0;border:0;border-radius:0;background:none;box-shadow:none;outline:none;pointer-events:none}
-.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-icon--image img{width:100%;height:100%;object-fit:contain;pointer-events:none}
+.article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-icon--image img{width:var(--store-action-icon);height:var(--store-action-icon);object-fit:contain;pointer-events:none}
 .article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-copy b{color:#43304f;font-size:16px;font-weight:700;line-height:1.25}
 .article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-copy small{color:#665f70;font-size:12.5px;line-height:1.4}
 @media(min-width:1025px){
@@ -998,6 +998,8 @@ main{padding-top:12px}
   .article-body .store-directory:not(.store-directory--compact) .store-card--sexdollshop .store-card-actions .footer-featured-link{min-height:88px}
 }
 @media(max-width:1024px){
+  .store-directory:not(.store-directory--compact) .store-card-heading{grid-template-columns:64px minmax(0,1fr);gap:14px}
+  .store-directory:not(.store-directory--compact) .store-heading-icon{width:64px;height:64px}
   .store-directory:not(.store-directory--compact) .store-card-actions{--store-action-icon:40px}
   .article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-link{gap:12px;min-height:64px;padding:12px 15px}
   .article-body .store-directory:not(.store-directory--compact) .store-card-actions .footer-featured-copy b{font-size:15px}
@@ -1013,8 +1015,8 @@ main{padding-top:12px}
   .store-card--moon-doll{--store-card-position:67% center;--store-card-art-opacity:.72;--store-card-overlay:linear-gradient(90deg,rgba(255,253,248,.9) 0%,rgba(252,249,250,.74) 58%,rgba(238,235,253,.4) 100%)}
   .store-card--hanidoll{--store-card-position:76% center;--store-card-art-opacity:.7;--store-card-overlay:linear-gradient(90deg,rgba(255,253,248,.91) 0%,rgba(255,247,250,.75) 58%,rgba(253,224,240,.42) 100%)}
   .store-card--sexdollshop{--store-card-position:72% center;--store-card-art-opacity:.74;--store-card-overlay:linear-gradient(90deg,rgba(255,253,248,.92) 0%,rgba(255,251,246,.76) 58%,rgba(226,245,239,.42) 100%)}
-  .store-directory:not(.store-directory--compact) .store-card-heading{grid-template-columns:46px minmax(0,1fr);gap:11px}
-  .store-directory:not(.store-directory--compact) .store-heading-icon{width:46px;height:46px}
+  .store-directory:not(.store-directory--compact) .store-card-heading{grid-template-columns:52px minmax(0,1fr);gap:12px}
+  .store-directory:not(.store-directory--compact) .store-heading-icon{width:52px;height:52px}
   .store-directory:not(.store-directory--compact) .store-card h3{font-size:28px}
   .store-directory:not(.store-directory--compact) .store-card>p{font-size:15px}
 }
