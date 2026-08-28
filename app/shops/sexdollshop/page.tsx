@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { CommercialLink, StoreReference } from "../store-reference";
-import { OPEN_GRAPH_IMAGE, siteUrl } from "../../site-config";
+import { OPEN_GRAPH_IMAGE, publicPath, siteUrl } from "../../site-config";
 
 const title="SexDollShop — магазин реалистичных кукол, торсов и аксессуаров";
 const description="Справочная страница SexDollShop: каталог реалистичных кукол, торсов, голов и аксессуаров, контакты магазина и что проверить перед заказом.";
@@ -8,12 +8,12 @@ export const metadata:Metadata={title,description,alternates:{canonical:siteUrl(
 
 export default function SexDollShopPage(){return <StoreReference slug="sexdollshop" heroEmblem="/images/shops/sexdollshop/sexdollshop-brand-emblem.png" h1="SexDollShop — российский магазин кукол и аксессуаров" description={description} intro="SexDollShop — российский интернет-магазин с каталогом реалистичных кукол, торсов, голов, аксессуаров, париков и средств ухода. На сайте представлены каталог, бренды, инструкции, информация о доставке и оплате.">
   <section><span className="chapter">01</span><div><h2>Официальный сайт и канал</h2><p>Проверяйте актуальные характеристики и условия непосредственно на официальных площадках магазина.</p><div className="store-reference-grid">
-    <CommercialLink href="https://sexdollshop.ru/" rel="noopener noreferrer">Официальный сайт SexDollShop</CommercialLink>
-    <CommercialLink href="https://t.me/sexdollshopru" rel="noopener noreferrer">Telegram-канал SexDollShop</CommercialLink>
+    <CommercialLink href="https://sexdollshop.ru/" rel="noopener noreferrer" className="sexdollshop-action sexdollshop-action--official"><img className="sexdollshop-action-icon" src={publicPath("/images/shops/sexdollshop/actions/official-site-icon.png")} width={48} height={48} alt="" aria-hidden="true" loading="lazy"/><span>Официальный сайт SexDollShop</span></CommercialLink>
+    <CommercialLink href="https://t.me/sexdollshopru" rel="noopener noreferrer" className="sexdollshop-action sexdollshop-action--telegram"><img className="sexdollshop-action-icon" src={publicPath("/images/shops/sexdollshop/actions/telegram-channel-icon.png")} width={48} height={48} alt="" aria-hidden="true" loading="lazy"/><span>Telegram-канал SexDollShop</span></CommercialLink>
   </div></div></section>
   <section><span className="chapter">02</span><div><h2>Контакты магазина</h2><div className="store-contact-grid">
-    <div><b>Telegram</b><span>@sxtrade</span><small>Контакт указан без автоматически созданной ссылки, чтобы не подменять предоставленные данные.</small></div>
-    <div><b>WhatsApp / телефон</b><a href="tel:+79997151340">+7 (999) 715-13-40</a></div>
+    <div className="sexdollshop-contact sexdollshop-contact--telegram"><img className="sexdollshop-contact-icon" src={publicPath("/images/shops/sexdollshop/actions/telegram-contact-icon.png")} width={56} height={56} alt="" aria-hidden="true" loading="lazy"/><div className="sexdollshop-contact-copy"><b>Telegram</b><span>@sxtrade</span><small>Контакт указан без автоматически созданной ссылки, чтобы не подменять предоставленные данные.</small></div></div>
+    <div className="sexdollshop-contact sexdollshop-contact--phone"><img className="sexdollshop-contact-icon" src={publicPath("/images/shops/sexdollshop/actions/whatsapp-contact-icon.png")} width={56} height={56} alt="" aria-hidden="true" loading="lazy"/><div className="sexdollshop-contact-copy"><b>WhatsApp / телефон</b><a href="tel:+79997151340">+7 (999) 715-13-40</a></div></div>
   </div></div></section>
   <section><span className="chapter">03</span><div><h2>Если нужной модели нет в каталоге</h2><div className="store-feature store-feature--wide"><p>Если интересующая кукла, голова, торс или аксессуар отсутствуют на сайте, можно отправить менеджеру ссылку или фотографию модели и уточнить возможность заказа, цену, доступные опции, сроки и условия доставки.</p></div></div></section>
   <section><span className="chapter">04</span><div><h2>Что уточнить перед заказом</h2><ul className="store-checklist"><li>Наличие и точную модель.</li><li>Материал и комплектацию.</li><li>Фактический вес.</li><li>Сроки и условия доставки.</li><li>Способ оплаты.</li><li>Гарантию и условия возврата.</li><li>Реальные фотографии товара перед отправкой.</li></ul></div></section>

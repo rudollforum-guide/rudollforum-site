@@ -13,8 +13,8 @@ type StoreReferenceProps = {
   children: React.ReactNode;
 };
 
-export function CommercialLink({href,children,rel=sponsoredRel}:{href:string;children:React.ReactNode;rel?:string}) {
-  return <a className="store-reference-link" href={href} target="_blank" rel={rel}>{children}</a>;
+export function CommercialLink({href,children,rel=sponsoredRel,className}:{href:string;children:React.ReactNode;rel?:string;className?:string}) {
+  return <a className={`store-reference-link${className ? ` ${className}` : ""}`} href={href} target="_blank" rel={rel}>{children}</a>;
 }
 
 export function StoreReference({slug,h1,description,intro,heroEmblem,children}:StoreReferenceProps) {
@@ -23,7 +23,7 @@ export function StoreReference({slug,h1,description,intro,heroEmblem,children}:S
   const article={"@context":"https://schema.org","@type":"Article",headline:h1,description,url:canonical,mainEntityOfPage:canonical,inLanguage:"ru-RU",datePublished:"2026-08-08",dateModified:"2026-08-08",author:{"@type":"Organization","name":"Редакция Rudollforum"},publisher:{"@type":"Organization","name":"Rudollforum"}};
   const webPage={"@context":"https://schema.org","@type":"WebPage",name:h1,description,url:canonical,inLanguage:"ru-RU",datePublished:"2026-08-08",dateModified:"2026-08-08"};
   const headingContent=<><span className="eyebrow">Внешний магазин · справочная страница · 18+</span><h1>{h1}</h1><p>{intro}</p></>;
-  return <SiteShell><JsonLd data={breadcrumb}/><JsonLd data={article}/><JsonLd data={webPage}/><article className="article store-reference-page">
+  return <SiteShell><JsonLd data={breadcrumb}/><JsonLd data={article}/><JsonLd data={webPage}/><article className={`article store-reference-page store-reference-page--${slug}`}>
     <nav className="breadcrumbs"><Link href="/">Главная</Link><span aria-hidden="true">·</span><Link href="/where-to-buy">Где купить</Link><span aria-hidden="true">·</span><span>{h1}</span></nav>
     <header className="article-hero">{heroEmblem ? <div className="article-emblem-heading store-reference-heading">
       <img className="article-hero-emblem" src={publicPath(heroEmblem)} width={128} height={128} alt="" aria-hidden="true" />
