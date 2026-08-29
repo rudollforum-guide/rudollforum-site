@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { storeReviewSources, StoreReviewAction, StoreReviewCommunityNote } from "../store-reviews";
 import { FeaturedExternalLink, JsonLd, MetaLine, SiteShell } from "../site";
 import { OPEN_GRAPH_IMAGE, siteUrl } from "../site-config";
 
@@ -64,6 +65,17 @@ export default function OwnerReviewsPage() {
           {topics.map(([heading, text], index) => <article className="topic-card" key={heading}><div className="card-top"><span>{String(index + 1).padStart(2,"0")}</span><i aria-hidden="true">◇</i></div><h3>{heading}</h3><p>{text}</p></article>)}
         </div>
         <p className="catalog-navigation-note">Мнение автора отзыва может не совпадать с опытом других владельцев. Характеристики моделей и материалов меняются между партиями и версиями.</p>
+      </section>
+      <section className="store-reviews-section" aria-labelledby="store-reviews-title">
+        <h2 id="store-reviews-title">Отзывы о магазинах</h2>
+        <div className="store-reviews-grid">
+          {storeReviewSources.map(source => <article className="store-reviews-panel" key={source.id}>
+            <h3>{source.name}</h3>
+            <p>{source.description}</p>
+            <StoreReviewAction source={source} />
+          </article>)}
+        </div>
+        <StoreReviewCommunityNote />
       </section>
       <section className="related owner-reviews-related" aria-labelledby="owner-related-title">
         <span className="section-no">Полезные материалы</span>
