@@ -2,6 +2,8 @@ export type StoreReviewSource = {
   id: string;
   name: string;
   description: string;
+  details?: string;
+  context?: string;
   href: string;
   sponsored: boolean;
 };
@@ -14,7 +16,17 @@ export const moonDollReviews: StoreReviewSource = {
   sponsored: true,
 };
 
-export const storeReviewSources: readonly StoreReviewSource[] = [moonDollReviews];
+export const hanidollReviews: StoreReviewSource = {
+  id: "hanidoll",
+  name: "Hanidoll",
+  description: "У Hanidoll нет одного единого открытого раздела отзывов, где были бы собраны все отзывы покупателей по магазину и бренду.",
+  details: "Отзывы можно смотреть на нескольких внешних площадках, в карточках отдельных товаров и на маркетплейсах.",
+  context: "Также отзывы встречаются в карточках товаров на Яндекс Маркете, Wildberries и AliExpress, через агрегаторы вроде Alitools, а также в зарубежных сообществах и обсуждениях.",
+  href: "https://www.trustpilot.com/review/hanidoll.com",
+  sponsored: false,
+};
+
+export const storeReviewSources: readonly StoreReviewSource[] = [moonDollReviews, hanidollReviews];
 
 export function StoreReviewAction({ source, label }: { source: StoreReviewSource; label?: string }) {
   return <a className="link-button-secondary store-review-action" href={source.href} target="_blank" rel={source.sponsored ? "noopener noreferrer sponsored" : "noopener noreferrer"}>

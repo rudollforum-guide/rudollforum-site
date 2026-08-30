@@ -13,8 +13,10 @@ type StoreReferenceProps = {
   children: React.ReactNode;
 };
 
-export function CommercialLink({href,children,rel=sponsoredRel,className}:{href:string;children:React.ReactNode;rel?:string;className?:string}) {
-  return <a className={`store-reference-link${className ? ` ${className}` : ""}`} href={href} target="_blank" rel={rel}>{children}</a>;
+export function CommercialLink({href,children,rel=sponsoredRel,className,iconImage}:{href:string;children:React.ReactNode;rel?:string;className?:string;iconImage?:string}) {
+  return <a className={`store-reference-link${className ? ` ${className}` : ""}`} href={href} target="_blank" rel={rel}>
+    {iconImage ? <><img className="store-reference-link-icon" src={publicPath(iconImage)} width={48} height={48} alt="" aria-hidden="true"/><span className="store-reference-link-copy">{children}</span></> : children}
+  </a>;
 }
 
 export function StoreReference({slug,h1,description,intro,heroEmblem,children}:StoreReferenceProps) {

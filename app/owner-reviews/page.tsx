@@ -69,10 +69,11 @@ export default function OwnerReviewsPage() {
       <section className="store-reviews-section" aria-labelledby="store-reviews-title">
         <h2 id="store-reviews-title">Отзывы о магазинах</h2>
         <div className="store-reviews-grid">
-          {storeReviewSources.map(source => <article className="store-reviews-panel" key={source.id}>
+          {storeReviewSources.map(source => <article className={`store-reviews-panel store-reviews-panel--${source.id}`} key={source.id}>
             <h3>{source.name}</h3>
             <p>{source.description}</p>
-            <StoreReviewAction source={source} />
+            {source.details ? <p className="store-review-details">{source.details}{source.context ? ` ${source.context}` : ""}</p> : null}
+            <div className="store-review-action-wrap"><StoreReviewAction source={source} label={source.id === "hanidoll" ? "Отзывы Hanidoll на Trustpilot" : undefined} /></div>
           </article>)}
         </div>
         <StoreReviewCommunityNote />
