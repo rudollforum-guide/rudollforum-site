@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { hanidollReviews, StoreReviewAction } from "../../store-reviews";
+import { hanidollReviews } from "../../store-reviews";
 import { OPEN_GRAPH_IMAGE, publicPath, siteUrl } from "../../site-config";
 import { CommercialLink, StoreReference } from "../store-reference";
 
@@ -55,12 +54,12 @@ export default function HanidollPage(){return <StoreReference slug="hanidoll" he
   </ul></div></section>
   <section><span className="chapter">04</span><div><h2>Специальное предложение Hanidoll для Rudollforum</h2><div className="store-offer"><span>Условия необходимо уточнить</span><p>Для участников сообщества Rudollforum действует специальное предложение Hanidoll — скидка 10% при оформлении заказа через официальные площадки бренда.</p><p>Telegram используется только для консультации, уточнения модели и подтверждения скидки. Оплата должна проходить через официальный сайт Hanidoll или официальные маркетплейсы.</p></div><ol className="store-steps"><li>Выбрать модель.</li><li>Связаться с представителем бренда для консультации.</li><li>Уточнить применение скидки Rudollforum.</li><li>Оформить и оплатить заказ через официальную площадку.</li></ol><p><strong>Актуальность предложения и условия скидки рекомендуется уточнять перед заказом.</strong></p></div></section>
   <section className="hanidoll-reviews-section"><span className="chapter">05</span><div><h2>Отзывы покупателей</h2><div className="hanidoll-reviews-panel">
-    <div className="hanidoll-reviews-intro"><p>{hanidollReviews.description}</p><p>{hanidollReviews.details}</p><StoreReviewAction source={hanidollReviews} label="Открыть отзывы на Trustpilot"/></div>
+    <div className="hanidoll-reviews-intro"><p>{hanidollReviews.description}</p><p>{hanidollReviews.details}</p><a className="store-review-action hanidoll-review-action" href={hanidollReviews.href} target="_blank" rel="noopener noreferrer"><img className="hanidoll-review-action-icon" src={publicPath("/images/shops/hanidoll/reviews/trustpilot-reviews-icon.png")} width={44} height={44} alt="" aria-hidden="true"/><span>Открыть отзывы на Trustpilot</span></a></div>
     <div className="hanidoll-reviews-notes">
       <article><h3>Маркетплейсы и агрегаторы</h3><p>Отзывы Hanidoll можно искать в карточках отдельных товаров на Яндекс Маркете, Wildberries, AliExpress и через агрегаторы вроде Alitools.</p></article>
       <article><h3>Зарубежные сообщества и обсуждения</h3><p>Иногда отзывы, вопросы и личный опыт по Hanidoll встречаются на Reddit, форумах и других открытых площадках.</p></article>
     </div>
-    <Link className="store-reviews-owner-link" href="/owner-reviews/">Другие отзывы владельцев</Link>
+    <div className="hanidoll-reviews-telegram"><p>Более подробные отзывы и личный опыт владельцев публикуются в закрытой Telegram-группе Rudollforum. Информацию о входе в группу можно получить через Telegram-канал Rudollforum.</p><a href="https://t.me/rudollforum" target="_blank" rel="noopener noreferrer">Telegram-канал Rudollforum</a></div>
   </div></div></section>
   <section><span className="chapter">06</span><div><h2>Роль Rudollforum</h2><p>Упоминание Hanidoll носит справочный характер. Покупатель самостоятельно принимает решение об оплате, проверяет точную модель, материал, комплектацию, фактический вес, сроки, гарантию и порядок возврата.</p><p>Коммерческие ссылки на официальные площадки открываются в новой вкладке и обозначены как спонсируемые. Контактные ссылки телефона и email не являются платёжными ссылками.</p></div></section>
 </StoreReference>}
