@@ -23,9 +23,9 @@ const sections = [
 ];
 
 const ownerReviewCards = [
-  ["Материалы", "Состав, мягкость, текстура и изменения поверхности со временем.", "materials-icon.png"],
-  ["Вес и переноска", "Фактическая масса, скелет, суставы и бытовое удобство.", "weight-portability-icon.png"],
-  ["Уход и долговечность", "Очистка, пятна, хранение, ремонт и состояние спустя месяцы.", "care-longevity-icon.png"],
+  ["Материалы", "Состав, мягкость, текстура и изменения поверхности со временем.", "materials-icon.png", "/owner-reviews/#materials"],
+  ["Вес и переноска", "Фактическая масса, скелет, суставы и бытовое удобство.", "weight-portability-icon.png", "/owner-reviews/#weight-and-handling"],
+  ["Уход и долговечность", "Очистка, пятна, хранение, ремонт и состояние спустя месяцы.", "care-longevity-icon.png", "/owner-reviews/#care-and-longevity"],
 ];
 
 const faq = [
@@ -133,7 +133,7 @@ export default function Home() {
     <section className="section" aria-labelledby="owner-reviews-title">
       <div className="section-head"><div><span className="section-no">Редакционный раздел</span><h2 id="owner-reviews-title">Отзывы владельцев</h2></div><p>Будущая подборка будет опираться только на подтверждённый опыт без выдуманных оценок и количества отзывов.</p></div>
       <div className="topic-grid">
-        {ownerReviewCards.map(([title,text,icon],index)=><Link href="/owner-reviews" className="topic-card home-guide-card" key={title}><div className="card-top"><span>{String(index+1).padStart(2,"0")}</span><img src={publicPath(`/images/home/guide-cards/${icon}`)} alt="" aria-hidden="true" width="52" height="52" loading="lazy" draggable="false" /></div><h3>{title}</h3><p>{text}</p><b>Открыть раздел</b></Link>)}
+        {ownerReviewCards.map(([title,text,icon,href],index)=><Link href={href} className="topic-card home-guide-card" key={title}><div className="card-top"><span>{String(index+1).padStart(2,"0")}</span><img src={publicPath(`/images/home/guide-cards/${icon}`)} alt="" aria-hidden="true" width="52" height="52" loading="lazy" draggable="false" /></div><h3>{title}</h3><p>{text}</p><b>Открыть раздел</b></Link>)}
       </div>
     </section>
 

@@ -14,12 +14,6 @@ export const metadata: Metadata = {
   openGraph: { title, description, url: siteUrl("/owner-reviews"), type: "website", images: [OPEN_GRAPH_IMAGE] },
 };
 
-const topics = [
-  ["Материалы", "Будущие публикации будут отделять первое впечатление от опыта спустя месяцы: мягкость, запах, липкость, текстура, окрашивание поверхности, soft-зоны и различия между заявленным и фактическим материалом."],
-  ["Вес и переноска", "В центре внимания — фактический вес комплектации, удобство подъёма и переноски, работа скелета, суставов и пальцев, а также соответствие размеров и массы данным продавца."],
-  ["Уход и долговечность", "Редакция будет учитывать очистку, сушку, пятна, хранение, ремонт, состояние парика, упаковку и доставку, а также изменения материала после продолжительной эксплуатации."],
-] as const;
-
 export default function OwnerReviewsPage() {
   const breadcrumb = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":siteUrl("/")},{"@type":"ListItem","position":2,"name":"Отзывы владельцев","item":siteUrl("/owner-reviews/")}]};
   const collection = {"@context":"https://schema.org","@type":"CollectionPage",name:"Отзывы владельцев силиконовых и TPE-кукол",description,url:siteUrl("/owner-reviews/"),inLanguage:"ru-RU",datePublished:"2026-08-01",dateModified:"2026-08-01",publisher:{"@type":"Organization","name":"Rudollforum"}};
@@ -32,12 +26,136 @@ export default function OwnerReviewsPage() {
       <header className="article-hero">
         <span className="eyebrow">Редакционный раздел · 18+</span>
         <h1>Отзывы владельцев силиконовых и TPE-кукол</h1>
-        <p>Раздел предназначен для систематизации реального опыта владельцев без выдуманных авторов, оценок и количества отзывов. Здесь будут публиковаться только материалы, для которых можно указать модель, срок владения и контекст эксплуатации.</p>
+        <p>Обобщённый опыт владельцев по материалам, весу, эксплуатации, уходу, хранению и долговечности.</p>
       </header>
       <div className="owner-reviews-intro-copy">
-        <p>Основная часть отзывов владельцев, фотографий, обсуждений моделей и практического опыта публикуется в закрытой группе Rudollforum. Закрытый формат помогает сохранять уважительное отношение к материалам участников и поддерживать спокойную атмосферу общения.</p>
-        <p>Информация о входе в закрытую группу доступна через <a href="https://t.me/rudollforum" target="_blank" rel="noopener noreferrer">открытый Telegram-канал Rudollforum</a>. Доступ не предоставляется автоматически: условия вступления и актуальные правила необходимо смотреть в канале.</p>
+        <p>В этом разделе собран обобщённый практический опыт владельцев силиконовых и TPE-кукол. Это не рейтинг брендов и не набор отдельных отзывов, а основные наблюдения по материалам, весу, эксплуатации, уходу и долговечности.</p>
+        <p>Опыт разных владельцев может отличаться: свойства зависят от конкретного состава, конструкции изделия, условий хранения и обращения. Материал помогает понять практические риски, но не служит гарантией для отдельной модели.</p>
       </div>
+      <nav className="owner-experience-nav" aria-label="Темы практического опыта владельцев">
+        <a href="#materials">Материалы</a>
+        <a href="#weight-and-handling">Вес и переноска</a>
+        <a href="#care-and-longevity">Уход и долговечность</a>
+      </nav>
+      <section className="owner-experience-section owner-experience-section--materials" id="materials" aria-labelledby="materials-title">
+        <div className="owner-experience-heading">
+          <span className="section-no">01 · Практический опыт</span>
+          <h2 id="materials-title">Материалы: что замечают владельцы</h2>
+          <p>Очень мягкий TPE, S-TPE и ультрамягкий силикон приятнее на ощупь, но мягкость влияет и на повседневное обращение. Такие материалы легче пачкаются и растягиваются, сильнее проминаются и могут быть чувствительнее к механическим повреждениям.</p>
+        </div>
+        <aside className="owner-experience-callout owner-experience-callout--rose">
+          <strong>Силикон сам по себе не гарантирует высокой прочности.</strong>
+          <p>Долговечность зависит от конкретного состава, мягкости, конструкции изделия и аккуратности владельца.</p>
+        </aside>
+        <div className="owner-experience-grid">
+          <article className="owner-experience-block">
+            <h3>Что обычно проявляется раньше всего</h3>
+            <ul className="owner-experience-list">
+              <li>стирание макияжа и окраски;</li>
+              <li>отклеивание ресниц и ногтей;</li>
+              <li>выпадение отдельных имплантированных волос;</li>
+              <li>небольшие потёртости и вмятины;</li>
+              <li>следы от одежды.</li>
+            </ul>
+            <p>Подобные косметические дефекты не обязательно означают окончание эксплуатации и часто могут быть восстановлены.</p>
+          </article>
+          <article className="owner-experience-block">
+            <h3>Наиболее уязвимые зоны</h3>
+            <ul className="owner-experience-list owner-experience-list--compact">
+              <li>пальцы;</li>
+              <li>локти и колени;</li>
+              <li>плечи и ступни;</li>
+              <li>паховая область;</li>
+              <li>места сильного сгиба.</li>
+            </ul>
+            <p>Риск зависит не только от материала, но и от конструкции, скелета и распределения нагрузки.</p>
+          </article>
+        </div>
+        <a className="owner-experience-next" href="#weight-and-handling">Далее: вес и переноска</a>
+      </section>
+      <section className="owner-experience-section owner-experience-section--weight" id="weight-and-handling" aria-labelledby="weight-title">
+        <div className="owner-experience-heading">
+          <span className="section-no">02 · Практический опыт</span>
+          <h2 id="weight-title">Вес и переноска: почему килограммы ощущаются иначе</h2>
+          <p><strong>Вес куклы — это не просто цифра в карточке товара.</strong> Одна из частых ошибок новичков — смотреть на рост, лицо, грудь, фигуру и материал, но недооценивать фактическую массу.</p>
+          <p>У куклы нет жёсткой формы, удобной ручки и стабильного центра тяжести. Голова, корпус, бёдра, руки и ноги двигаются отдельно, суставы могут складываться, тело — уходить в сторону, а мягкий материал требует аккуратного обращения. По ощущениям тяжёлая кукла ближе не к обычному грузу, а к телу без собственного баланса.</p>
+        </div>
+        <div className="owner-experience-grid owner-experience-grid--weight">
+          <article className="owner-experience-block">
+            <h3>Что учитывать перед покупкой</h3>
+            <ul className="owner-experience-list">
+              <li>реальный вес изделия;</li>
+              <li>собственный рост, физические возможности и состояние спины;</li>
+              <li>место хранения и возможность безопасной переноски;</li>
+              <li>удобство переодевания, мойки и сушки;</li>
+              <li>нагрузку на суставы и каркас;</li>
+              <li>риск падения или повреждения изделия.</li>
+            </ul>
+          </article>
+          <article className="owner-experience-block">
+            <h3>Как переносить безопаснее</h3>
+            <ul className="owner-experience-list">
+              <li>поддерживать корпус и распределять вес;</li>
+              <li>не тянуть за руки, ноги или голову;</li>
+              <li>не переносить за отдельный сустав;</li>
+              <li>не перегибать тело;</li>
+              <li>не поднимать весь вес одной точкой;</li>
+              <li>избегать резких движений.</li>
+            </ul>
+          </article>
+        </div>
+        <aside className="owner-experience-callout owner-experience-callout--gold">
+          <p>Особенно осторожно стоит относиться к моделям <strong>35+ кг</strong>.</p>
+          <strong>40+ кг — это уже не просто «тяжеловато», а полноценная силовая эксплуатация.</strong>
+        </aside>
+        <div className="owner-experience-summary"><strong>Перед покупкой всегда смотрите вес, а не только рост и фотографии.</strong><span>Иногда более лёгкая модель приносит больше радости просто потому, что с ней проще жить.</span></div>
+        <a className="owner-experience-next" href="#care-and-longevity">Далее: уход и долговечность</a>
+      </section>
+      <section className="owner-experience-section owner-experience-section--care" id="care-and-longevity" aria-labelledby="care-title">
+        <div className="owner-experience-heading">
+          <span className="section-no">03 · Практический опыт</span>
+          <h2 id="care-title">Уход и долговечность: сколько реально служит кукла</h2>
+        </div>
+        <aside className="owner-experience-callout owner-experience-callout--mint">
+          <strong>Универсального срока службы не существует.</strong>
+          <p>Одна кукла может потребовать ремонта уже в первый год, а другая спустя несколько лет продолжает нормально использоваться. Это не рейтинг брендов и не гарантия для каждого экземпляра, а обобщение практического опыта владельцев.</p>
+        </aside>
+        <div className="owner-experience-grid">
+          <article className="owner-experience-block">
+            <h3>Скелет часто важнее косметических дефектов</h3>
+            <p>Суставы могут изнашиваться неравномерно: один становится слабым, другой — слишком тугим. Тугой сустав тоже может быть проблемой, потому что нагрузка передаётся на соседние части каркаса и материала.</p>
+            <p>Большой вес влияет не только на удобство, но и на срок службы: тяжёлую куклу сложнее переносить, мыть и менять ей позы, а нагрузка на скелет и риск повреждения материала выше. <a href="#weight-and-handling">Вернуться к разделу о весе.</a></p>
+          </article>
+          <article className="owner-experience-block">
+            <h3>Как хранение влияет на состояние</h3>
+            <p>Длительное давление, складки ткани, тёмная одежда и жёсткие поверхности могут оставить пятна, вмятины и деформации.</p>
+            <p>Горизонтальное хранение допустимо, если поверхность ровная, тело расправлено, а нагрузка распределена равномерно.</p>
+          </article>
+          <article className="owner-experience-block owner-experience-block--wide">
+            <h3>После мойки и при хранении</h3>
+            <ul className="owner-experience-list owner-experience-list--columns">
+              <li>полноценно просушивать изделие;</li>
+              <li>контролировать внутренние полости;</li>
+              <li>следить за герметичностью;</li>
+              <li>контролировать места контакта TPE с силиконовыми деталями.</li>
+            </ul>
+          </article>
+        </div>
+        <div className="owner-experience-timeline" aria-labelledby="experience-timeline-title">
+          <div className="owner-experience-timeline-heading"><span className="section-no">Временная шкала наблюдений</span><h3 id="experience-timeline-title">Что чаще замечают со временем</h3></div>
+          <div className="owner-experience-timeline-grid">
+            <article><span>Первые месяцы</span><ul><li>заводские особенности;</li><li>косметические дефекты.</li></ul></article>
+            <article><span>Первый год</span><ul><li>слабые или тугие суставы;</li><li>первые разрывы;</li><li>следы хранения.</li></ul></article>
+            <article><span>Два-три года</span><ul><li>некоторые экземпляры остаются полностью рабочими;</li><li>может потребоваться косметический уход или небольшой ремонт.</li></ul></article>
+          </div>
+          <p>Это не прогноз срока службы конкретной куклы. По обобщённому опыту некоторые экземпляры продолжают нормально использоваться спустя два-три года.</p>
+        </div>
+        <aside className="owner-experience-callout owner-experience-callout--final">
+          <strong>Когда срок службы действительно заканчивается</strong>
+          <p>Реальный срок службы заканчивается не при первой потёртости, а когда повреждение становится неремонтопригодным, использование — небезопасным или владелец больше не готов обслуживать куклу.</p>
+        </aside>
+        <p className="owner-experience-conclusion">Долговечность зависит не только от бренда и материала, но и от качества конкретного экземпляра, веса, конструкции, хранения, ухода и аккуратности владельца.</p>
+      </section>
       <section className="owner-community-card" aria-labelledby="owner-community-title">
         <div className="owner-community-copy">
           <span className="section-no">Сообщество владельцев</span>
@@ -57,14 +175,6 @@ export default function OwnerReviewsPage() {
           <FeaturedExternalLink href="https://t.me/rudollforum" variant="telegram" icon="✈" title="Перейти в Telegram Rudollforum" subtitle="вход через открытый канал"/>
           <small>В канале размещена информация о сообществе и условиях входа в закрытую группу.</small>
         </div>
-      </section>
-      <section className="section" aria-labelledby="review-topics-title">
-        <div className="section-head"><div><span className="section-no">Темы будущих материалов</span><h2 id="review-topics-title">Что важно в опыте владельца</h2></div><p>Карточки описывают направления редакционной работы, а не отзывы или оценки товаров.</p></div>
-        <p className="catalog-disclaimer">Полезный материал должен указывать точную модель, материал, срок эксплуатации и обстоятельства использования. Первые впечатления отделяются от наблюдений спустя месяцы, а заводские фотографии — от фотографий полученного экземпляра.</p>
-        <div className="topic-grid">
-          {topics.map(([heading, text], index) => <article className="topic-card" key={heading}><div className="card-top"><span>{String(index + 1).padStart(2,"0")}</span><i aria-hidden="true">◇</i></div><h3>{heading}</h3><p>{text}</p></article>)}
-        </div>
-        <p className="catalog-navigation-note">Мнение автора отзыва может не совпадать с опытом других владельцев. Характеристики моделей и материалов меняются между партиями и версиями.</p>
       </section>
       <section className="store-reviews-section" aria-labelledby="store-reviews-title">
         <h2 id="store-reviews-title">Отзывы о магазинах</h2>
