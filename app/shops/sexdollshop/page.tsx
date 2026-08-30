@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { CommercialLink, StoreReference } from "../store-reference";
 import { OPEN_GRAPH_IMAGE, publicPath, siteUrl } from "../../site-config";
 
@@ -8,9 +7,9 @@ const description="Справочная страница SexDollShop: катал
 export const metadata:Metadata={title,description,alternates:{canonical:siteUrl("/shops/sexdollshop")},openGraph:{title,description,url:siteUrl("/shops/sexdollshop"),type:"article",images:[OPEN_GRAPH_IMAGE]}};
 
 const reviewLinks = [
-  { label: "Яндекс Карты", href: "https://yandex.ru/maps/org/sexdollshop_ru/57094202383/reviews/?ll=37.531660%2C55.763941&z=14", variant: "maps" },
-  { label: "Яндекс Отзывы", href: "https://reviews.yandex.ru/shop/sexdollshop.ru", variant: "yandex" },
-  { label: "2ГИС", href: "https://2gis.ru/moscow/firm/70000001058897830/tab/reviews", variant: "gis" },
+  { label: "Яндекс Карты", href: "https://yandex.ru/maps/org/sexdollshop_ru/57094202383/reviews/?ll=37.531660%2C55.763941&z=14", icon: "/images/shops/sexdollshop/reviews/yandex-maps-icon.png", variant: "maps" },
+  { label: "Яндекс Отзывы", href: "https://reviews.yandex.ru/shop/sexdollshop.ru", icon: "/images/shops/sexdollshop/reviews/yandex-reviews-icon.png", variant: "yandex" },
+  { label: "2ГИС", href: "https://2gis.ru/moscow/firm/70000001058897830/tab/reviews", icon: "/images/shops/sexdollshop/reviews/2gis-icon.png", variant: "gis" },
 ] as const;
 
 export default function SexDollShopPage(){return <StoreReference slug="sexdollshop" heroEmblem="/images/shops/sexdollshop/sexdollshop-brand-emblem.png" h1="SexDollShop — российский магазин кукол и аксессуаров" description={description} intro="SexDollShop — российский интернет-магазин с каталогом реалистичных кукол, торсов, голов, аксессуаров, париков и средств ухода. На сайте представлены каталог, бренды, инструкции, информация о доставке и оплате.">
@@ -25,7 +24,7 @@ export default function SexDollShopPage(){return <StoreReference slug="sexdollsh
   <section><span className="chapter">03</span><div><h2>Если нужной модели нет в каталоге</h2><div className="store-feature store-feature--wide"><p>Если интересующая кукла, голова, торс или аксессуар отсутствуют на сайте, можно отправить менеджеру ссылку или фотографию модели и уточнить возможность заказа, цену, доступные опции, сроки и условия доставки.</p></div></div></section>
   <section><span className="chapter">04</span><div><h2>Что уточнить перед заказом</h2><ul className="store-checklist"><li>Наличие и точную модель.</li><li>Материал и комплектацию.</li><li>Фактический вес.</li><li>Сроки и условия доставки.</li><li>Способ оплаты.</li><li>Гарантию и условия возврата.</li><li>Реальные фотографии товара перед отправкой.</li></ul></div></section>
   <section><span className="chapter">05</span><div className="sexdollshop-reviews-panel"><h2>Отзывы покупателей</h2><p>У SexDollShop.ru нет отдельного раздела отзывов на сайте, поэтому для оценки опыта покупателей можно смотреть внешние площадки.</p><p className="sexdollshop-reviews-lead">Наиболее вместительные и удобные ресурсы по отзывам:</p><div className="sexdollshop-reviews-grid">
-    {reviewLinks.map(link => <a className={`sexdollshop-review-link sexdollshop-review-link--${link.variant}`} href={link.href} target="_blank" rel="noopener noreferrer" key={link.href}><span>{link.label}</span></a>)}
-  </div><p className="sexdollshop-reviews-note">Также отзывы о магазине можно встретить и на других открытых площадках, агрегаторах и справочных сервисах.</p><Link className="store-reviews-owner-link" href="/owner-reviews/">Другие отзывы владельцев</Link></div></section>
+    {reviewLinks.map(link => <a className={`sexdollshop-review-link sexdollshop-review-link--${link.variant}`} href={link.href} target="_blank" rel="noopener noreferrer" key={link.href}><img className="sexdollshop-review-link-icon" src={publicPath(link.icon)} width={52} height={52} alt="" aria-hidden="true" loading="lazy"/><span>{link.label}</span></a>)}
+  </div><p className="sexdollshop-reviews-note">Также отзывы о магазине можно встретить и на других открытых площадках, агрегаторах и справочных сервисах.</p><div className="sexdollshop-reviews-telegram"><p>Более подробные отзывы и личный опыт владельцев публикуются в закрытой Telegram-группе Rudollforum. Информацию о входе в группу можно получить через Telegram-канал Rudollforum.</p><a href="https://t.me/rudollforum" target="_blank" rel="noopener noreferrer">Telegram-канал Rudollforum</a></div></div></section>
   <section><span className="chapter">06</span><div><h2>Роль Rudollforum</h2><div className="store-safety"><p>Rudollforum не является продавцом, посредником или гарантом сделки. Покупатель самостоятельно проверяет магазин, предложение, получателя платежа, условия доставки, гарантии и возврата.</p></div><p>Упоминание магазина носит справочный характер и не заменяет проверку конкретного заказа.</p></div></section>
 </StoreReference>}
