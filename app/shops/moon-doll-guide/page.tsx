@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { moonDollReviews, StoreReviewAction, StoreReviewCommunityNote } from "../../store-reviews";
+import { moonDollReviews, StoreReviewCommunityNote } from "../../store-reviews";
 import { JsonLd, MetaLine, SiteShell } from "../../site";
 import { OPEN_GRAPH_IMAGE, publicPath, siteUrl } from "../../site-config";
 
@@ -129,7 +129,7 @@ export default function MoonDollGuidePage() {
           <img className="article-hero-emblem" src={publicPath("/images/shops/moon-doll-guide/moon-doll-guide-brand-emblem.png")} width={128} height={128} alt="" aria-hidden="true" />
           <span className="eyebrow">Внешний магазин · независимая инструкция</span>
           <h1>Как оформить заказ на Moon-Doll</h1>
-          <p>Ниже приведён общий порядок оформления заказа на сайте Moon-Doll. Инструкция помогает понять последовательность действий, однако перед оплатой необходимо повторно проверить выбранную модель, комплектацию, итоговую стоимость и актуальные условия магазина.</p>
+          <p>Moon-Doll принимает заказы с <strong className="moon-guide-russia-accent">доставкой в Россию</strong>. Ниже приведён общий порядок оформления заказа на сайте Moon-Doll. Инструкция помогает понять последовательность действий, однако перед оплатой необходимо повторно проверить выбранную модель, комплектацию, итоговую стоимость и актуальные условия магазина.</p>
         </div>
       </header>
       <aside className="moon-disclaimer"><strong>18+ · Справочный материал для совершеннолетних</strong><p>Условия оплаты, скидок, производства, доставки, возврата и связи с магазином могут меняться. Перед оформлением заказа проверяйте актуальные сведения на сайте Moon-Doll и уточняйте детали у менеджера.</p><p>Rudollforum не принимает оплату, не оформляет заказ от имени покупателя и не является стороной сделки.</p></aside>
@@ -144,7 +144,7 @@ export default function MoonDollGuidePage() {
             {step.items&&<ul className="check-list">{step.items.map(item=><li key={item}>{item}</li>)}</ul>}
             {step.note&&<aside className="step-warning">{step.note}</aside>}
             {step.extra&&<p className="step-extra">{step.extra}</p>}
-            {index===2&&<div className="contact-card"><span>Справочные контакты</span><a className="link-inline" href="https://t.me/jackymoondoll" target="_blank" rel="noopener noreferrer sponsored">Telegram: @jackymoondoll</a><a className="link-inline" href="mailto:sales@moon-doll.com">E-mail: sales@moon-doll.com</a><a className="link-inline" href="https://wa.me/601126685168" target="_blank" rel="noopener noreferrer sponsored">WhatsApp: +60 11-2668 5168</a></div>}
+            {index===2&&<div className="contact-card"><span>Справочные контакты</span><a className="contact-card-row" href="https://t.me/jackymoondoll" target="_blank" rel="noopener noreferrer sponsored"><img className="contact-card-icon" src={publicPath("/images/shops/moon-doll-guide/contacts/telegram-contact-icon.png")} width={38} height={38} alt="" aria-hidden="true"/><strong>Telegram: @jackymoondoll</strong></a><a className="contact-card-row" href="mailto:sales@moon-doll.com"><img className="contact-card-icon" src={publicPath("/images/shops/moon-doll-guide/contacts/email-contact-icon.png")} width={38} height={38} alt="" aria-hidden="true"/><strong>E-mail: sales@moon-doll.com</strong></a><a className="contact-card-row" href="https://wa.me/601126685168" target="_blank" rel="noopener noreferrer sponsored"><img className="contact-card-icon" src={publicPath("/images/shops/moon-doll-guide/contacts/whatsapp-contact-icon.png")} width={38} height={38} alt="" aria-hidden="true"/><strong>WhatsApp: +60 11-2668 5168</strong></a></div>}
             {index===4&&<div className="moon-promo"><span>Промокод Rudollforum</span><code>RUDOLLFORUM</code><a className="link-button-secondary moon-guide-action moon-guide-action--shop" href="https://www.moon-doll.com/" target="_blank" rel="noopener noreferrer sponsored"><MoonGuideActionContent icon="promo-open-moon-doll" title="Открыть Moon-Doll"/></a></div>}
             {index===5&&<div className="checkout-grid"><div><strong>Information</strong><p>Проверьте имя, адрес, телефон, электронную почту и промокод.</p></div><div><strong>Shipping</strong><p>Повторно проверьте адрес и действующие условия доставки.</p></div><div><strong>Payment</strong><p>На этапе оплаты выберите доступный для вашей страны и банка способ. Конкретные реквизиты и инструкции магазин может прислать отдельным письмом или инвойсом.</p></div><aside>Если банк приостановил перевод, свяжитесь со службой безопасности банка и менеджером магазина. Не повторяйте платёж несколько раз без подтверждения его статуса.</aside></div>}
             {index===7&&<><a className="link-button-secondary moon-guide-action moon-guide-action--policy" href="https://www.moon-doll.com/pages/cancellation-and-refund-policy" target="_blank" rel="noopener noreferrer sponsored"><MoonGuideActionContent icon="return-policy" title="Проверить политику отмены и возврата"/></a><details className="inline-help"><summary>Справка по версии руководства</summary><p>В версии руководства Rudollforum на момент публикации указывались отдельные условия возврата до запуска производства. Перед оплатой обязательно проверьте действующую политику Moon-Doll.</p></details></>}
@@ -187,9 +187,8 @@ export default function MoonDollGuidePage() {
       <section className="store-reviews-panel moon-store-reviews" aria-labelledby="moon-reviews-title">
         <h2 id="moon-reviews-title">Отзывы о Moon-Doll</h2>
         <p>{moonDollReviews.description} Перед заказом можно ознакомиться с отзывами и самостоятельно оценить опыт покупателей.</p>
-        <StoreReviewAction source={moonDollReviews} label="Открыть отзывы Moon-Doll" />
+        <a className="store-review-action moon-reviews-action" href={moonDollReviews.href} target="_blank" rel="noopener noreferrer sponsored"><img className="moon-reviews-action-icon" src={publicPath("/images/shops/moon-doll-guide/actions/reviews-icon.png")} width={44} height={44} alt="" aria-hidden="true"/><span>Открыть отзывы Moon-Doll</span></a>
         <StoreReviewCommunityNote />
-        <Link className="store-reviews-owner-link" href="/owner-reviews/">Отзывы владельцев на Rudollforum</Link>
       </section>
 
       <section className="section faq moon-faq"><div className="section-head"><div><span className="section-no">FAQ</span><h2>Вопросы об оформлении заказа</h2></div></div>{faq.map(([q,a])=><details key={q}><summary>{q}</summary><p>{a}</p></details>)}</section>

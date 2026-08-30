@@ -65,7 +65,7 @@ export default function Home() {
           <span className="external-label">Внешний ресурс</span>
           <h3 id="moon-doll-title">Где посмотреть доступные модели</h3>
         </div>
-        <p className="external-card-description">В качестве одного из внешних примеров магазина можно посмотреть каталог Moon-Doll. На сайте представлены силиконовые и ТПЕ-куклы разных брендов и конфигураций. Перед заказом самостоятельно проверяйте материал, фактический вес, комплектацию, условия оплаты, доставки и гарантии.</p>
+        <p className="external-card-description">Moon-Doll принимает заказы с <strong className="moon-russia-accent">доставкой в Россию</strong>. В качестве одного из внешних примеров магазина можно посмотреть каталог Moon-Doll. На сайте представлены силиконовые и ТПЕ-куклы разных брендов и конфигураций. Перед заказом самостоятельно проверяйте материал, фактический вес, комплектацию, условия оплаты, доставки и гарантии.</p>
         <div className="external-card-action">
           <div className="promo">
             <div className="promo-heading">
