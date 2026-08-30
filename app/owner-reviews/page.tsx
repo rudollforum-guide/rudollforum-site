@@ -73,7 +73,7 @@ export default function OwnerReviewsPage() {
             <h3>{source.name}</h3>
             <p>{source.description}</p>
             {source.details ? <p className="store-review-details">{source.details}{source.context ? ` ${source.context}` : ""}</p> : null}
-            <div className="store-review-action-wrap"><StoreReviewAction source={source} label={source.id === "hanidoll" ? "Отзывы Hanidoll на Trustpilot" : undefined} /></div>
+            <div className="store-review-action-wrap"><StoreReviewAction source={source} /></div>
           </article>)}
         </div>
         <StoreReviewCommunityNote />

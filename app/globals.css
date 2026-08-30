@@ -65,8 +65,10 @@ main{padding-top:12px}
 .store-reviews-panel>p,.store-reviews-community-note{max-width:78ch;margin:0;color:#59515f;font-size:15px;line-height:1.8}
 .store-reviews-panel>.store-review-details{margin-top:12px;color:#675e6b;font-size:14px;line-height:1.7}
 .store-reviews-panel--hanidoll{border-color:rgba(205,139,177,.34);background:linear-gradient(135deg,rgba(255,250,252,.98),rgba(248,239,249,.97),rgba(255,249,241,.98));box-shadow:0 10px 28px rgba(112,59,91,.08)}
+.store-reviews-panel--sexdollshop{border-color:rgba(103,166,156,.34);background:linear-gradient(135deg,rgba(245,253,250,.98),rgba(240,248,247,.96),rgba(249,244,252,.98));box-shadow:0 10px 28px rgba(53,87,80,.08)}
 .store-reviews-panel .store-review-action{justify-content:center;max-width:100%;min-height:52px;margin-top:22px;padding:12px 20px;border-color:rgba(119,87,149,.48);background:linear-gradient(135deg,#fffdf8,#eee6f6);color:#43304f;font-size:14px;line-height:1.4;text-align:center}
 .store-reviews-panel--hanidoll .store-review-action{border-color:rgba(198,94,157,.52);background:linear-gradient(135deg,#fff9fc,#f4e8f5)}
+.store-reviews-panel--sexdollshop .store-review-action{border-color:rgba(71,157,143,.52);background:linear-gradient(135deg,#f8fffc,#e8f6f2,#f4edf8)}
 .store-review-action-wrap{margin-top:auto;padding-top:22px}
 .store-review-action-wrap .store-review-action{margin-top:0}
 .store-reviews-panel .store-review-action:hover{transform:translateY(-1px);border-color:rgba(105,72,137,.75);box-shadow:0 9px 22px rgba(88,61,112,.13)}
@@ -1079,6 +1081,19 @@ main{padding-top:12px}
 .store-reference-page--sexdollshop .store-checklist{max-width:820px;margin:0;padding-left:22px;column-gap:38px;color:#554d60;font-size:16px;line-height:1.75}
 .store-reference-page--sexdollshop .store-checklist li{margin:0 0 12px;padding-left:3px}
 .store-reference-page--sexdollshop .store-checklist li::marker{color:#9a7daa}
+.store-reference-page--sexdollshop .article-body .sexdollshop-reviews-panel{min-width:0;padding:30px 32px;border:1px solid rgba(103,166,156,.34);border-radius:22px;background:linear-gradient(135deg,rgba(245,253,250,.98),rgba(240,248,247,.96),rgba(249,244,252,.98));box-shadow:0 10px 30px rgba(53,47,72,.06),0 2px 7px rgba(53,47,72,.04)}
+.store-reference-page--sexdollshop .article-body .sexdollshop-reviews-panel h2{margin-bottom:18px}
+.store-reference-page--sexdollshop .article-body .sexdollshop-reviews-panel>p{max-width:800px;margin-bottom:13px}
+.store-reference-page--sexdollshop .article-body .sexdollshop-reviews-panel>.sexdollshop-reviews-lead{margin-top:20px;color:#43304f;font-weight:700}
+.store-reference-page--sexdollshop .sexdollshop-reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:14px;margin:22px 0}
+.store-reference-page--sexdollshop .article-body .sexdollshop-review-link{display:flex;align-items:center;min-width:0;min-height:86px;padding:18px 20px;border:1px solid rgba(126,105,155,.34);border-radius:18px;background:linear-gradient(135deg,rgba(255,253,247,.99),rgba(246,239,250,.98));color:#43304f;font-size:17px;font-weight:700;line-height:1.25;text-decoration:none;box-shadow:0 8px 22px rgba(55,45,75,.06),0 2px 5px rgba(55,45,75,.04);transition:transform 200ms ease,border-color 200ms ease,background 200ms ease,box-shadow 200ms ease}
+.store-reference-page--sexdollshop .article-body .sexdollshop-review-link--maps{border-color:rgba(191,151,77,.42);background:linear-gradient(135deg,rgba(255,252,244,.99),rgba(247,239,250,.98))}
+.store-reference-page--sexdollshop .article-body .sexdollshop-review-link--yandex{border-color:rgba(112,137,199,.42);background:linear-gradient(135deg,rgba(248,252,255,.99),rgba(239,239,251,.98))}
+.store-reference-page--sexdollshop .article-body .sexdollshop-review-link--gis{border-color:rgba(75,160,145,.44);background:linear-gradient(135deg,rgba(245,253,249,.99),rgba(249,245,238,.98))}
+.store-reference-page--sexdollshop .article-body .sexdollshop-review-link:hover{transform:translateY(-2px);border-color:rgba(61,142,128,.74);background:linear-gradient(135deg,#fff,#ebf8f4,#f5edf9);box-shadow:0 12px 28px rgba(55,45,75,.11),0 3px 8px rgba(55,45,75,.05)}
+.store-reference-page--sexdollshop .article-body .sexdollshop-review-link:focus-visible,.store-reference-page--sexdollshop .sexdollshop-reviews-panel>.store-reviews-owner-link:focus-visible{outline:3px solid #77a99f;outline-offset:4px}
+.store-reference-page--sexdollshop .article-body .sexdollshop-reviews-panel>.sexdollshop-reviews-note{margin:0;color:#675f6c;font-size:15px;line-height:1.7}
+.store-reference-page--sexdollshop .sexdollshop-reviews-panel>.store-reviews-owner-link{margin-top:18px;color:#426e68;text-decoration-color:rgba(75,160,145,.52)}
 @media(max-width:900px){
   .store-reference-page--sexdollshop .article-body>section{gap:20px;padding:46px 0}
   .store-reference-page--sexdollshop .article-body h2{font-size:32px}
@@ -1087,6 +1102,8 @@ main{padding-top:12px}
   .store-reference-page--sexdollshop .store-contact-grid>.sexdollshop-contact{grid-template-columns:50px minmax(0,1fr);gap:14px;padding:18px}
   .store-reference-page--sexdollshop .sexdollshop-contact-icon{width:50px;height:50px}
   .store-reference-page--sexdollshop .sexdollshop-contact-copy>span,.store-reference-page--sexdollshop .sexdollshop-contact-copy>a{font-size:18px}
+  .store-reference-page--sexdollshop .article-body .sexdollshop-reviews-panel{padding:26px 28px}
+  .store-reference-page--sexdollshop .article-body .sexdollshop-review-link{min-height:82px;font-size:16px}
 }
 @media(max-width:700px){
   .store-reference-page--sexdollshop .article-body>section{gap:16px;padding:38px 0}
@@ -1101,8 +1118,12 @@ main{padding-top:12px}
   .store-reference-page--sexdollshop .store-feature--wide,.store-reference-page--sexdollshop .store-safety{padding:20px}
   .store-reference-page--sexdollshop .article-body .store-feature--wide p,.store-reference-page--sexdollshop .article-body .store-safety p{font-size:15px;line-height:1.75}
   .store-reference-page--sexdollshop .store-checklist{font-size:15px}
+  .store-reference-page--sexdollshop .article-body .sexdollshop-reviews-panel{padding:22px 20px;border-radius:20px}
+  .store-reference-page--sexdollshop .sexdollshop-reviews-grid{grid-template-columns:1fr;gap:12px;margin:18px 0}
+  .store-reference-page--sexdollshop .article-body .sexdollshop-review-link{min-height:74px;padding:16px;font-size:15px}
+  .store-reference-page--sexdollshop .article-body .sexdollshop-reviews-panel>.sexdollshop-reviews-note{font-size:14px}
 }
-@media(prefers-reduced-motion:reduce){.store-reference-page--sexdollshop .article-body .sexdollshop-action{transition:none}.store-reference-page--sexdollshop .article-body .sexdollshop-action:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){.store-reference-page--sexdollshop .article-body .sexdollshop-action,.store-reference-page--sexdollshop .article-body .sexdollshop-review-link{transition:none}.store-reference-page--sexdollshop .article-body .sexdollshop-action:hover,.store-reference-page--sexdollshop .article-body .sexdollshop-review-link:hover{transform:none}}
 
 /* Unified link interactions. */
 .article-list a{grid-template-columns:140px minmax(0,1fr)}

@@ -5,6 +5,7 @@ export type StoreReviewSource = {
   details?: string;
   context?: string;
   href: string;
+  actionLabel?: string;
   sponsored: boolean;
 };
 
@@ -23,14 +24,25 @@ export const hanidollReviews: StoreReviewSource = {
   details: "Отзывы можно смотреть на нескольких внешних площадках, в карточках отдельных товаров и на маркетплейсах.",
   context: "Также отзывы встречаются в карточках товаров на Яндекс Маркете, Wildberries и AliExpress, через агрегаторы вроде Alitools, а также в зарубежных сообществах и обсуждениях.",
   href: "https://www.trustpilot.com/review/hanidoll.com",
+  actionLabel: "Отзывы Hanidoll на Trustpilot",
   sponsored: false,
 };
 
-export const storeReviewSources: readonly StoreReviewSource[] = [moonDollReviews, hanidollReviews];
+export const sexDollShopReviews: StoreReviewSource = {
+  id: "sexdollshop",
+  name: "SexDollShop",
+  description: "У SexDollShop.ru нет отдельного раздела отзывов на сайте, поэтому для оценки опыта покупателей можно смотреть внешние площадки.",
+  details: "Наиболее вместительные и удобные ресурсы по отзывам — Яндекс Карты, Яндекс Отзывы и 2ГИС.",
+  href: "https://yandex.ru/maps/org/sexdollshop_ru/57094202383/reviews/?ll=37.531660%2C55.763941&z=14",
+  actionLabel: "Отзывы SexDollShop на Яндекс Картах",
+  sponsored: false,
+};
+
+export const storeReviewSources: readonly StoreReviewSource[] = [moonDollReviews, hanidollReviews, sexDollShopReviews];
 
 export function StoreReviewAction({ source, label }: { source: StoreReviewSource; label?: string }) {
   return <a className="link-button-secondary store-review-action" href={source.href} target="_blank" rel={source.sponsored ? "noopener noreferrer sponsored" : "noopener noreferrer"}>
-    {label ?? `Отзывы о ${source.name}`}
+    {label ?? source.actionLabel ?? `Отзывы о ${source.name}`}
   </a>;
 }
 
