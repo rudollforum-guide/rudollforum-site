@@ -62,6 +62,7 @@ const articleHeroEmblems: Record<string, string> = {
   community: "/images/community/community-hero-emblem.png",
   "useful-links": "/images/useful-links/useful-links-hero-emblem.png",
   "safe-purchase": "/images/safe-purchase/safe-purchase-hero-emblem.png",
+  "editorial-policy": "/images/editorial-policy/editorial-policy-hero-emblem.png",
 };
 
 export const dynamicParams = false;
