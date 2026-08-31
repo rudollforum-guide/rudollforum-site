@@ -70,6 +70,7 @@ const articleHeroEmblems: Record<string, string> = {
   skeleton: "/images/skeleton/skeleton-hero-emblem.png",
   "clothing-and-stains": "/images/clothing-and-stains/clothing-and-stains-hero-emblem.png",
   "material-aging": "/images/material-aging/material-aging-hero-emblem.png",
+  "owner-experience": "/images/owner-experience/owner-experience-hero-emblem.png",
 };
 
 export const dynamicParams = false;
