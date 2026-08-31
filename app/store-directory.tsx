@@ -19,9 +19,9 @@ function StoreHeading({ icon, type, title }: { icon: string; type: string; title
 export function StoreDirectory({ compact = false }: { compact?: boolean }) {
   if (compact) {
     return <div className="store-directory store-directory--compact">
-      <FeaturedInternalLink className="store-directory-link store-directory-link--moon" href="/shops/moon-doll-guide" iconImage={publicPath("/images/useful-links/moondoll-icon.png")} title="Moon-Doll" description="международный мультибрендовый магазин" />
-      <FeaturedInternalLink className="store-directory-link store-directory-link--hanidoll" href="/shops/hanidoll" iconImage={publicPath("/images/useful-links/hanidoll-icon.png")} title="Hanidoll" description="магазин и бренд, есть площадка для РФ" />
-      <FeaturedInternalLink className="store-directory-link store-directory-link--sexdollshop" href="/shops/sexdollshop" iconImage={publicPath("/images/useful-links/sexdollshop-icon.png")} title="SexDollShop" description="российский интернет-магазин" />
+      <FeaturedInternalLink className="store-directory-link store-directory-link--moon" href="/shops/moon-doll-guide" iconImage={publicPath("/images/useful-links/stores/moon-doll-icon.png")} title="Moon-Doll" description="международный мультибрендовый магазин" />
+      <FeaturedInternalLink className="store-directory-link store-directory-link--hanidoll" href="/shops/hanidoll" iconImage={publicPath("/images/useful-links/stores/hanidoll-icon.png")} title="Hanidoll" description="магазин и бренд, есть площадка для РФ" />
+      <FeaturedInternalLink className="store-directory-link store-directory-link--sexdollshop" href="/shops/sexdollshop" iconImage={publicPath("/images/useful-links/stores/sexdollshop-icon.png")} title="SexDollShop" description="российский интернет-магазин" />
     </div>;
   }
 
