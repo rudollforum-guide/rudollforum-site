@@ -65,6 +65,7 @@ const articleHeroEmblems: Record<string, string> = {
   "editorial-policy": "/images/editorial-policy/editorial-policy-hero-emblem.png",
   "age-policy": "/images/age-policy/age-policy-hero-emblem.png",
   "weight-and-size": "/images/weight-and-size/weight-and-size-hero-emblem.png",
+  "delivery-check": "/images/delivery-check/delivery-check-hero-emblem.png",
 };
 
 export const dynamicParams = false;
