@@ -22,6 +22,14 @@ const contest2025PlaceIcons = {
   3: "/images/events/contest-third-place-icon.png",
 } as const;
 
+const contest2026Winners = [
+  { place: 1, name: "Крис", image: "/images/events/rudollforum-contest-2026/01-kris-first-place.webp", alt: "Крис — 1 место конкурса Rudollforum 2026" },
+  { place: 2, name: "Элька", image: "/images/events/rudollforum-contest-2026/02-elka-second-place.webp", alt: "Элька — 2 место конкурса Rudollforum 2026" },
+  { place: 3, name: "Химари", image: "/images/events/rudollforum-contest-2026/03-himari-third-place.webp", alt: "Химари — 3 место конкурса Rudollforum 2026" },
+  { place: 4, name: "Мику", image: "/images/events/rudollforum-contest-2026/04-miku-fourth-place.webp", alt: "Мику — 4 место конкурса Rudollforum 2026", note: "Кукла Konstantin" },
+  { place: 5, name: "Ева", image: "/images/events/rudollforum-contest-2026/05-eva-fifth-place.webp", alt: "Ева — 5 место конкурса Rudollforum 2026" },
+] as const;
+
 export default function EventsPage() {
   const breadcrumb = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":siteUrl("/")},{"@type":"ListItem","position":2,"name":"Мероприятия","item":siteUrl("/events/")}]} as const;
   const collection = {"@context":"https://schema.org","@type":"CollectionPage","name":"Мероприятия Rudollforum","description":description,"url":siteUrl("/events/"),"inLanguage":"ru-RU","datePublished":"2026-08-25","dateModified":"2026-08-25","publisher":{"@type":"Organization","name":"Rudollforum"}} as const;
@@ -54,6 +62,33 @@ export default function EventsPage() {
           <FeaturedExternalLink href="https://t.me/rudollforum" variant="telegram" icon="✦" title="Следить за конкурсом в Telegram" subtitle="актуальная информация сообщества"/>
         </article>)}
       </section>
+
+      <section className="events-section contest-2026" aria-labelledby="contest-2026-title">
+        <header className="contest-2026-heading">
+          <div>
+            <span className="section-no">Итоги · 2026</span>
+            <h2 id="contest-2026-title">Конкурс Rudollforum 2026 — результаты</h2>
+          </div>
+          <p>Итоги конкурса Rudollforum 2026. Ниже представлены пять участниц, занявших призовые места по итогам конкурса.</p>
+        </header>
+        <div className="contest-2026-podium">
+          {contest2026Winners.map(winner => <figure className={`contest-2026-card contest-2026-card--${winner.place}`} key={winner.place}>
+            <div className="contest-2026-photo"><img src={publicPath(winner.image)} alt={winner.alt} width="1080" height="1350" loading="lazy"/></div>
+            <figcaption>
+              <span className="contest-2026-place"><b>{winner.place}</b><span>место</span></span>
+              <h3>{winner.name}</h3>
+              {"note" in winner && <span className="contest-2026-special">{winner.note}</span>}
+            </figcaption>
+          </figure>)}
+        </div>
+        <aside className="contest-2026-thanks" aria-labelledby="contest-2026-thanks-title">
+          <span className="contest-2026-thanks-mark" aria-hidden="true">✦</span>
+          <div><h3 id="contest-2026-thanks-title">Отдельная благодарность Konstantin</h3><p>Отдельная благодарность Konstantin за помощь в проведении конкурса Rudollforum 2026 и поддержку сообщества. Его участие помогло сделать конкурс более масштабным и завершённым событием для участников Rudollforum.</p><strong>Мику, занявшая 4 место, — кукла Konstantin.</strong></div>
+        </aside>
+        <p className="events-permission-note"><span aria-hidden="true">◆</span>Фотографии участниц опубликованы в архиве результатов конкурса.</p>
+      </section>
+
+      <div className="events-archive-transition" aria-hidden="true"><span>Архив · 2025</span></div>
 
       <section className="events-section events-archive" aria-labelledby="events-archive-title">
         <div className="events-section-heading">
