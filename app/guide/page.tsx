@@ -69,6 +69,10 @@ export default function GuidePage() {
       </div>
     </section>
     <section className="guide-intro"><p>Выберите тему, чтобы перейти к самостоятельной веб-статье. Рекомендации нужно сверять с точным материалом, конструкцией и инструкцией производителя. После выбора требований можно сравнить <Link href="/where-to-buy">магазины и официальные площадки</Link>.</p></section>
+    <aside className="guide-customization-entry" aria-labelledby="guide-customization-title">
+      <div><span>Дополнительный раздел</span><h2 id="guide-customization-title">Кастомизация и улучшения</h2><p>Визуальные модификации, необычные эффекты и практический опыт владельцев.</p></div>
+      <Link href="/customization/">Открыть раздел</Link>
+    </aside>
     <div className="chapter-grid">{chapters.map(({title,text,href,icon},index)=><Link href={href} key={href}><div className="chapter-card-top"><span className="chapter-index">{String(index+1).padStart(2,"0")}</span><img className="chapter-icon" src={publicPath(`/images/guide/chapters/${icon}`)} alt="" aria-hidden="true" width="72" height="72" loading="lazy"/></div><h2>{title}</h2><p>{text}</p><b>Открыть главу</b></Link>)}</div>
     <MetaLine/>
   </article></SiteShell>
