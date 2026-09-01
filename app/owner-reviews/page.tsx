@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { storeReviewSources, StoreReviewAction, StoreReviewCommunityNote } from "../store-reviews";
+import { storeReviewSources, StoreReviewCommunityNote } from "../store-reviews";
 import { FeaturedExternalLink, JsonLd, MetaLine, SiteShell } from "../site";
 import { OPEN_GRAPH_IMAGE, siteUrl } from "../site-config";
 
@@ -10,6 +10,21 @@ const description = "Отзывы владельцев силиконовых и
 function OwnerReviewsEmblem({ src, className = "" }: { src: string; className?: string }) {
   return <img className={`owner-reviews-heading-emblem ${className}`.trim()} src={src} alt="" aria-hidden="true"/>;
 }
+
+const ownerStoreIcons: Record<string, { heading: string; reviews: string }> = {
+  "moon-doll": {
+    heading: "/images/owner-reviews/stores/moon-doll-heading-icon.png",
+    reviews: "/images/owner-reviews/stores/moon-doll-reviews-icon.png",
+  },
+  hanidoll: {
+    heading: "/images/owner-reviews/stores/hanidoll-heading-icon.png",
+    reviews: "/images/owner-reviews/stores/hanidoll-reviews-icon.png",
+  },
+  sexdollshop: {
+    heading: "/images/owner-reviews/stores/sexdollshop-heading-icon.png",
+    reviews: "/images/owner-reviews/stores/sexdollshop-reviews-icon.png",
+  },
+};
 
 export const metadata: Metadata = {
   title,
@@ -81,7 +96,6 @@ export default function OwnerReviewsPage() {
             <p>Риск зависит не только от материала, но и от конструкции, скелета и распределения нагрузки.</p>
           </article>
         </div>
-        <a className="owner-experience-next" href="#weight-and-handling">Далее: вес и переноска</a>
       </section>
       <section className="owner-experience-section owner-experience-section--weight" id="weight-and-handling" aria-labelledby="weight-title">
         <div className="owner-experience-heading owner-reviews-emblem-heading owner-reviews-emblem-heading--section">
@@ -122,7 +136,6 @@ export default function OwnerReviewsPage() {
           <strong>40+ кг — это уже не просто «тяжеловато», а полноценная силовая эксплуатация.</strong>
         </aside>
         <div className="owner-experience-summary"><strong>Перед покупкой всегда смотрите вес, а не только рост и фотографии.</strong><span>Иногда более лёгкая модель приносит больше радости просто потому, что с ней проще жить.</span></div>
-        <a className="owner-experience-next" href="#care-and-longevity">Далее: уход и долговечность</a>
       </section>
       <section className="owner-experience-section owner-experience-section--care" id="care-and-longevity" aria-labelledby="care-title">
         <div className="owner-experience-heading owner-reviews-emblem-heading owner-reviews-emblem-heading--section">
@@ -204,10 +217,18 @@ export default function OwnerReviewsPage() {
         </div>
         <div className="store-reviews-grid">
           {storeReviewSources.map(source => <article className={`store-reviews-panel store-reviews-panel--${source.id}`} key={source.id}>
-            <h3>{source.name}</h3>
+            <div className="owner-store-review-heading">
+              <img className="owner-store-review-heading-icon" src={ownerStoreIcons[source.id].heading} alt="" aria-hidden="true"/>
+              <h3>{source.name}</h3>
+            </div>
             <p>{source.description}</p>
             {source.details ? <p className="store-review-details">{source.details}{source.context ? ` ${source.context}` : ""}</p> : null}
-            <div className="store-review-action-wrap"><StoreReviewAction source={source} /></div>
+            <div className="store-review-action-wrap">
+              <a className="link-button-secondary store-review-action owner-store-review-action" href={source.href} target="_blank" rel={source.sponsored ? "noopener noreferrer sponsored" : "noopener noreferrer"}>
+                <img className="owner-store-review-action-icon" src={ownerStoreIcons[source.id].reviews} alt="" aria-hidden="true"/>
+                <span>{source.actionLabel ?? `Отзывы о ${source.name}`}</span>
+              </a>
+            </div>
           </article>)}
         </div>
         <StoreReviewCommunityNote />
