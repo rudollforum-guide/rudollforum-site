@@ -7,6 +7,10 @@ import { OPEN_GRAPH_IMAGE, siteUrl } from "../site-config";
 const title = "Отзывы владельцев силиконовых и TPE-кукол | Rudollforum";
 const description = "Отзывы владельцев силиконовых и TPE-кукол: материалы, вес, уход, хранение и длительная эксплуатация. Основные обсуждения и реальные отзывы публикуются в закрытой группе Rudollforum.";
 
+function OwnerReviewsEmblem({ src, className = "" }: { src: string; className?: string }) {
+  return <img className={`owner-reviews-heading-emblem ${className}`.trim()} src={src} alt="" aria-hidden="true"/>;
+}
+
 export const metadata: Metadata = {
   title,
   description,
@@ -24,9 +28,12 @@ export default function OwnerReviewsPage() {
     <article className="article owner-reviews-page">
       <nav className="breadcrumbs"><Link href="/">Главная</Link><span aria-hidden="true">·</span><span>Отзывы владельцев</span></nav>
       <header className="article-hero">
-        <span className="eyebrow">Редакционный раздел · 18+</span>
-        <h1>Отзывы владельцев силиконовых и TPE-кукол</h1>
-        <p>Обобщённый опыт владельцев по материалам, весу, эксплуатации, уходу, хранению и долговечности.</p>
+        <div className="article-emblem-heading owner-reviews-emblem-heading owner-reviews-emblem-heading--hero">
+          <OwnerReviewsEmblem className="article-hero-emblem" src="/images/owner-reviews/emblems/owner-reviews-hero-emblem.png"/>
+          <span className="eyebrow">Редакционный раздел · 18+</span>
+          <h1>Отзывы владельцев силиконовых и TPE-кукол</h1>
+          <p>Обобщённый опыт владельцев по материалам, весу, эксплуатации, уходу, хранению и долговечности.</p>
+        </div>
       </header>
       <div className="owner-reviews-intro-copy">
         <p>В этом разделе собран обобщённый практический опыт владельцев силиконовых и TPE-кукол. Это не рейтинг брендов и не набор отдельных отзывов, а основные наблюдения по материалам, весу, эксплуатации, уходу и долговечности.</p>
@@ -38,10 +45,13 @@ export default function OwnerReviewsPage() {
         <a href="#care-and-longevity">Уход и долговечность</a>
       </nav>
       <section className="owner-experience-section owner-experience-section--materials" id="materials" aria-labelledby="materials-title">
-        <div className="owner-experience-heading">
-          <span className="section-no">01 · Практический опыт</span>
-          <h2 id="materials-title">Материалы: что замечают владельцы</h2>
-          <p>Очень мягкий TPE, S-TPE и ультрамягкий силикон приятнее на ощупь, но мягкость влияет и на повседневное обращение. Такие материалы легче пачкаются и растягиваются, сильнее проминаются и могут быть чувствительнее к механическим повреждениям.</p>
+        <div className="owner-experience-heading owner-reviews-emblem-heading owner-reviews-emblem-heading--section">
+          <OwnerReviewsEmblem src="/images/owner-reviews/emblems/materials-emblem.png"/>
+          <div className="owner-reviews-heading-copy">
+            <span className="section-no">01 · Практический опыт</span>
+            <h2 id="materials-title">Материалы: что замечают владельцы</h2>
+            <p>Очень мягкий TPE, S-TPE и ультрамягкий силикон приятнее на ощупь, но мягкость влияет и на повседневное обращение. Такие материалы легче пачкаются и растягиваются, сильнее проминаются и могут быть чувствительнее к механическим повреждениям.</p>
+          </div>
         </div>
         <aside className="owner-experience-callout owner-experience-callout--rose">
           <strong>Силикон сам по себе не гарантирует высокой прочности.</strong>
@@ -74,11 +84,14 @@ export default function OwnerReviewsPage() {
         <a className="owner-experience-next" href="#weight-and-handling">Далее: вес и переноска</a>
       </section>
       <section className="owner-experience-section owner-experience-section--weight" id="weight-and-handling" aria-labelledby="weight-title">
-        <div className="owner-experience-heading">
-          <span className="section-no">02 · Практический опыт</span>
-          <h2 id="weight-title">Вес и переноска: почему килограммы ощущаются иначе</h2>
-          <p><strong>Вес куклы — это не просто цифра в карточке товара.</strong> Одна из частых ошибок новичков — смотреть на рост, лицо, грудь, фигуру и материал, но недооценивать фактическую массу.</p>
-          <p>У куклы нет жёсткой формы, удобной ручки и стабильного центра тяжести. Голова, корпус, бёдра, руки и ноги двигаются отдельно, суставы могут складываться, тело — уходить в сторону, а мягкий материал требует аккуратного обращения. По ощущениям тяжёлая кукла ближе не к обычному грузу, а к телу без собственного баланса.</p>
+        <div className="owner-experience-heading owner-reviews-emblem-heading owner-reviews-emblem-heading--section">
+          <OwnerReviewsEmblem src="/images/owner-reviews/emblems/weight-and-handling-emblem.png"/>
+          <div className="owner-reviews-heading-copy">
+            <span className="section-no">02 · Практический опыт</span>
+            <h2 id="weight-title">Вес и переноска: почему килограммы ощущаются иначе</h2>
+            <p><strong>Вес куклы — это не просто цифра в карточке товара.</strong> Одна из частых ошибок новичков — смотреть на рост, лицо, грудь, фигуру и материал, но недооценивать фактическую массу.</p>
+            <p>У куклы нет жёсткой формы, удобной ручки и стабильного центра тяжести. Голова, корпус, бёдра, руки и ноги двигаются отдельно, суставы могут складываться, тело — уходить в сторону, а мягкий материал требует аккуратного обращения. По ощущениям тяжёлая кукла ближе не к обычному грузу, а к телу без собственного баланса.</p>
+          </div>
         </div>
         <div className="owner-experience-grid owner-experience-grid--weight">
           <article className="owner-experience-block">
@@ -112,9 +125,12 @@ export default function OwnerReviewsPage() {
         <a className="owner-experience-next" href="#care-and-longevity">Далее: уход и долговечность</a>
       </section>
       <section className="owner-experience-section owner-experience-section--care" id="care-and-longevity" aria-labelledby="care-title">
-        <div className="owner-experience-heading">
-          <span className="section-no">03 · Практический опыт</span>
-          <h2 id="care-title">Уход и долговечность: сколько реально служит кукла</h2>
+        <div className="owner-experience-heading owner-reviews-emblem-heading owner-reviews-emblem-heading--section">
+          <OwnerReviewsEmblem src="/images/owner-reviews/emblems/care-and-longevity-emblem.png"/>
+          <div className="owner-reviews-heading-copy">
+            <span className="section-no">03 · Практический опыт</span>
+            <h2 id="care-title">Уход и долговечность: сколько реально служит кукла</h2>
+          </div>
         </div>
         <aside className="owner-experience-callout owner-experience-callout--mint">
           <strong>Универсального срока службы не существует.</strong>
@@ -158,9 +174,14 @@ export default function OwnerReviewsPage() {
       </section>
       <section className="owner-community-card" aria-labelledby="owner-community-title">
         <div className="owner-community-copy">
-          <span className="section-no">Сообщество владельцев</span>
-          <h2 id="owner-community-title">Где читать реальные отзывы владельцев</h2>
-          <p>Отзывы о брендах, материалах, весе, скелетах, уходе, хранении и долговременной эксплуатации публикуются участниками закрытой группы Rudollforum. В группе также обсуждаются новые модели, доставка, повреждения, ремонт и личный опыт владения.</p>
+          <div className="owner-reviews-emblem-heading owner-reviews-emblem-heading--community">
+            <OwnerReviewsEmblem src="/images/owner-reviews/emblems/community-reviews-emblem.png"/>
+            <div className="owner-reviews-heading-copy">
+              <span className="section-no">Сообщество владельцев</span>
+              <h2 id="owner-community-title">Где читать реальные отзывы владельцев</h2>
+              <p>Отзывы о брендах, материалах, весе, скелетах, уходе, хранении и долговременной эксплуатации публикуются участниками закрытой группы Rudollforum. В группе также обсуждаются новые модели, доставка, повреждения, ремонт и личный опыт владения.</p>
+            </div>
+          </div>
           <ul>
             <li>отзывы владельцев;</li>
             <li>фотографии моделей;</li>
@@ -177,7 +198,10 @@ export default function OwnerReviewsPage() {
         </div>
       </section>
       <section className="store-reviews-section" aria-labelledby="store-reviews-title">
-        <h2 id="store-reviews-title">Отзывы о магазинах</h2>
+        <div className="owner-reviews-emblem-heading owner-reviews-emblem-heading--stores">
+          <OwnerReviewsEmblem src="/images/owner-reviews/emblems/store-reviews-emblem.png"/>
+          <h2 id="store-reviews-title">Отзывы о магазинах</h2>
+        </div>
         <div className="store-reviews-grid">
           {storeReviewSources.map(source => <article className={`store-reviews-panel store-reviews-panel--${source.id}`} key={source.id}>
             <h3>{source.name}</h3>
