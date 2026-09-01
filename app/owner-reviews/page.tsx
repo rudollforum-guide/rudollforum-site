@@ -206,7 +206,7 @@ export default function OwnerReviewsPage() {
           </ul>
         </div>
         <div className="owner-community-action">
-          <FeaturedExternalLink href="https://t.me/rudollforum" variant="telegram" icon="✈" title="Перейти в Telegram Rudollforum" subtitle="вход через открытый канал"/>
+          <FeaturedExternalLink href="https://t.me/rudollforum" variant="telegram" iconImage="/images/owner-reviews/community/telegram-rudollforum-icon.png" title="Перейти в Telegram Rudollforum" subtitle="вход через открытый канал"/>
           <small>В канале размещена информация о сообществе и условиях входа в закрытую группу.</small>
         </div>
       </section>
