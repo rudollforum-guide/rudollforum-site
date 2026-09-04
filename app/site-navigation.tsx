@@ -75,7 +75,7 @@ function NavItem({
   return (
     <Link
       href={href}
-      className={`nav-item${href === "/customization" ? " nav-item--customization" : ""}`}
+      className="nav-item"
       aria-current={active ? "page" : undefined}
     >
       {label}

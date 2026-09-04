@@ -73,6 +73,7 @@ export default function Home() {
               <div><span className="promo-kicker">Специальное предложение</span><strong>Для читателей Rudollforum может быть доступна <span className="promo-discount">скидка <b>5%</b></span></strong></div>
             </div>
             <div className="promo-code"><span>Промокод</span><code>RUDOLLFORUM</code></div>
+            <p className="promo-support-note">Средства от использования промокода направляются на конкурсы, активности и развитие сообщества Rudollforum.</p>
             <small>Перед оплатой проверьте актуальные условия, итоговую стоимость и применение промокода.</small>
           </div>
           <div className="external-actions"><a className="link-button-secondary" href="https://www.moon-doll.com/" target="_blank" rel="noopener noreferrer sponsored" aria-label="Открыть Moon-Doll во внешней вкладке"><img className="external-action-icon" src={publicPath("/images/home/moon-doll-cta-brand-logo.png")} alt="" aria-hidden="true" width="32" height="32"/>Открыть Moon-Doll</a><Link className="link-button-secondary link-button-internal" href="/shops/moon-doll-guide"><img className="external-action-icon" src={publicPath("/images/home/guide-link-icon.png")} alt="" aria-hidden="true" width="32" height="32"/>Читать инструкцию</Link></div>
