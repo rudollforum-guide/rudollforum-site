@@ -51,7 +51,7 @@ export default function EventsPage() {
       <section className="events-section contest-2026" aria-labelledby="contest-2026-title">
         <header className="contest-2026-heading">
           <div className="contest-2026-title-group">
-            <img className="contest-2026-main-emblem" src={publicPath("/images/events/rudollforum-contest-2026/emblems/contest-results-emblem.png")} alt="" aria-hidden="true" width="116" height="116"/>
+            <img className="contest-2026-main-emblem" src={publicPath("/images/events/rudollforum-contest-2026/emblems/contest-results-emblem.png")} alt="" aria-hidden="true" width="146" height="146"/>
             <div className="contest-2026-title-copy">
               <span className="section-no">Итоги · 2026</span>
               <h2 id="contest-2026-title">Конкурс Rudollforum 2026 — результаты</h2>
@@ -64,14 +64,18 @@ export default function EventsPage() {
             <div className="contest-2026-photo"><img src={publicPath(winner.image)} alt={winner.alt} width="1080" height="1350" loading="lazy"/></div>
             <figcaption>
               <span className="contest-2026-place"><b>{winner.place}</b><span>место</span></span>
-              <h3 className="contest-2026-name"><img className="contest-2026-participant-emblem" src={publicPath(winner.emblem)} alt="" aria-hidden="true" width="64" height="64"/><span>{winner.name}</span></h3>
+              <h3 className="contest-2026-name"><img className="contest-2026-participant-emblem" src={publicPath(winner.emblem)} alt="" aria-hidden="true" width="90" height="90"/><span>{winner.name}</span></h3>
               {"note" in winner && <span className="contest-2026-special">{winner.note}</span>}
             </figcaption>
           </figure>)}
         </div>
         <aside className="contest-2026-thanks" aria-labelledby="contest-2026-thanks-title">
-          <img className="contest-2026-thanks-emblem" src={publicPath("/images/events/rudollforum-contest-2026/emblems/konstantin-thanks-emblem.png")} alt="" aria-hidden="true" width="72" height="72"/>
+          <img className="contest-2026-thanks-emblem" src={publicPath("/images/events/rudollforum-contest-2026/emblems/konstantin-thanks-emblem.png")} alt="" aria-hidden="true" width="92" height="92"/>
           <div><h3 id="contest-2026-thanks-title">Отдельная благодарность Konstantin</h3><p>Отдельная благодарность Konstantin за помощь в проведении конкурса Rudollforum 2026 и поддержку сообщества. Его участие помогло сделать конкурс более масштабным и завершённым событием для участников Rudollforum.</p><strong>Мику, занявшая 4 место, — кукла Konstantin.</strong></div>
+        </aside>
+        <aside className="contest-2026-guriy" aria-labelledby="contest-2026-guriy-title">
+          <span className="contest-2026-guriy-mark" aria-hidden="true"/>
+          <div><h3 id="contest-2026-guriy-title">Отдельно отмечаем вклад Гурия</h3><p>Гурий передал свой приз в копилку будущих конкурсов Rudollforum, поддержав тем самым следующие мероприятия сообщества.</p></div>
         </aside>
         <p className="events-permission-note"><span aria-hidden="true">◆</span>Фотографии опубликованы с разрешения владельцев.</p>
       </section>
