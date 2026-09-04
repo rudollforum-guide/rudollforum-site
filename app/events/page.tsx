@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { FeaturedExternalLink, FeaturedInternalLink, JsonLd, SiteShell } from "../site";
+import { JsonLd, SiteShell } from "../site";
 import { OPEN_GRAPH_IMAGE, publicPath, siteUrl, TWITTER_IMAGE } from "../site-config";
-import { archivedEvents, currentEvents } from "./events-data";
+import { archivedEvents } from "./events-data";
 
 const title = "Мероприятия и конкурсы Rudollforum — архив и результаты";
-const description = "Конкурсы и мероприятия сообщества Rudollforum: архив конкурса красоты 2025, призёры, результаты и информация о новых событиях.";
+const description = "Конкурсы и мероприятия сообщества Rudollforum: архив результатов, призёры и сохранённые материалы прошедших событий.";
 
 export const metadata: Metadata = {
   title,
@@ -23,11 +23,11 @@ const contest2025PlaceIcons = {
 } as const;
 
 const contest2026Winners = [
-  { place: 1, name: "Крис", image: "/images/events/rudollforum-contest-2026/01-kris-first-place.webp", alt: "Крис — 1 место конкурса Rudollforum 2026" },
-  { place: 2, name: "Элька", image: "/images/events/rudollforum-contest-2026/02-elka-second-place.webp", alt: "Элька — 2 место конкурса Rudollforum 2026" },
-  { place: 3, name: "Химари", image: "/images/events/rudollforum-contest-2026/03-himari-third-place.webp", alt: "Химари — 3 место конкурса Rudollforum 2026" },
-  { place: 4, name: "Мику", image: "/images/events/rudollforum-contest-2026/04-miku-fourth-place.webp", alt: "Мику — 4 место конкурса Rudollforum 2026", note: "Кукла Konstantin" },
-  { place: 5, name: "Ева", image: "/images/events/rudollforum-contest-2026/05-eva-fifth-place.webp", alt: "Ева — 5 место конкурса Rudollforum 2026" },
+  { place: 1, name: "Крис", image: "/images/events/rudollforum-contest-2026/01-kris-first-place.webp", emblem: "/images/events/rudollforum-contest-2026/emblems/kris-emblem.png", alt: "Крис — 1 место конкурса Rudollforum 2026" },
+  { place: 2, name: "Элька", image: "/images/events/rudollforum-contest-2026/02-elka-second-place.webp", emblem: "/images/events/rudollforum-contest-2026/emblems/elka-emblem.png", alt: "Элька — 2 место конкурса Rudollforum 2026" },
+  { place: 3, name: "Химари", image: "/images/events/rudollforum-contest-2026/03-himari-third-place.webp", emblem: "/images/events/rudollforum-contest-2026/emblems/himari-emblem.png", alt: "Химари — 3 место конкурса Rudollforum 2026" },
+  { place: 4, name: "Мику", image: "/images/events/rudollforum-contest-2026/04-miku-fourth-place.webp", emblem: "/images/events/rudollforum-contest-2026/emblems/miku-emblem.png", alt: "Мику — 4 место конкурса Rudollforum 2026", note: "Кукла Konstantin" },
+  { place: 5, name: "Ева", image: "/images/events/rudollforum-contest-2026/05-eva-fifth-place.webp", emblem: "/images/events/rudollforum-contest-2026/emblems/eva-emblem.png", alt: "Ева — 5 место конкурса Rudollforum 2026" },
 ] as const;
 
 export default function EventsPage() {
@@ -44,30 +44,18 @@ export default function EventsPage() {
           <img className="events-hero-emblem" src={publicPath("/images/events/events-hero-emblem.png")} alt="" aria-hidden="true" width="118" height="118"/>
           <span className="eyebrow">Сообщество · Конкурсы · Архив</span>
           <h1>Мероприятия Rudollforum</h1>
-          <p>Конкурсы, тематические события и архив мероприятий сообщества Rudollforum. Здесь сохраняются результаты прошлых конкурсов, призёры и материалы будущих мероприятий.</p>
+          <p>Конкурсы, тематические события и архив мероприятий сообщества Rudollforum. Здесь сохраняются результаты прошедших конкурсов, призёры и материалы участников.</p>
         </div>
       </header>
 
-      <section className="events-section events-current" aria-labelledby="events-current-title">
-        <div className="events-section-heading">
-          <span className="section-no">Сейчас и далее</span>
-          <h2 id="events-current-title">Текущие и будущие мероприятия</h2>
-        </div>
-        {currentEvents.map(event => <article className="current-event-card" key={event.year}>
-          <div>
-            <span className="event-status event-status--current">{event.status}</span>
-            <h3>{event.title}</h3>
-            <p>{event.summary}</p>
-          </div>
-          <FeaturedExternalLink href="https://t.me/rudollforum" variant="telegram" icon="✦" title="Следить за конкурсом в Telegram" subtitle="актуальная информация сообщества"/>
-        </article>)}
-      </section>
-
       <section className="events-section contest-2026" aria-labelledby="contest-2026-title">
         <header className="contest-2026-heading">
-          <div>
-            <span className="section-no">Итоги · 2026</span>
-            <h2 id="contest-2026-title">Конкурс Rudollforum 2026 — результаты</h2>
+          <div className="contest-2026-title-group">
+            <img className="contest-2026-main-emblem" src={publicPath("/images/events/rudollforum-contest-2026/emblems/contest-results-emblem.png")} alt="" aria-hidden="true" width="116" height="116"/>
+            <div className="contest-2026-title-copy">
+              <span className="section-no">Итоги · 2026</span>
+              <h2 id="contest-2026-title">Конкурс Rudollforum 2026 — результаты</h2>
+            </div>
           </div>
           <p>Итоги конкурса Rudollforum 2026. Ниже представлены пять участниц, занявших призовые места по итогам конкурса.</p>
         </header>
@@ -76,16 +64,16 @@ export default function EventsPage() {
             <div className="contest-2026-photo"><img src={publicPath(winner.image)} alt={winner.alt} width="1080" height="1350" loading="lazy"/></div>
             <figcaption>
               <span className="contest-2026-place"><b>{winner.place}</b><span>место</span></span>
-              <h3>{winner.name}</h3>
+              <h3 className="contest-2026-name"><img className="contest-2026-participant-emblem" src={publicPath(winner.emblem)} alt="" aria-hidden="true" width="64" height="64"/><span>{winner.name}</span></h3>
               {"note" in winner && <span className="contest-2026-special">{winner.note}</span>}
             </figcaption>
           </figure>)}
         </div>
         <aside className="contest-2026-thanks" aria-labelledby="contest-2026-thanks-title">
-          <span className="contest-2026-thanks-mark" aria-hidden="true">✦</span>
+          <img className="contest-2026-thanks-emblem" src={publicPath("/images/events/rudollforum-contest-2026/emblems/konstantin-thanks-emblem.png")} alt="" aria-hidden="true" width="72" height="72"/>
           <div><h3 id="contest-2026-thanks-title">Отдельная благодарность Konstantin</h3><p>Отдельная благодарность Konstantin за помощь в проведении конкурса Rudollforum 2026 и поддержку сообщества. Его участие помогло сделать конкурс более масштабным и завершённым событием для участников Rudollforum.</p><strong>Мику, занявшая 4 место, — кукла Konstantin.</strong></div>
         </aside>
-        <p className="events-permission-note"><span aria-hidden="true">◆</span>Фотографии участниц опубликованы в архиве результатов конкурса.</p>
+        <p className="events-permission-note"><span aria-hidden="true">◆</span>Фотографии опубликованы с разрешения владельцев.</p>
       </section>
 
       <div className="events-archive-transition" aria-hidden="true"><span>Архив · 2025</span></div>
@@ -120,16 +108,6 @@ export default function EventsPage() {
         </article>)}
       </section>
 
-      <section className="events-continuation" aria-labelledby="events-continuation-title">
-        <div className="events-continuation-heading">
-          <img className="events-history-icon" src={publicPath("/images/events/events-history-icon.png")} alt="" aria-hidden="true" width="112" height="112" loading="lazy"/>
-          <span className="section-no">Новые главы</span><h2 id="events-continuation-title">История продолжается</h2><p>После конкурса 2025 года формат получил продолжение. Новые мероприятия Rudollforum будут постепенно добавляться в этот раздел вместе с итогами и архивными материалами.</p>
-        </div>
-        <div className="events-actions">
-          <FeaturedExternalLink href="https://t.me/rudollforum" variant="telegram" iconImage={publicPath("/images/events/events-follow-icon.png")} title="Следить за мероприятиями Rudollforum" subtitle="новости в открытом Telegram-канале"/>
-          <FeaturedInternalLink href="/community" iconImage={publicPath("/images/events/events-community-icon.png")} title="О сообществе" description="как устроен Rudollforum"/>
-        </div>
-      </section>
     </article>
   </SiteShell>;
 }
