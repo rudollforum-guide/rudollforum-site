@@ -70,13 +70,6 @@ export default function CustomizationPage() {
       </nav>
 
       <header className="customization-hero">
-        <div className="customization-hero-visual" aria-hidden="true">
-          <span className="customization-orbit customization-orbit--outer"/>
-          <span className="customization-orbit customization-orbit--inner"/>
-          <span className="customization-orbit-core"/>
-          <span className="customization-orbit-node customization-orbit-node--one"/>
-          <span className="customization-orbit-node customization-orbit-node--two"/>
-        </div>
         <div className="customization-hero-copy">
           <span className="eyebrow">Модификации · визуальные эффекты · практика</span>
           <h1>Кастомизация и улучшения кукол</h1>
@@ -86,8 +79,13 @@ export default function CustomizationPage() {
 
       <div className="customization-intro-zone">
         <section className="customization-overview" aria-labelledby="customization-overview-title">
-          <span className="customization-kicker">Обзор раздела</span>
-          <h2 id="customization-overview-title">Кастомизация на практике</h2>
+          <div className="customization-heading-with-emblem customization-overview-heading">
+            <img className="customization-emblem customization-overview-emblem" src={publicPath("/images/customization/emblems/customization-overview-emblem.png")} alt="" aria-hidden="true"/>
+            <div>
+              <span className="customization-kicker">Обзор раздела</span>
+              <h2 id="customization-overview-title">Кастомизация на практике</h2>
+            </div>
+          </div>
           <p>Здесь собираются примеры модификаций и улучшений, которые меняют внешний вид, восприятие или отдельные функциональные особенности кукол. Раздел будет постепенно дополняться новыми материалами.</p>
           <ul className="customization-labels" aria-label="Темы раздела">
             <li>Визуальные эффекты</li>
@@ -104,21 +102,26 @@ export default function CustomizationPage() {
             <small>Переход осуществляется через открытый Telegram-канал сообщества.</small>
           </div>
           <a className="customization-telegram-action" href="https://t.me/rudollforum" target="_blank" rel="noopener noreferrer">
+            <img className="customization-emblem customization-telegram-emblem" src={publicPath("/images/customization/emblems/telegram-rudollforum-emblem.png")} alt="" aria-hidden="true"/>
             <span>Перейти в Telegram Rudollforum</span>
-            <span className="customization-action-mark" aria-hidden="true"/>
           </a>
         </aside>
       </div>
 
       <section className="customization-feature" id="following-eyes" aria-labelledby="following-eyes-title">
         <header className="customization-feature-heading">
-          <span className="customization-section-index">Первый материал</span>
-          <h2 id="following-eyes-title">Следящие глаза</h2>
+          <div className="customization-heading-with-emblem customization-feature-title">
+            <img className="customization-emblem customization-following-emblem" src={publicPath("/images/customization/emblems/following-eyes-emblem.png")} alt="" aria-hidden="true"/>
+            <div>
+              <span className="customization-section-index">Первый материал</span>
+              <h2 id="following-eyes-title">Следящие глаза</h2>
+            </div>
+          </div>
           <p>Одна из необычных визуальных модификаций — эффект следящего взгляда. При перемещении наблюдателя создаётся впечатление, будто глаза куклы продолжают смотреть в его сторону под разными углами.</p>
         </header>
 
         <div className="customization-explanation">
-          <span className="customization-explanation-mark" aria-hidden="true"/>
+          <img className="customization-emblem customization-effect-emblem" src={publicPath("/images/customization/emblems/how-effect-works-emblem.png")} alt="" aria-hidden="true"/>
           <div>
             <h3>Как работает эффект</h3>
             <p>В основе эффекта лежит оптическая иллюзия, связанная с формой глаза и расположением изображения зрачка. Для создания такого эффекта может использоваться полусферическая прозрачная линза или купол, за которым либо на поверхности которого размещено изображение зрачка. При изменении угла обзора меняется восприятие глубины и положения зрачка, из-за чего взгляд визуально кажется направленным на наблюдателя.</p>
@@ -127,10 +130,13 @@ export default function CustomizationPage() {
         </div>
 
         <section className="customization-video-section" aria-labelledby="customization-video-title">
-          <div className="customization-video-heading">
-            <span className="customization-kicker">Видеопримеры</span>
-            <h3 id="customization-video-title">Эффект в движении</h3>
-            <p>Три коротких примера позволяют увидеть, как меняется восприятие взгляда при смене угла обзора.</p>
+          <div className="customization-heading-with-emblem customization-video-heading">
+            <img className="customization-emblem customization-video-emblem" src={publicPath("/images/customization/emblems/effect-in-motion-emblem.png")} alt="" aria-hidden="true"/>
+            <div>
+              <span className="customization-kicker">Видеопримеры</span>
+              <h3 id="customization-video-title">Эффект в движении</h3>
+              <p>Три коротких примера позволяют увидеть, как меняется восприятие взгляда при смене угла обзора.</p>
+            </div>
           </div>
           <div className="customization-video-grid">
             {videos.map(({src, caption}, index) => <figure className="customization-video-card" key={src}>
@@ -147,17 +153,20 @@ export default function CustomizationPage() {
         </section>
 
         <aside className="customization-purchase" aria-labelledby="customization-purchase-title">
-          <div>
-            <span className="customization-kicker">Практическая часть</span>
-            <h3 id="customization-purchase-title">Изготовление и покупка</h3>
-            <p>Подробная практическая информация о вариантах изготовления, установке и возможности приобретения таких глаз размещена в закрытой группе Rudollforum.</p>
+          <div className="customization-heading-with-emblem customization-purchase-heading">
+            <img className="customization-emblem customization-purchase-emblem" src={publicPath("/images/customization/emblems/making-and-purchase-emblem.png")} alt="" aria-hidden="true"/>
+            <div>
+              <span className="customization-kicker">Практическая часть</span>
+              <h3 id="customization-purchase-title">Изготовление и покупка</h3>
+              <p>Подробная практическая информация о вариантах изготовления, установке и возможности приобретения таких глаз размещена в закрытой группе Rudollforum.</p>
+            </div>
           </div>
-          <a href="https://t.me/rudollforum" target="_blank" rel="noopener noreferrer">Узнать подробнее в Rudollforum</a>
+          <a href="https://t.me/rudollforum" target="_blank" rel="noopener noreferrer"><img className="customization-emblem customization-details-emblem" src={publicPath("/images/customization/emblems/rudollforum-details-emblem.png")} alt="" aria-hidden="true"/><span>Узнать подробнее в Rudollforum</span></a>
         </aside>
       </section>
 
       <section className="customization-future" aria-labelledby="customization-future-title">
-        <span className="customization-future-mark" aria-hidden="true"/>
+        <img className="customization-emblem customization-future-emblem" src={publicPath("/images/customization/emblems/coming-soon-emblem.png")} alt="" aria-hidden="true"/>
         <div>
           <h2 id="customization-future-title">Раздел будет дополняться</h2>
           <p>По мере появления новых практических материалов здесь будут добавляться другие варианты кастомизации и улучшений.</p>
