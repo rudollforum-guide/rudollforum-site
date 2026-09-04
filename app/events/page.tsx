@@ -74,8 +74,8 @@ export default function EventsPage() {
           <div><h3 id="contest-2026-thanks-title">Отдельная благодарность Konstantin</h3><p>Отдельная благодарность Konstantin за помощь в проведении конкурса Rudollforum 2026 и поддержку сообщества. Его участие помогло сделать конкурс более масштабным и завершённым событием для участников Rudollforum.</p><strong>Мику, занявшая 4 место, — кукла Konstantin.</strong></div>
         </aside>
         <aside className="contest-2026-guriy" aria-labelledby="contest-2026-guriy-title">
-          <span className="contest-2026-guriy-mark" aria-hidden="true"/>
-          <div><h3 id="contest-2026-guriy-title">Отдельно отмечаем вклад Гурия</h3><p>Гурий передал свой приз в копилку будущих конкурсов Rudollforum, поддержав тем самым следующие мероприятия сообщества.</p></div>
+          <img className="contest-2026-guriy-emblem" src={publicPath("/images/events/rudollforum-contest-2026/emblems/guriy-contribution-emblem.png")} alt="" aria-hidden="true" width="90" height="90"/>
+          <div><h3 id="contest-2026-guriy-title">Жест в поддержку будущих конкурсов</h3><p>Гурий передал свой приз в копилку будущих конкурсов Rudollforum, поддержав тем самым следующие мероприятия сообщества.</p></div>
         </aside>
         <p className="events-permission-note"><span aria-hidden="true">◆</span>Фотографии опубликованы с разрешения владельцев.</p>
       </section>
