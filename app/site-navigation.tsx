@@ -11,6 +11,7 @@ export const nav = [
   ["Уход", "/care"],
   ["Хранение", "/storage"],
   ["Ремонт", "/repair"],
+  ["Кастомизация", "/customization"],
   ["Бренды", "/brands"],
   ["Сообщество", "/community"],
   ["Полезные ссылки", "/useful-links"],
@@ -34,8 +35,10 @@ const guideOnlyRoutes = new Set<string>(
 );
 
 function isNavActive(pathname: string, href: string) {
+  const currentPath = pathname !== "/" ? pathname.replace(/\/$/, "") : pathname;
+
   if (href === "/guide") {
-    return pathname === href || guideOnlyRoutes.has(pathname);
+    return currentPath === href || guideOnlyRoutes.has(currentPath);
   }
 
   if (href === "/where-to-buy") {
@@ -48,10 +51,14 @@ function isNavActive(pathname: string, href: string) {
       "/safe-purchase",
       "/delivery-check",
       "/owner-reviews",
-    ]).has(pathname);
+    ]).has(currentPath);
   }
 
-  return pathname === href;
+  if (href === "/community") {
+    return currentPath === href || currentPath === "/events";
+  }
+
+  return currentPath === href;
 }
 
 function NavItem({
@@ -68,7 +75,7 @@ function NavItem({
   return (
     <Link
       href={href}
-      className="nav-item"
+      className={`nav-item${href === "/customization" ? " nav-item--customization" : ""}`}
       aria-current={active ? "page" : undefined}
     >
       {label}
