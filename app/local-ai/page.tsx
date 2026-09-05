@@ -86,12 +86,17 @@ export default function LocalAiPage() {
 
       <header className="local-ai-hero">
         <div className="local-ai-hero-copy">
-          <span className="eyebrow">Локальный ИИ · персонажи · LM Studio</span>
-          <h1>Roles Witch + LM Studio — локальный ИИ-персонаж на телефоне</h1>
-          <p>Roles Witch позволяет создавать собственных ИИ-персонажей и ассистентов, а при подключении к LM Studio модель может работать локально на компьютере, пока телефон используется как удобный интерфейс для общения.</p>
+          <div className="local-ai-hero-heading">
+            <img className="local-ai-emblem local-ai-hero-emblem" src={publicPath("/images/local-ai/emblems/local-ai-hero-emblem.png")} alt="" aria-hidden="true" width="124" height="124"/>
+            <div className="local-ai-hero-heading-copy">
+              <span className="eyebrow">Локальный ИИ · персонажи · LM Studio</span>
+              <h1>Roles Witch + LM Studio — локальный ИИ-персонаж на телефоне</h1>
+              <p>Roles Witch позволяет создавать собственных ИИ-персонажей и ассистентов, а при подключении к LM Studio модель может работать локально на компьютере, пока телефон используется как удобный интерфейс для общения.</p>
+            </div>
+          </div>
           <div className="local-ai-hero-actions">
-            <a href="#setup">Перейти к настройке</a>
-            <a href={publicPath("/files/guides/roles-witch-lm-studio-guide.pdf")} target="_blank" rel="noopener noreferrer">Открыть PDF-гайд</a>
+            <a href="#setup"><img className="local-ai-link-icon local-ai-hero-link-icon" src={publicPath("/images/local-ai/links/local-ai-setup-link-icon.png")} alt="" aria-hidden="true" width="54" height="54"/><span>Перейти к настройке</span></a>
+            <a href={publicPath("/files/guides/roles-witch-lm-studio-guide.pdf")} target="_blank" rel="noopener noreferrer"><img className="local-ai-link-icon local-ai-hero-link-icon" src={publicPath("/images/local-ai/links/local-ai-pdf-guide-link-icon.png")} alt="" aria-hidden="true" width="54" height="54"/><span>Открыть PDF-гайд</span></a>
           </div>
         </div>
         <div className="local-ai-hero-visual" aria-hidden="true">
@@ -105,8 +110,11 @@ export default function LocalAiPage() {
 
       <section className="local-ai-section local-ai-connection" aria-labelledby="local-ai-connection-title">
         <div className="local-ai-section-heading">
-          <span className="local-ai-kicker">Принцип работы</span>
-          <h2 id="local-ai-connection-title">Как работает связка</h2>
+          <img className="local-ai-emblem local-ai-section-emblem" src={publicPath("/images/local-ai/emblems/local-ai-how-it-works-emblem.png")} alt="" aria-hidden="true" width="84" height="84"/>
+          <div className="local-ai-section-heading-copy">
+            <span className="local-ai-kicker">Принцип работы</span>
+            <h2 id="local-ai-connection-title">Как работает связка</h2>
+          </div>
           <p>Компьютер выполняет модель и принимает запросы в локальной сети, а приложение на телефоне отвечает за персонажа и интерфейс общения.</p>
         </div>
         <div className="local-ai-flow" aria-label="LM Studio на компьютере, локальная ИИ-модель, Roles Witch на телефоне">
@@ -120,30 +128,38 @@ export default function LocalAiPage() {
 
       <section className="local-ai-section local-ai-options" aria-labelledby="local-ai-options-title">
         <div className="local-ai-section-heading">
-          <span className="local-ai-kicker">Возможности</span>
-          <h2 id="local-ai-options-title">Что можно настроить</h2>
+          <img className="local-ai-emblem local-ai-section-emblem" src={publicPath("/images/local-ai/emblems/local-ai-capabilities-emblem.png")} alt="" aria-hidden="true" width="84" height="84"/>
+          <div className="local-ai-section-heading-copy">
+            <span className="local-ai-kicker">Возможности</span>
+            <h2 id="local-ai-options-title">Что можно настроить</h2>
+          </div>
         </div>
         <ul>{capabilities.map((item, index) => <li key={item}><span>{String(index + 1).padStart(2, "0")}</span>{item}</li>)}</ul>
         <p className="local-ai-dependency-note">Доступность конкретных возможностей зависит от выбранной ИИ-модели и текущей версии приложения.</p>
       </section>
 
       <aside className="local-ai-characters" aria-labelledby="local-ai-characters-title">
-        <span className="local-ai-kicker">Характер и роль</span>
-        <h2 id="local-ai-characters-title">Какими могут быть персонажи</h2>
+        <div className="local-ai-compact-heading">
+          <img className="local-ai-emblem local-ai-section-emblem" src={publicPath("/images/local-ai/emblems/local-ai-characters-emblem.png")} alt="" aria-hidden="true" width="84" height="84"/>
+          <div><span className="local-ai-kicker">Характер и роль</span><h2 id="local-ai-characters-title">Какими могут быть персонажи</h2></div>
+        </div>
         <p>Одному персонажу можно задать спокойный и дружелюбный характер, другому — более эмоциональную или ироничную манеру общения, а третьего настроить как технического помощника или консультанта.</p>
       </aside>
 
       <section className="local-ai-section local-ai-setup" id="setup" aria-labelledby="local-ai-setup-title">
         <div className="local-ai-section-heading">
-          <span className="local-ai-kicker">Пошаговая настройка</span>
-          <h2 id="local-ai-setup-title">От установки до первого персонажа</h2>
+          <img className="local-ai-emblem local-ai-section-emblem" src={publicPath("/images/local-ai/emblems/local-ai-setup-emblem.png")} alt="" aria-hidden="true" width="84" height="84"/>
+          <div className="local-ai-section-heading-copy">
+            <span className="local-ai-kicker">Пошаговая настройка</span>
+            <h2 id="local-ai-setup-title">От установки до первого персонажа</h2>
+          </div>
           <p>Сначала проверьте модель на компьютере, затем откройте сервер в локальной сети и только после этого подключайте телефон.</p>
         </div>
 
         <div className="local-ai-steps">
           <Step number="1" title="Установить LM Studio">
             <p>Скачайте LM Studio с официального сайта и установите его на компьютер.</p>
-            <a className="local-ai-external-link" href="https://lmstudio.ai/" target="_blank" rel="noopener noreferrer">Открыть официальный сайт LM Studio</a>
+            <a className="local-ai-external-link" href="https://lmstudio.ai/" target="_blank" rel="noopener noreferrer"><img className="local-ai-link-icon local-ai-resource-link-icon" src={publicPath("/images/local-ai/links/local-ai-lm-studio-site-icon.png")} alt="" aria-hidden="true" width="48" height="48"/><span>Открыть официальный сайт LM Studio</span></a>
           </Step>
 
           <Step number="2" title="Скачать подходящую ИИ-модель">
@@ -185,8 +201,8 @@ export default function LocalAiPage() {
           <Step number="5" title="Установить Roles Witch на телефон">
             <p>Установите приложение, затем подготовьте подключение к локальному серверу.</p>
             <div className="local-ai-link-row">
-              <a className="local-ai-external-link" href="https://roleswitch.ai/" target="_blank" rel="noopener noreferrer">Официальный сайт Roles Witch</a>
-              <a className="local-ai-external-link" href="https://play.google.com/store/apps/details?id=ai.roleswitch.android" target="_blank" rel="noopener noreferrer">Roles Witch в Google Play</a>
+              <a className="local-ai-external-link" href="https://roleswitch.ai/" target="_blank" rel="noopener noreferrer"><img className="local-ai-link-icon local-ai-resource-link-icon" src={publicPath("/images/local-ai/links/local-ai-roles-witch-site-icon.png")} alt="" aria-hidden="true" width="48" height="48"/><span>Официальный сайт Roles Witch</span></a>
+              <a className="local-ai-external-link" href="https://play.google.com/store/apps/details?id=ai.roleswitch.android" target="_blank" rel="noopener noreferrer"><img className="local-ai-link-icon local-ai-resource-link-icon" src={publicPath("/images/local-ai/links/local-ai-google-play-icon.png")} alt="" aria-hidden="true" width="48" height="48"/><span>Roles Witch в Google Play</span></a>
             </div>
           </Step>
 
@@ -214,8 +230,11 @@ export default function LocalAiPage() {
 
       <section className="local-ai-section local-ai-additional" aria-labelledby="local-ai-additional-title">
         <div className="local-ai-section-heading">
-          <span className="local-ai-kicker">Дополнительные функции</span>
-          <h2 id="local-ai-additional-title">Голос, изображения и дополнительные возможности</h2>
+          <img className="local-ai-emblem local-ai-section-emblem" src={publicPath("/images/local-ai/emblems/local-ai-extra-features-emblem.png")} alt="" aria-hidden="true" width="84" height="84"/>
+          <div className="local-ai-section-heading-copy">
+            <span className="local-ai-kicker">Дополнительные функции</span>
+            <h2 id="local-ai-additional-title">Голос, изображения и дополнительные возможности</h2>
+          </div>
         </div>
         <ul>
           <li>Для голосового режима может потребоваться VOSK.</li>
@@ -225,7 +244,7 @@ export default function LocalAiPage() {
       </section>
 
       <section className="local-ai-privacy" aria-labelledby="local-ai-privacy-title">
-        <div><span className="local-ai-kicker">Что происходит с запросами</span><h2 id="local-ai-privacy-title">Локальная работа и приватность</h2></div>
+        <div className="local-ai-compact-heading"><img className="local-ai-emblem local-ai-section-emblem" src={publicPath("/images/local-ai/emblems/local-ai-privacy-emblem.png")} alt="" aria-hidden="true" width="84" height="84"/><div><span className="local-ai-kicker">Что происходит с запросами</span><h2 id="local-ai-privacy-title">Локальная работа и приватность</h2></div></div>
         <div>
           <p>При подключении через LM Studio Roles Witch отправляет запросы на локальный сервер, адрес которого пользователь указал самостоятельно. В этой схеме модель обрабатывает сообщения на компьютере, а телефон выступает в роли мобильного интерфейса.</p>
           <p>Если вместо LM Studio используется внешний API-провайдер, сообщения будут отправляться уже выбранному внешнему сервису.</p>
@@ -233,15 +252,15 @@ export default function LocalAiPage() {
       </section>
 
       <section className="local-ai-pdf" aria-labelledby="local-ai-pdf-title">
-        <div className="local-ai-pdf-mark" aria-hidden="true"><span>PDF</span><i>7</i></div>
+        <img className="local-ai-emblem local-ai-pdf-emblem" src={publicPath("/images/local-ai/emblems/local-ai-pdf-emblem.png")} alt="" aria-hidden="true" width="84" height="84"/>
         <div>
           <span className="local-ai-kicker">Дополнение к странице</span>
           <h2 id="local-ai-pdf-title">Полная пошаговая инструкция в PDF</h2>
           <p>7 страниц со скриншотами установки LM Studio, загрузки модели, настройки Local Server и подключения Roles Witch.</p>
         </div>
         <div className="local-ai-pdf-actions">
-          <a href={publicPath("/files/guides/roles-witch-lm-studio-guide.pdf")} target="_blank" rel="noopener noreferrer">Открыть PDF</a>
-          <a href="#setup">Читать инструкцию на странице</a>
+          <a href={publicPath("/files/guides/roles-witch-lm-studio-guide.pdf")} target="_blank" rel="noopener noreferrer"><img className="local-ai-link-icon local-ai-pdf-link-icon" src={publicPath("/images/local-ai/links/local-ai-open-pdf-icon.png")} alt="" aria-hidden="true" width="50" height="50"/><span>Открыть PDF</span></a>
+          <a href="#setup"><img className="local-ai-link-icon local-ai-pdf-link-icon" src={publicPath("/images/local-ai/links/local-ai-read-on-page-icon.png")} alt="" aria-hidden="true" width="50" height="50"/><span>Читать инструкцию на странице</span></a>
         </div>
       </section>
 
