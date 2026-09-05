@@ -86,10 +86,12 @@ export default function Home() {
 
     <section className="brand-preview section" aria-labelledby="brand-preview-title">
       <div className="brand-preview-copy">
-        <span className="section-no">Справочный раздел</span>
-        <h2 id="brand-preview-title">Каталог брендов</h2>
+        <div className="home-section-heading home-section-heading--brands">
+          <img className="home-section-emblem" src={publicPath("/images/home/home-brands-emblem.png")} alt="" aria-hidden="true" width="94" height="94" draggable="false" />
+          <div className="home-section-heading-copy"><span className="section-no">Справочный раздел</span><h2 id="brand-preview-title">Каталог брендов</h2></div>
+        </div>
         <p>Справочник производителей силиконовых, ТПЕ, аниме, фурри и роботизированных моделей. Бренды распределены по категориям и доступны через поиск и фильтры.</p>
-        <Link className="button primary" href="/brands">Открыть каталог брендов</Link>
+        <Link className="button primary home-brands-cta" href="/brands"><img className="home-section-cta-icon" src={publicPath("/images/home/home-brands-cta-icon.png")} alt="" aria-hidden="true" width="50" height="50" draggable="false" /><span>Открыть каталог брендов</span></Link>
         <small>Список не является рейтингом или рекомендацией.</small>
       </div>
       <div className="brand-preview-list compact-index-list" aria-label="Примеры брендов">
@@ -98,8 +100,8 @@ export default function Home() {
     </section>
     <SectionDivider />
 
-    <section className="section split" aria-labelledby="purchase-guides-title">
-      <div className="feature"><span className="section-no">Навигация по покупке</span><h2 id="purchase-guides-title">Как купить силиконовую или TPE-куклу</h2><p>Сначала определите подходящий материал и допустимый вес, затем сравните бренды и каналы покупки. В справочнике представлены разные варианты покупки: международные магазины, российские площадки и официальные сайты брендов. Rudollforum помогает проверить магазин и модель, но не оформляет заказы.</p></div>
+    <section className="section split home-buying-guide" aria-labelledby="purchase-guides-title">
+      <div className="feature"><div className="home-section-heading home-section-heading--compact"><img className="home-section-emblem" src={publicPath("/images/home/home-buying-guide-emblem.png")} alt="" aria-hidden="true" width="84" height="84" draggable="false" /><div className="home-section-heading-copy"><span className="section-no">Навигация по покупке</span><h2 id="purchase-guides-title">Как купить силиконовую или TPE-куклу</h2></div></div><p>Сначала определите подходящий материал и допустимый вес, затем сравните бренды и каналы покупки. В справочнике представлены разные варианты покупки: международные магазины, российские площадки и официальные сайты брендов. Rudollforum помогает проверить магазин и модель, но не оформляет заказы.</p></div>
       <div className="article-list">
         <Link href="/buy-tpe-doll"><span>Материал</span><strong>Купить TPE-куклу: как выбрать</strong></Link>
         <Link href="/buy-silicone-doll"><span>Материал</span><strong>Купить силиконовую куклу: как выбрать</strong></Link>
@@ -113,11 +115,12 @@ export default function Home() {
 
     <section className="home-local-ai section" aria-labelledby="home-local-ai-title">
       <div className="home-local-ai-copy">
-        <span className="home-local-ai-eyebrow">Roles Witch + LM Studio</span>
-        <h2 id="home-local-ai-title">Локальный ИИ-персонаж на телефоне</h2>
-        <p>Запустите ИИ-модель локально на компьютере и общайтесь с собственным персонажем через телефон. Характер, системный промпт, голос и дополнительные возможности зависят от выбранной модели.</p>
+        <div className="home-local-ai-heading">
+          <img className="home-section-emblem home-local-ai-emblem" src={publicPath("/images/home/home-local-ai-emblem.png")} alt="" aria-hidden="true" width="88" height="88" draggable="false" />
+          <div className="home-local-ai-heading-copy"><span className="home-local-ai-eyebrow">Roles Witch + LM Studio</span><h2 id="home-local-ai-title">Локальный ИИ-персонаж на телефоне</h2><p>Запустите ИИ-модель локально на компьютере и общайтесь с собственным персонажем через телефон. Характер, системный промпт, голос и дополнительные возможности зависят от выбранной модели.</p></div>
+        </div>
         <span className="home-local-ai-badge">Локально · Без привязки к одному облачному ИИ</span>
-        <Link href="/local-ai">Открыть раздел</Link>
+        <Link className="home-local-ai-cta" href="/local-ai"><img className="home-section-cta-icon" src={publicPath("/images/home/home-local-ai-cta-icon.png")} alt="" aria-hidden="true" width="52" height="52" draggable="false" /><span>Открыть раздел</span></Link>
       </div>
       <div className="home-local-ai-visual" aria-hidden="true">
         <span className="home-local-ai-panel"><i></i><b>LM Studio</b><small>локальная модель</small></span>
@@ -147,23 +150,23 @@ export default function Home() {
       <div className="community-actions"><a className="link-button-secondary" href="https://t.me/rudollforum" target="_blank" rel="noopener noreferrer"><img className="external-action-icon" src={publicPath("/images/home/community-telegram-icon.png")} alt="" aria-hidden="true" width="32" height="32"/>Открыть Telegram Rudollforum</a><Link className="link-button-secondary link-button-internal" href="/community"><img className="external-action-icon" src={publicPath("/images/home/community-about-icon.png")} alt="" aria-hidden="true" width="32" height="32"/>О сообществе</Link><small>На канале доступны открытые материалы и информация о закрытой группе владельцев.</small></div>
     </section>
 
-    <section className="section" aria-labelledby="owner-reviews-title">
-      <div className="section-head"><div><span className="section-no">Редакционный раздел</span><h2 id="owner-reviews-title">Отзывы владельцев</h2></div><p>Будущая подборка будет опираться только на подтверждённый опыт без выдуманных оценок и количества отзывов.</p></div>
+    <section className="section home-owner-reviews" aria-labelledby="owner-reviews-title">
+      <div className="section-head"><div className="home-section-heading"><img className="home-section-emblem" src={publicPath("/images/home/home-owner-reviews-emblem.png")} alt="" aria-hidden="true" width="88" height="88" draggable="false" /><div className="home-section-heading-copy"><span className="section-no">Редакционный раздел</span><h2 id="owner-reviews-title">Отзывы владельцев</h2></div></div><p>Будущая подборка будет опираться только на подтверждённый опыт без выдуманных оценок и количества отзывов.</p></div>
       <div className="topic-grid">
         {ownerReviewCards.map(([title,text,icon,href],index)=><Link href={href} className="topic-card home-guide-card" key={title}><div className="card-top"><span>{String(index+1).padStart(2,"0")}</span><img src={publicPath(`/images/home/guide-cards/${icon}`)} alt="" aria-hidden="true" width="52" height="52" loading="lazy" draggable="false" /></div><h3>{title}</h3><p>{text}</p><b>Открыть раздел</b></Link>)}
       </div>
     </section>
 
-    <section className="section split">
-      <div className="feature"><span className="section-no">Новые статьи</span><h2>Практические материалы</h2><p>Разбираем риски, которые часто обнаруживаются уже после покупки.</p></div>
+    <section className="section split home-practical-materials">
+      <div className="feature"><div className="home-section-heading"><img className="home-section-emblem" src={publicPath("/images/home/home-practical-materials-emblem.png")} alt="" aria-hidden="true" width="88" height="88" draggable="false" /><div className="home-section-heading-copy"><span className="section-no">Новые статьи</span><h2>Практические материалы</h2></div></div><p>Разбираем риски, которые часто обнаруживаются уже после покупки.</p></div>
       <div className="article-list">
-        <Link href="/stains"><span>Материалы и уход</span><strong>Как избежать и удалить пятна</strong><small>8 минут</small></Link>
-        <Link href="/mold"><span>Профилактика</span><strong>Плесень: признаки и причины</strong><small>7 минут</small></Link>
-        <Link href="/brands"><span>Справочник</span><strong>Как читать заявления брендов</strong><small>6 минут</small></Link>
+        <Link href="/stains"><span>Материалы и уход</span><strong>Как избежать и удалить пятна</strong></Link>
+        <Link href="/mold"><span>Профилактика</span><strong>Плесень: признаки и причины</strong></Link>
+        <Link href="/brands"><span>Справочник</span><strong>Как читать заявления брендов</strong></Link>
       </div>
     </section>
 
-    <section className="section faq" id="faq"><div className="section-head"><div><span className="section-no">FAQ</span><h2>Частые вопросы</h2></div><Link href="/useful-links">Дополнительные ресурсы</Link></div>
+    <section className="section faq home-faq" id="faq"><div className="section-head"><div className="home-section-heading home-section-heading--compact"><img className="home-section-emblem" src={publicPath("/images/home/home-faq-emblem.png")} alt="" aria-hidden="true" width="84" height="84" draggable="false" /><div className="home-section-heading-copy"><span className="section-no">FAQ</span><h2>Частые вопросы</h2></div></div><Link href="/useful-links">Дополнительные ресурсы</Link></div>
       {faq.map(([q,a])=><details key={q}><summary>{q}</summary><p>{a}</p></details>)}
     </section>
     <section className="policy-callout"><div><span>Редакционные принципы</span><h2>Информация отделена от коммерческих упоминаний</h2></div><p>Упоминание бренда или продавца не означает рекомендацию. Партнёрские ссылки и промокоды обозначаются явно.</p><Link href="/editorial-policy">Редакционная политика</Link></section>
