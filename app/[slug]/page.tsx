@@ -71,6 +71,13 @@ const articleHeroEmblems: Record<string, string> = {
   "clothing-and-stains": "/images/clothing-and-stains/clothing-and-stains-hero-emblem.png",
   "material-aging": "/images/material-aging/material-aging-hero-emblem.png",
   "owner-experience": "/images/owner-experience/owner-experience-hero-emblem.png",
+  "buy-tpe-doll": "/images/buy-tpe-doll/buy-tpe-doll-hero-emblem.png",
+  "buy-silicone-doll": "/images/buy-silicone-doll/buy-silicone-doll-hero-emblem.png",
+  "realistic-dolls": "/images/realistic-dolls/realistic-dolls-hero-emblem.png",
+  "how-to-buy": "/images/how-to-buy/how-to-buy-hero-emblem.png",
+  "internal-drying": "/images/internal-drying/internal-drying-hero-emblem.png",
+  "tpe-care": "/images/tpe-care/tpe-care-hero-emblem.png",
+  stains: "/images/stains/stains-hero-emblem.png",
 };
 
 export const dynamicParams = false;

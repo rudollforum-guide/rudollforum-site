@@ -277,7 +277,7 @@ main{padding-top:12px}
 .community-actions small{flex-basis:100%;color:var(--muted);font-size:10px}
 .guide-page{max-width:1120px}
 .article-emblem-heading{display:grid;grid-template-columns:118px minmax(0,1fr);grid-template-areas:"emblem eyebrow" "emblem title" "emblem description";column-gap:26px;align-items:start}
-.article-hero-emblem{grid-area:emblem;display:block;width:118px;height:118px;max-width:100%;object-fit:contain;pointer-events:none;filter:none}
+.article-hero-emblem{grid-area:emblem;display:block;width:118px;height:118px;max-width:100%;object-fit:contain;pointer-events:none;user-select:none;filter:none}
 .article-emblem-heading .eyebrow{grid-area:eyebrow;margin:0 0 18px}
 .article-emblem-heading h1{grid-area:title}
 .article-emblem-heading>p{grid-area:description;max-width:820px;margin:28px 0;font-size:19px;color:var(--muted)}
