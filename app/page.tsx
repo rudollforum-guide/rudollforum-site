@@ -111,6 +111,22 @@ export default function Home() {
     </section>
     <SectionDivider />
 
+    <section className="home-local-ai section" aria-labelledby="home-local-ai-title">
+      <div className="home-local-ai-copy">
+        <span className="home-local-ai-eyebrow">Roles Witch + LM Studio</span>
+        <h2 id="home-local-ai-title">Локальный ИИ-персонаж на телефоне</h2>
+        <p>Запустите ИИ-модель локально на компьютере и общайтесь с собственным персонажем через телефон. Характер, системный промпт, голос и дополнительные возможности зависят от выбранной модели.</p>
+        <span className="home-local-ai-badge">Локально · Без привязки к одному облачному ИИ</span>
+        <Link href="/local-ai">Открыть раздел</Link>
+      </div>
+      <div className="home-local-ai-visual" aria-hidden="true">
+        <span className="home-local-ai-panel"><i></i><b>LM Studio</b><small>локальная модель</small></span>
+        <span className="home-local-ai-signal"><i></i><i></i><i></i></span>
+        <span className="home-local-ai-panel home-local-ai-panel--phone"><i></i><b>Roles Witch</b><small>персонаж на телефоне</small></span>
+      </div>
+    </section>
+    <SectionDivider />
+
     <section className="community-home section" aria-labelledby="community-title">
       <div className="community-heading">
         <div className="community-heading-mark">

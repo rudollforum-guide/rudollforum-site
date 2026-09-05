@@ -12,6 +12,7 @@ export const nav = [
   ["Хранение", "/storage"],
   ["Ремонт", "/repair"],
   ["Кастомизация", "/customization"],
+  ["Локальный ИИ", "/local-ai"],
   ["Бренды", "/brands"],
   ["Сообщество", "/community"],
   ["Полезные ссылки", "/useful-links"],
