@@ -51,12 +51,12 @@ export default function Home() {
     </section>
 
     <section className="intro-grid">
-      <div><span className="section-no">О справочнике</span><h2>Что такое силиконовые и ТПЕ-куклы</h2></div>
+      <div className="home-illustrated-heading home-illustrated-heading--about"><img className="home-illustrated-heading-emblem" src={publicPath("/images/home/about-guide-emblem.png")} alt="" aria-hidden="true" width="92" height="92" draggable="false" /><div className="home-illustrated-heading-copy"><span className="section-no">О справочнике</span><h2>Что такое силиконовые и ТПЕ-куклы</h2></div></div>
       <p>Полноразмерные изделия из мягких полимерных материалов отличаются свойствами поверхности, весом, требованиями к очистке и возможностями ремонта. Rudollforum помогает оценивать эти различия по практическим критериям, а не по рекламным обещаниям.</p>
     </section>
     <SectionDivider />
 
-    <section className="section" id="topics"><div className="section-head"><div><span className="section-no">Навигация</span><h2>Ключевые темы справочника</h2></div><p>Краткие вводные ведут к отдельным подробным материалам.</p></div>
+    <section className="section" id="topics"><div className="section-head"><div className="home-illustrated-heading home-illustrated-heading--topics"><img className="home-illustrated-heading-emblem" src={publicPath("/images/home/key-topics-emblem.png")} alt="" aria-hidden="true" width="88" height="88" draggable="false" /><div className="home-illustrated-heading-copy"><span className="section-no">Навигация</span><h2>Ключевые темы справочника</h2></div></div><p>Краткие вводные ведут к отдельным подробным материалам.</p></div>
       <div className="topic-grid">{sections.slice(0,4).map(([title, text, href, no, icon]) => <Link href={href} className="topic-card home-guide-card reveal" key={no}><div className="card-top"><span>{no}</span><img src={publicPath(`/images/home/guide-cards/${icon}`)} alt="" aria-hidden="true" width="52" height="52" loading="lazy" draggable="false" /></div><h3>{title}</h3><p>{text}</p><b>Читать материал</b></Link>)}</div>
       <figure className="editorial-visual guide-visual" id="guide-banner"><img src={publicPath("/images/home-choice-new.webp")} alt="Взрослая женщина в светлом закрытом ханьфу читает справочник" width="1672" height="941" loading="lazy"/><figcaption><span>Осознанный выбор</span><strong>Сначала факты, затем решение</strong><Link href="/how-to-choose">Как выбрать модель</Link><Link className="home-guide-link" href="/guide">Полное руководство владельца</Link></figcaption></figure>
       <aside className="external-card" aria-labelledby="moon-doll-title">
@@ -123,9 +123,9 @@ export default function Home() {
         <Link className="home-local-ai-cta" href="/local-ai"><img className="home-section-cta-icon" src={publicPath("/images/home/home-local-ai-cta-icon.png")} alt="" aria-hidden="true" width="52" height="52" draggable="false" /><span>Открыть раздел</span></Link>
       </div>
       <div className="home-local-ai-visual" aria-hidden="true">
-        <span className="home-local-ai-panel"><i></i><b>LM Studio</b><small>локальная модель</small></span>
+        <span className="home-local-ai-panel"><img className="home-local-ai-panel-icon" src={publicPath("/images/home/local-ai-lm-studio-emblem.png")} alt="" aria-hidden="true" width="64" height="64" draggable="false" /><b>LM Studio</b><small>локальная модель</small></span>
         <span className="home-local-ai-signal"><i></i><i></i><i></i></span>
-        <span className="home-local-ai-panel home-local-ai-panel--phone"><i></i><b>Roles Witch</b><small>персонаж на телефоне</small></span>
+        <span className="home-local-ai-panel home-local-ai-panel--phone"><img className="home-local-ai-panel-icon" src={publicPath("/images/home/local-ai-roles-witch-emblem.png")} alt="" aria-hidden="true" width="64" height="64" draggable="false" /><b>Roles Witch</b><small>персонаж на телефоне</small></span>
       </div>
     </section>
     <SectionDivider />
@@ -169,7 +169,7 @@ export default function Home() {
     <section className="section faq home-faq" id="faq"><div className="section-head"><div className="home-section-heading home-section-heading--compact"><img className="home-section-emblem" src={publicPath("/images/home/home-faq-emblem.png")} alt="" aria-hidden="true" width="84" height="84" draggable="false" /><div className="home-section-heading-copy"><span className="section-no">FAQ</span><h2>Частые вопросы</h2></div></div><Link href="/useful-links">Дополнительные ресурсы</Link></div>
       {faq.map(([q,a])=><details key={q}><summary>{q}</summary><p>{a}</p></details>)}
     </section>
-    <section className="policy-callout"><div><span>Редакционные принципы</span><h2>Информация отделена от коммерческих упоминаний</h2></div><p>Упоминание бренда или продавца не означает рекомендацию. Партнёрские ссылки и промокоды обозначаются явно.</p><Link href="/editorial-policy">Редакционная политика</Link></section>
+    <section className="policy-callout"><div className="home-illustrated-heading home-illustrated-heading--editorial"><img className="home-illustrated-heading-emblem" src={publicPath("/images/home/editorial-independence-emblem.png")} alt="" aria-hidden="true" width="92" height="92" draggable="false" /><div className="home-illustrated-heading-copy"><span>Редакционные принципы</span><h2>Информация отделена от коммерческих упоминаний</h2></div></div><p>Упоминание бренда или продавца не означает рекомендацию. Партнёрские ссылки и промокоды обозначаются явно.</p><Link href="/editorial-policy">Редакционная политика</Link></section>
     <MetaLine />
   </SiteShell>;
 }
