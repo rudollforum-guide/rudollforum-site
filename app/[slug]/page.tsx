@@ -54,7 +54,7 @@ function CommunityDiscussionAction() {
 
 function LocalAiUsefulLink() {
   return <Link className="useful-local-ai-card" href="/local-ai">
-    <span className="useful-local-ai-visual" aria-hidden="true"><i></i><b>AI</b><i></i></span>
+    <img className="useful-local-ai-icon" src={publicPath("/images/useful-links/local-ai-icon.png")} alt="" aria-hidden="true"/>
     <span><b>Локальный ИИ: Roles Witch + LM Studio</b><small>Настройка персонажа, локального сервера и подключения телефона.</small></span>
   </Link>;
 }
