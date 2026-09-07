@@ -87,9 +87,17 @@ export default function BrandsPage() {
           </div>
         </section>
 
-        <aside className="catalog-editorial">
-          <p>Справочник составлен на основе открытых данных и материалов сообщества Rudollforum. Названия, сайты, линейки и особенности брендов могут изменяться. Обнаруженную неточность можно сообщить администрации Rudollforum.</p>
-          <a className="link-button-secondary" href="https://t.me/rudollforum" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">✈</span>Сообщить об изменении или дополнении</a>
+        <aside className="brands-feedback" aria-labelledby="brands-feedback-title">
+          <img className="brands-feedback-emblem" src="/images/brands/brands-feedback-emblem.png" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+          <div className="brands-feedback-copy">
+            <span className="brands-feedback-eyebrow">Обновление каталога</span>
+            <h2 id="brands-feedback-title">Помогите поддерживать каталог актуальным</h2>
+            <p>Справочник составлен на основе открытых данных и материалов сообщества Rudollforum. Названия брендов, официальные сайты, модельные линейки и заявленные особенности со временем могут меняться.</p>
+            <p>Если вы заметили неточность, новый официальный сайт, изменение линейки или важное дополнение — сообщите нам, и информация будет проверена перед обновлением каталога.</p>
+          </div>
+          <div className="brands-feedback-actions">
+            <a className="brands-feedback-button" href="https://t.me/rudollforum" target="_blank" rel="noopener noreferrer">Сообщить об изменении или дополнении</a>
+          </div>
         </aside>
         <MetaLine />
       </article>
