@@ -100,11 +100,11 @@ export default function LocalAiPage() {
           </div>
         </div>
         <div className="local-ai-hero-visual" aria-hidden="true">
-          <span className="local-ai-device local-ai-device--desktop"><i></i><b>LM Studio</b><small>Local Server</small></span>
+          <span className="local-ai-device local-ai-device--desktop"><img className="local-ai-device-icon" src={publicPath("/images/local-ai/hero/lm-studio-local-server-icon.png")} alt="" aria-hidden="true" width="78" height="78" draggable="false"/><b>LM Studio</b><small>Local Server</small></span>
           <span className="local-ai-data-flow"><i></i><i></i><i></i></span>
           <span className="local-ai-core"><i>AI</i><small>локальная модель</small></span>
           <span className="local-ai-data-flow local-ai-data-flow--reverse"><i></i><i></i><i></i></span>
-          <span className="local-ai-device local-ai-device--phone"><i></i><b>Roles Witch</b><small>персонаж</small></span>
+          <span className="local-ai-device local-ai-device--phone"><img className="local-ai-device-icon" src={publicPath("/images/local-ai/hero/roles-witch-character-icon.png")} alt="" aria-hidden="true" width="78" height="78" draggable="false"/><b>Roles Witch</b><small>персонаж</small></span>
         </div>
       </header>
 
