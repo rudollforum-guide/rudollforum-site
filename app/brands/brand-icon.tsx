@@ -1,21 +1,19 @@
 type BrandIconProps = {
-  name: string;
   src: string;
-  ariaLabel: string;
 };
 
-export function BrandIcon({ name, src, ariaLabel }: BrandIconProps) {
+export function BrandIcon({ src }: BrandIconProps) {
   return (
-    <span className="brand-icon" role="img" aria-label={ariaLabel} title={name}>
-      <img
-        src={src}
-        alt=""
-        aria-hidden="true"
-        width="128"
-        height="128"
-        loading="lazy"
-        decoding="async"
-      />
-    </span>
+    <img
+      className="brand-icon"
+      src={src}
+      alt=""
+      aria-hidden="true"
+      width="76"
+      height="76"
+      loading="lazy"
+      decoding="async"
+      draggable="false"
+    />
   );
 }

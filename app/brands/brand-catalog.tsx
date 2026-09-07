@@ -1,199 +1,172 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { brands, groupInfo, tagDescriptions, tagLabels, type Brand, type BrandGroup, type BrandTag } from "./brands-data";
+import {
+  brands,
+  categoryInfo,
+  categoryOrder,
+  featureInfo,
+  type Brand,
+  type BrandCategory,
+  type BrandFeature,
+} from "./brands-data";
 import { BrandIcon } from "./brand-icon";
 import { publicPath } from "../site-config";
 
-type Filter = "all" | "realistic" | BrandGroup | BrandTag;
-type SortOrder = "az" | "za";
+const featureOrder: BrandFeature[] = ["anime", "fantasy", "furry", "ai", "robotics", "heavy", "tall", "games", "cartoons", "actresses", "torsos"];
 
-const groupOrder: BrandGroup[] = ["known", "additional", "anime", "furry", "robotics", "torsos", "plush"];
+function normalizeSearch(value: string) {
+  return value
+    .normalize("NFKC")
+    .toLocaleLowerCase("ru")
+    .replace(/[\s/\-–—_+()]+/g, " ")
+    .trim();
+}
 
-const filters: { value: Filter; label: string; kind: "all" | "derived" | "group" | "tag" }[] = [
-  { value: "all", label: "Все бренды", kind: "all" },
-  { value: "realistic", label: "Реалистичные", kind: "derived" },
-  { value: "known", label: "Известные бренды", kind: "group" },
-  { value: "additional", label: "Дополнительные бренды", kind: "group" },
-  { value: "anime", label: "Аниме", kind: "tag" },
-  { value: "furry", label: "Фурри", kind: "tag" },
-  { value: "robotics", label: "AI и роботизированные системы", kind: "group" },
-  { value: "torsos", label: "Торсы", kind: "group" },
-  { value: "plush", label: "Плюшевые куклы", kind: "group" },
-  { value: "fantasy", label: "Фэнтези-модели", kind: "tag" },
-  { value: "heavy", label: "Модели 50+ кг", kind: "tag" },
-  { value: "tall", label: "Модели 180+ см", kind: "tag" },
-  { value: "games", label: "Игровые персонажи", kind: "tag" },
-  { value: "styled", label: "Стилизованные модели", kind: "tag" },
-  { value: "ai", label: "AI-функции", kind: "tag" },
-];
-
-function emblemSrc(brand: Brand) {
-  const slug = brand.name
-    .split(",")[0]
-    .toLocaleLowerCase("en")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "");
-  return publicPath(`/brands/generated/${brand.group}/${slug}.webp`);
+function searchableText(brand: Brand) {
+  return normalizeSearch([
+    brand.name,
+    ...(brand.aliases ?? []),
+    categoryInfo[brand.category].label,
+    categoryInfo[brand.category].shortLabel,
+    ...(brand.features ?? []).flatMap((feature) => [featureInfo[feature].label, ...(featureInfo[feature].searchTerms ?? [])]),
+    brand.note ?? "",
+  ].join(" "));
 }
 
 function BrandCard({ brand }: { brand: Brand }) {
-  const isHttp = brand.url?.startsWith("http://");
-  const fallbackFeature = brand.group === "anime"
-    ? "В каталоге встречаются отдельные аниме-модели."
-    : brand.group === "robotics"
-      ? "Для отдельных моделей или систем заявлены роботизированные функции, AI-функции или электронные опции."
-      : brand.group === "torsos"
-        ? "В каталоге представлены торсовые модели."
-        : brand.group === "plush"
-          ? "Бренд выпускает отдельные модели из мягких или текстильных материалов."
-          : "Сведения об отдельных линейках пока не добавлены.";
   return (
-    <article className="brand-card">
-      <div className="brand-card-head">
-        <BrandIcon
-          name={brand.name}
-          src={emblemSrc(brand)}
-          ariaLabel={`Декоративный значок бренда ${brand.name}`}
-        />
-        <div>
-          <span className="brand-category">{groupInfo[brand.group].label}</span>
+    <article className={`brand-card brand-card--${brand.category}`}>
+      <div className="brand-card-main">
+        <BrandIcon src={publicPath(brand.icon)} />
+        <div className="brand-card-copy">
+          <span className="brand-category">{categoryInfo[brand.category].shortLabel}</span>
           <h3>{brand.name}</h3>
+          {brand.features?.length ? (
+            <div className="brand-features" aria-label={`Особенности ${brand.name}`}>
+              {brand.features.map((feature) => (
+                <span className={`brand-feature brand-feature--${featureInfo[feature].className}`} key={feature}>
+                  {featureInfo[feature].label}
+                </span>
+              ))}
+            </div>
+          ) : null}
+          {brand.note ? <p className="brand-note">{brand.note}</p> : null}
         </div>
       </div>
-      <div className="brand-tag-section">
-        <span className="brand-tag-caption">Особенности отдельных моделей</span>
-        {brand.tags?.length ? (
-          <div className="brand-tags" aria-label={`Особенности отдельных моделей ${brand.name}`}>
-            {brand.tags.map((tag) => (
-              <span key={tag} title={tagDescriptions[tag]} aria-label={tagDescriptions[tag]}>{tagLabels[tag]}</span>
-            ))}
-          </div>
-        ) : <div className="brand-tags brand-tags-empty"><span>Сведения дополняются</span></div>}
-      </div>
-      <details className="brand-details">
-        <summary>Сведения и ссылка</summary>
-        <div className="brand-details-body">
-          <p>{brand.features ?? fallbackFeature}</p>
-          {brand.note && <p className="brand-note">{brand.note}</p>}
-          {isHttp && <p className="link-warning">Соединение может быть незащищённым</p>}
+      {(brand.url || brand.secondaryUrl) ? (
+        <div className="brand-card-actions">
           {brand.url ? (
-            <>
-              <span className="external-label">Внешний сайт</span>
-              <a className="link-button-primary brand-link" href={brand.url} target="_blank" rel="noopener noreferrer">
-                Открыть официальный сайт
-              </a>
-              {brand.secondaryUrl && (
-                <a className="secondary-external link-inline" href={brand.secondaryUrl} target="_blank" rel="noopener noreferrer">
-                  Дополнительный официальный сайт
-                </a>
-              )}
-            </>
-          ) : (
-            <span className="brand-link-missing">Официальная прямая ссылка не указана</span>
-          )}
+            <a className="brand-site-link" href={brand.url} target="_blank" rel="noopener noreferrer">
+              Официальный сайт
+            </a>
+          ) : null}
+          {brand.secondaryUrl ? (
+            <a className="brand-secondary-link" href={brand.secondaryUrl} target="_blank" rel="noopener noreferrer">
+              Дополнительный сайт
+            </a>
+          ) : null}
         </div>
-      </details>
+      ) : null}
     </article>
   );
 }
 
 export function BrandCatalog() {
   const [query, setQuery] = useState("");
-  const [filter, setFilter] = useState<Filter>("all");
-  const [sortOrder, setSortOrder] = useState<SortOrder>("az");
+  const [category, setCategory] = useState<"all" | BrandCategory>("all");
+  const [feature, setFeature] = useState<"all" | BrandFeature>("all");
 
-  const activeFilter = filters.find((item) => item.value === filter) ?? filters[0];
-  const visible = useMemo(() => {
-    const normalizedQuery = query.trim().toLocaleLowerCase("ru");
-    return brands
-      .filter((brand) => {
-        const matchesSearch = !normalizedQuery || brand.name.toLocaleLowerCase("ru").includes(normalizedQuery);
-        if (!matchesSearch || filter === "all") return matchesSearch;
-        if (activeFilter.kind === "derived") return brand.group === "known" || brand.group === "additional";
-        if (activeFilter.kind === "group") return brand.group === filter;
-        return brand.tags?.includes(filter as BrandTag) ?? false;
-      })
-      .sort((a, b) => {
-        const result = a.name.localeCompare(b.name, "en", { sensitivity: "base" });
-        return sortOrder === "az" ? result : -result;
-      });
-  }, [activeFilter.kind, filter, query, sortOrder]);
+  const usedFeatures = useMemo(
+    () => featureOrder.filter((item) => brands.some((brand) => brand.features?.includes(item))),
+    [],
+  );
+  const normalizedQuery = normalizeSearch(query);
+  const visible = useMemo(() => brands.filter((brand) => {
+    const matchesQuery = !normalizedQuery || searchableText(brand).includes(normalizedQuery);
+    const matchesCategory = category === "all" || brand.category === category;
+    const matchesFeature = feature === "all" || brand.features?.includes(feature);
+    return matchesQuery && matchesCategory && matchesFeature;
+  }), [category, feature, normalizedQuery]);
 
-  const grouped = groupOrder
-    .map((group) => ({ group, items: visible.filter((brand) => brand.group === group) }))
-    .filter(({ items }) => items.length);
+  const grouped = categoryOrder
+    .map((item) => ({ category: item, items: visible.filter((brand) => brand.category === item) }))
+    .filter(({ items }) => items.length > 0);
+  const filtersActive = Boolean(normalizedQuery || category !== "all" || feature !== "all");
 
-  const clearFilters = () => {
+  const resetFilters = () => {
     setQuery("");
-    setFilter("all");
-    setSortOrder("az");
+    setCategory("all");
+    setFeature("all");
   };
 
   return (
-    <div className="catalog">
-      <section className="catalog-controls" aria-label="Поиск и фильтры каталога">
-        <div className="catalog-search">
-          <label htmlFor="brand-search">Поиск по названию бренда</label>
+    <div className="brands-catalog">
+      <nav className="brands-category-nav" aria-label="Быстрый переход к категории">
+        {categoryOrder.map((item) => (
+          <a href={`#${item}`} key={item}>{categoryInfo[item].shortLabel}</a>
+        ))}
+      </nav>
+
+      <section className="brands-controls" aria-label="Поиск и фильтры каталога">
+        <div className="brands-search">
+          <label htmlFor="brands-search">Поиск по каталогу</label>
           <input
-            id="brand-search"
+            id="brands-search"
             type="search"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
-            placeholder="Например, EXdoll"
+            placeholder="Найти бренд…"
+            aria-label="Найти бренд"
             autoComplete="off"
           />
         </div>
-        <div className="catalog-sort">
-          <label htmlFor="brand-sort">Сортировка</label>
-          <select id="brand-sort" value={sortOrder} onChange={(event) => setSortOrder(event.target.value as SortOrder)}>
-            <option value="az">По алфавиту: А–Я</option>
-            <option value="za">По алфавиту: Я–А</option>
-          </select>
-        </div>
-        <div className="catalog-stat" aria-live="polite">
-          <strong>{visible.length}</strong>
-          <span>найдено из {brands.length}</span>
-        </div>
-        <div className="catalog-filters" aria-label="Категории каталога">
-          {filters.map((item) => (
-            <button
-              key={`${item.kind}-${item.value}`}
-              type="button"
-              className={filter === item.value ? "active" : ""}
-              aria-pressed={filter === item.value}
-              onClick={() => setFilter(item.value)}
-            >
-              {item.label}
-            </button>
-          ))}
-        </div>
-        <div className="catalog-actions">
-          <button type="button" className="text-button" onClick={() => setFilter("all")}>Показать все бренды</button>
-          <button type="button" className="text-button" onClick={clearFilters}>Очистить фильтры</button>
-        </div>
+        <div className="brands-counter" aria-live="polite">Показано: <strong>{visible.length}</strong> из {brands.length}</div>
+
+        <fieldset className="brands-filter-group">
+          <legend>Категории</legend>
+          <div className="brands-filter-row">
+            <button type="button" aria-pressed={category === "all"} className={category === "all" ? "active" : ""} onClick={() => setCategory("all")}>Все</button>
+            {categoryOrder.map((item) => (
+              <button type="button" aria-pressed={category === item} className={category === item ? "active" : ""} onClick={() => setCategory(item)} key={item}>
+                {categoryInfo[item].shortLabel}
+              </button>
+            ))}
+          </div>
+        </fieldset>
+
+        <fieldset className="brands-filter-group brands-filter-group--features">
+          <legend>Особенности</legend>
+          <div className="brands-filter-row">
+            <button type="button" aria-pressed={feature === "all"} className={feature === "all" ? "active" : ""} onClick={() => setFeature("all")}>Все особенности</button>
+            {usedFeatures.map((item) => (
+              <button type="button" aria-pressed={feature === item} className={feature === item ? "active" : ""} onClick={() => setFeature(item)} key={item}>
+                {featureInfo[item].label}
+              </button>
+            ))}
+          </div>
+        </fieldset>
+
+        {filtersActive ? <button type="button" className="brands-reset" onClick={resetFilters}>Сбросить фильтры</button> : null}
       </section>
 
-      {grouped.length ? (
-        grouped.map(({ group, items }) => (
-          <section className="brand-group" id={`brands-${group}`} key={group}>
-            <div className="brand-group-head">
-              <div>
-                <span className="section-no">Категория · {items.length}</span>
-                <h2>{groupInfo[group].label}</h2>
-              </div>
-              {groupInfo[group].description && <p>{groupInfo[group].description}</p>}
+      {grouped.length ? grouped.map(({ category: item, items }) => (
+        <section className="brand-group" id={item} aria-labelledby={`${item}-title`} key={item}>
+          <div className="brand-group-head">
+            <div>
+              <span className="section-no">{categoryInfo[item].eyebrow}</span>
+              <h2 id={`${item}-title`}>{categoryInfo[item].label} <span>{items.length}</span></h2>
             </div>
-            <div className="brand-grid">
-              {items.map((brand) => <BrandCard key={brand.name} brand={brand} />)}
-            </div>
-          </section>
-        ))
-      ) : (
-        <div className="catalog-empty" role="status">
-          <h2>Бренды не найдены</h2>
-          <p>Измените поисковый запрос или очистите выбранные фильтры.</p>
-          <button type="button" className="button" onClick={clearFilters}>Очистить фильтры</button>
+          </div>
+          <div className="brand-grid">
+            {items.map((brand) => <BrandCard brand={brand} key={brand.name} />)}
+          </div>
+        </section>
+      )) : (
+        <div className="brands-empty" role="status">
+          <h2>Ничего не найдено</h2>
+          <p>Попробуйте изменить запрос или сбросить фильтры.</p>
+          <button type="button" onClick={resetFilters}>Сбросить</button>
         </div>
       )}
     </div>
