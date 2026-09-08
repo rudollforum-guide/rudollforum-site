@@ -85,6 +85,7 @@ const articleHeroEmblems: Record<string, string> = {
   "internal-drying": "/images/internal-drying/internal-drying-hero-emblem.png",
   "tpe-care": "/images/tpe-care/tpe-care-hero-emblem.png",
   stains: "/images/stains/stains-hero-emblem.png",
+  mold: "/images/mold/mold-hero-emblem.png",
 };
 
 export const dynamicParams = false;
