@@ -894,14 +894,10 @@ main{padding-top:12px}
 .brand-copy{grid-column:2;display:flex;min-width:0;flex-direction:column;align-items:flex-start;line-height:1.2}
 .brand-title{display:flex;align-items:center;gap:10px;min-width:0;color:#432d50}
 .brand strong{
-  color:#432d50;
+  color:#4b355a;
   font:700 28px/1.05 Georgia,serif;
   letter-spacing:-.018em;
-  background:linear-gradient(110deg,#34213e 0%,#684173 58%,#8b6534 112%);
-  -webkit-background-clip:text;
-  background-clip:text;
-  -webkit-text-fill-color:transparent;
-  text-shadow:0 1px 0 rgba(255,255,255,.72),0 4px 13px rgba(79,48,90,.08);
+  text-shadow:0 1px 0 rgba(255,255,255,.68),0 2px 6px rgba(67,40,78,.12);
 }
 .header-age{
   display:inline-flex;
