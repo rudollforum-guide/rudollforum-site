@@ -48,6 +48,11 @@ function CommunityDiscussionAction() {
   return <div className="resource-featured-links community-featured-action">
     <FeaturedExternalLink href="https://t.me/rudollforum" variant="telegram" iconImage={publicPath("/images/community/telegram-icon.png")} title="Открыть Telegram Rudollforum" subtitle="канал и вход в закрытое сообщество владельцев"/>
     <FeaturedInternalLink href="/events" iconImage={publicPath("/images/community/events-link-icon.png")} title="Мероприятия и конкурсы" description="Текущие события и архив конкурсов Rudollforum"/>
+    <Link className="community-lotus-entry" href="/white-lotus-garden">
+      <span className="community-lotus-entry-mark" aria-hidden="true">✦</span>
+      <span className="community-lotus-entry-copy"><b>Сад Белого Лотоса</b><small>Эстетическое направление Rudollforum: спокойные образы, закрытая одежда, атмосфера, красота композиции и тихая визуальная поэзия.</small></span>
+      <span className="community-lotus-entry-action">Открыть раздел</span>
+    </Link>
     <small className="article-featured-note">Информация об условиях входа в закрытую группу опубликована в открытом канале.</small>
   </div>;
 }
