@@ -3,6 +3,7 @@ import Link from "next/link";
 import {JsonLd,SiteShell} from "../site";
 import {OPEN_GRAPH_IMAGE,publicPath,siteUrl} from "../site-config";
 import {WhiteLotusMusicPlayer} from "./music-player";
+import {WhiteLotusGallery,type WhiteLotusGallerySet} from "./gallery";
 
 const title = "Сад Белого Лотоса | Rudollforum";
 const description = "Сад Белого Лотоса — эстетическое направление Rudollforum: спокойные образы, закрытая одежда, атмосфера и визуальная гармония.";
@@ -37,6 +38,18 @@ const sections = [
   },
 ];
 
+const gallerySets:WhiteLotusGallerySet[] = [
+  {
+    slug:"kitsune",
+    title:"Китсуне",
+    description:"Закрытый образ в восточной стилистике — бело-синяя одежда, спокойная домашняя композиция и мягкий характер фотографии.",
+    images:Array.from({length:11},(_,index)=>({
+      src:publicPath(`/images/white-lotus-garden/gallery/kitsune/kitsune-${String(index+1).padStart(2,"0")}.jpg`),
+      alt:`Китсуне — образ участника Rudollforum, фото ${index+1}`,
+    })),
+  },
+];
+
 export default function WhiteLotusGardenPage(){
   const breadcrumb={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":siteUrl("/")},{"@type":"ListItem","position":2,"name":"Сообщество","item":siteUrl("/community/")},{"@type":"ListItem","position":3,"name":"Сад Белого Лотоса","item":siteUrl("/white-lotus-garden/")} ]};
   const webPage={"@context":"https://schema.org","@type":"WebPage",name:"Сад Белого Лотоса",description,url:siteUrl("/white-lotus-garden/"),inLanguage:"ru-RU"};
@@ -64,6 +77,7 @@ export default function WhiteLotusGardenPage(){
           </div>
         </section>)}
       </div>
+      <WhiteLotusGallery sets={gallerySets}/>
       <section className="white-lotus-community" aria-labelledby="white-lotus-community-title">
         <div>
           <span>Продолжение сада</span>
