@@ -7,12 +7,13 @@ export type WhiteLotusGallerySet = {
   slug:string;
   title:string;
   description:string;
+  emblem:string;
   images:Array<{src:string;alt:string}>;
 };
 
 type ActiveImage = {setIndex:number;imageIndex:number};
 
-export function WhiteLotusGallery({sets}:{sets:WhiteLotusGallerySet[]}){
+export function WhiteLotusGallery({sets,headingEmblem}:{sets:WhiteLotusGallerySet[];headingEmblem:string}){
   const [active,setActive] = useState<ActiveImage|null>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const openerRef = useRef<HTMLButtonElement|null>(null);
@@ -75,8 +76,13 @@ export function WhiteLotusGallery({sets}:{sets:WhiteLotusGallerySet[]}){
 
   return <section className="white-lotus-gallery" aria-labelledby="white-lotus-gallery-title">
     <header className="white-lotus-gallery-heading">
-      <span className="white-lotus-gallery-eyebrow">ГАЛЕРЕЯ СООБЩЕСТВА</span>
-      <h2 id="white-lotus-gallery-title">Галерея образов участников</h2>
+      <div className="white-lotus-gallery-title-block">
+        <img className="white-lotus-heading-emblem" src={headingEmblem} alt="" aria-hidden="true"/>
+        <div className="white-lotus-gallery-title-copy">
+          <span className="white-lotus-gallery-eyebrow">ГАЛЕРЕЯ СООБЩЕСТВА</span>
+          <h2 id="white-lotus-gallery-title">Галерея образов участников</h2>
+        </div>
+      </div>
       <div className="white-lotus-gallery-intro">
         <p>Здесь собраны фотографии и постановочные образы, которыми участники сообщества делятся с “Садом Белого Лотоса”. В галерее публикуются только материалы, разрешённые владельцами к размещению на сайте Rudollforum.</p>
         <p>Главное здесь — не количество фотографий, а атмосфера образа: одежда, композиция, настроение и внимание к деталям.</p>
@@ -85,9 +91,12 @@ export function WhiteLotusGallery({sets}:{sets:WhiteLotusGallerySet[]}){
     <div className="white-lotus-gallery-sets">
       {sets.map((set,setIndex)=><section className="white-lotus-gallery-set" aria-labelledby={`white-lotus-gallery-${set.slug}`} key={set.slug}>
         <header className="white-lotus-gallery-set-heading">
-          <div>
-            <span>Фотосет участника</span>
-            <h3 id={`white-lotus-gallery-${set.slug}`}>{set.title}</h3>
+          <div className="white-lotus-gallery-set-title">
+            <img className="white-lotus-gallery-set-emblem" src={set.emblem} alt="" aria-hidden="true"/>
+            <div className="white-lotus-gallery-set-title-copy">
+              <span>Фотосет участника</span>
+              <h3 id={`white-lotus-gallery-${set.slug}`}>{set.title}</h3>
+            </div>
           </div>
           <p>{set.description}</p>
           <small>{set.images.length} фотографий</small>
@@ -100,7 +109,11 @@ export function WhiteLotusGallery({sets}:{sets:WhiteLotusGallerySet[]}){
             onClick={event=>open(setIndex,imageIndex,event.currentTarget)}
             key={image.src}
           >
-            <img src={image.src} alt={image.alt} loading="lazy" decoding="async"/>
+            <span className="white-lotus-gallery-photo-frame">
+              <img src={image.src} alt={image.alt} loading="lazy" decoding="async"/>
+              <span className="white-lotus-gallery-floral white-lotus-gallery-floral--top" aria-hidden="true"/>
+              <span className="white-lotus-gallery-floral white-lotus-gallery-floral--bottom" aria-hidden="true"/>
+            </span>
           </button>)}
         </div>
       </section>)}

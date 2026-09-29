@@ -43,6 +43,7 @@ const gallerySets:WhiteLotusGallerySet[] = [
     slug:"kitsune",
     title:"Китсуне",
     description:"Закрытый образ в восточной стилистике — бело-синяя одежда, спокойная домашняя композиция и мягкий характер фотографии.",
+    emblem:publicPath("/images/white-lotus-garden/icons/kitsune-emblem.png"),
     images:Array.from({length:11},(_,index)=>({
       src:publicPath(`/images/white-lotus-garden/gallery/kitsune/kitsune-${String(index+1).padStart(2,"0")}.jpg`),
       alt:`Китсуне — образ участника Rudollforum, фото ${index+1}`,
@@ -77,14 +78,19 @@ export default function WhiteLotusGardenPage(){
           </div>
         </section>)}
       </div>
-      <WhiteLotusGallery sets={gallerySets}/>
+      <WhiteLotusGallery sets={gallerySets} headingEmblem={publicPath("/images/white-lotus-garden/icons/gallery-community-emblem.png")}/>
       <section className="white-lotus-community" aria-labelledby="white-lotus-community-title">
-        <div>
+        <img className="white-lotus-community-emblem" src={publicPath("/images/white-lotus-garden/icons/garden-community-cta-emblem.png")} alt="" aria-hidden="true"/>
+        <div className="white-lotus-community-copy">
           <span>Продолжение сада</span>
           <h2 id="white-lotus-community-title">Хотите развивать это направление вместе с сообществом?</h2>
           <p>Идеи, публикации и дальнейшее развитие раздела обсуждаются в сообществе Rudollforum.</p>
         </div>
-        <a href="https://t.me/rudollforum" target="_blank" rel="noopener noreferrer">Перейти в Telegram Rudollforum</a>
+        <a href="https://t.me/rudollforum" target="_blank" rel="noopener noreferrer">
+          <img className="white-lotus-telegram-emblem" src={publicPath("/images/white-lotus-garden/icons/telegram-rudollforum-emblem.png")} alt="" aria-hidden="true"/>
+          <span>Перейти в Telegram Rudollforum</span>
+          <i aria-hidden="true">→</i>
+        </a>
       </section>
     </article>
   </SiteShell>;
