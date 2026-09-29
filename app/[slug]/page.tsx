@@ -49,7 +49,7 @@ function CommunityDiscussionAction() {
     <FeaturedExternalLink href="https://t.me/rudollforum" variant="telegram" iconImage={publicPath("/images/community/telegram-icon.png")} title="Открыть Telegram Rudollforum" subtitle="канал и вход в закрытое сообщество владельцев"/>
     <FeaturedInternalLink href="/events" iconImage={publicPath("/images/community/events-link-icon.png")} title="Мероприятия и конкурсы" description="Текущие события и архив конкурсов Rudollforum"/>
     <Link className="community-lotus-entry" href="/white-lotus-garden">
-      <span className="community-lotus-entry-mark" aria-hidden="true">✦</span>
+      <img className="community-lotus-entry-icon" src={publicPath("/images/white-lotus-garden/community-white-lotus-emblem.png")} alt="" aria-hidden="true" width="76" height="76"/>
       <span className="community-lotus-entry-copy"><b>Сад Белого Лотоса</b><small>Эстетическое направление Rudollforum: спокойные образы, закрытая одежда, атмосфера, красота композиции и тихая визуальная поэзия.</small></span>
       <span className="community-lotus-entry-action">Открыть раздел</span>
     </Link>
