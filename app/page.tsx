@@ -50,6 +50,23 @@ export default function Home() {
       <figure className="hero-art"><img src={publicPath("/images/home/home-hero-rudollforum-flag.png")} alt="Взрослая женщина в закрытом традиционном ханьфу среди белых лотосов" width="1672" height="941" fetchPriority="high" /></figure>
     </section>
 
+    <section className="home-security-warning" aria-labelledby="home-security-warning-title">
+      <img className="home-security-warning-emblem" src={publicPath("/images/home/home-official-resources-warning-emblem.png")} alt="" aria-hidden="true" width="104" height="104" draggable="false" />
+      <div className="home-security-warning-copy">
+        <span className="home-security-warning-eyebrow">Безопасность</span>
+        <h2 id="home-security-warning-title">Официальные ресурсы и защита от подделок</h2>
+        <div className="home-security-warning-text">
+          <p>Проверяйте ссылки на сайты, каналы и сообщества Rudollforum только через наши официальные источники.</p>
+          <p>Мы не имеем отношения к сторонним ресурсам с похожими названиями или оформлением, если такая связь не подтверждена официально.</p>
+          <p className="home-security-warning-alert">Остерегайтесь мошенников и поддельных ресурсов.</p>
+        </div>
+      </div>
+      <div className="home-security-warning-actions">
+        <Link className="home-security-warning-primary" href="/useful-links/">Официальные ресурсы Rudollforum</Link>
+        <a className="home-security-warning-secondary" href="https://t.me/rudollforum" target="_blank" rel="noopener noreferrer">Сообщить о подозрительном ресурсе</a>
+      </div>
+    </section>
+
     <section className="intro-grid">
       <div className="home-illustrated-heading home-illustrated-heading--about"><img className="home-illustrated-heading-emblem" src={publicPath("/images/home/about-guide-emblem.png")} alt="" aria-hidden="true" width="92" height="92" draggable="false" /><div className="home-illustrated-heading-copy"><span className="section-no">О справочнике</span><h2>Что такое силиконовые и ТПЕ-куклы</h2></div></div>
       <p>Полноразмерные изделия из мягких полимерных материалов отличаются свойствами поверхности, весом, требованиями к очистке и возможностями ремонта. Rudollforum помогает оценивать эти различия по практическим критериям, а не по рекламным обещаниям.</p>
