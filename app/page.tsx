@@ -56,14 +56,10 @@ export default function Home() {
         <span className="home-security-warning-eyebrow">Безопасность</span>
         <h2 id="home-security-warning-title">Официальные ресурсы и защита от подделок</h2>
         <div className="home-security-warning-text">
-          <p>Проверяйте ссылки на сайты, каналы и сообщества Rudollforum только через наши официальные источники.</p>
-          <p>Мы не имеем отношения к сторонним ресурсам с похожими названиями или оформлением, если такая связь не подтверждена официально.</p>
-          <p className="home-security-warning-alert">Остерегайтесь мошенников и поддельных ресурсов.</p>
+          <p>Проверяйте ссылки на сайты, каналы и сообщества Rudollforum только через официальные ресурсы.</p>
+          <p>Rudollforum не имеет отношения к сторонним сайтам, каналам или сообществам с похожими названиями, оформлением или подачей, если такая связь не подтверждена официально.</p>
+          <p className="home-security-warning-alert">Остерегайтесь мошенников, копий и поддельных ресурсов.</p>
         </div>
-      </div>
-      <div className="home-security-warning-actions">
-        <Link className="home-security-warning-primary" href="/useful-links/">Официальные ресурсы Rudollforum</Link>
-        <a className="home-security-warning-secondary" href="https://t.me/rudollforum" target="_blank" rel="noopener noreferrer">Сообщить о подозрительном ресурсе</a>
       </div>
     </section>
 
